@@ -42,12 +42,12 @@ module.exports = function (grunt) {
             //    src: '**',
             //    dest: '<%= prodBuildDir %>fonts/'
             //},
-            //data: {
-            //    expand: true,
-            //    cwd: '<%= publicDir %>data/',
-            //    src: '**',
-            //    dest: '<%= prodBuildDir %>data/'
-            //},
+            data: {
+                expand: true,
+                cwd: '<%= publicDir %>data/',
+                src: '**',
+                dest: '<%= prodBuildDir %>data/'
+            },
             htmlSource: {
                 expand: true,
                 cwd: '<%= sourceDir %>',
