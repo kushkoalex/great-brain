@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    (function (nv) {
+        var settings;
+        if (nv.settings === null) {
+            nv.settings = settings = {};
+        } else {
+            settings = nv.settings;
+        }
+
+        if (!('controlsDescriptors' in settings)) {
+            settings.controlsDescriptors = {};
+        }
+
+        if (!('dataModels' in settings)) {
+            settings.dataModels = {};
+        }
+
+        if (!('languages' in settings)) {
+            settings.languages = [
+                {
+                    code: 'ru',
+                    label: 'ru'
+                },
+                {
+                    code: 'ua',
+                    label: 'ukr'
+                },
+                {
+                    code: 'en',
+                    label: 'eng'
+                }
+            ];
+        }
+
+        settings.currentLanguage = 'ua';
+
+
+//        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
+//        settings.hiddenTokenAPIURL = '/api/user/';
+//        settings.hiddenTokenDestructAPIURL = '/api/user/';
+//
+//        settings.dataPaths = {
+//            mfo: '/data/ukrainianMFO.json',
+//            countryCode: '/data/countryCode.json'
+//        }
+
+    }(NV));
+</script>
+
+include "../includes/settings/l10n.html"
+include "../includes/settings/controlsDescriptors.html"
+<!--include "../includes/settings/dataModels/mainMenu.html"-->
+<!--include "../includes/settings/dataModels/mainPage.html"-->
+<!--include "../includes/settings/dataModels/events.html"-->
+<!--include "../includes/settings/dataModels/event.html"-->
+<!--include "../includes/settings/dataModels/media.html"-->
+<!--include "../includes/settings/dataModels/news.html"-->
+<!--include "../includes/settings/dataModels/authors.html"-->
+<!--include "../includes/settings/dataModels/author.html"-->
+<!--include "../includes/settings/dataModels/products.html"-->
+<!--include "../includes/settings/dataModels/newsDetails.html"-->
+<!--include "../includes/settings/dataModels/siteContent.html"-->
+<!--include "../includes/settings/dataModels/searchForm.html"-->
+<!--include "../includes/settings/dataModels/currentTags.html"-->

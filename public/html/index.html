@@ -1,10 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Great Brain</title>
+    <title>New Vision Productions</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- start script template tags -->
+    <!-- end script template tags -->
+
+    <!-- start css template tags -->
+        <link rel="stylesheet" type="text/css" href="../styles/default.css?v=0.0.1" media="screen"/>
+    <!-- end css template tags -->
+
+    <script type="text/javascript">
+        (function (nv) {
+            var settings;
+            if (nv.settings === null) {
+                nv.settings = settings = {};
+            } else {
+                settings = nv.settings;
+            }
+
+            if (!('controlsDescriptors' in settings)) {
+                settings.controlsDescriptors = {};
+            }
+
+            if (!('dataModels' in settings)) {
+                settings.dataModels = {};
+            }
+
+            if (!('languages' in settings)) {
+                settings.languages = [
+                    {
+                        code: 'ru',
+                        label: 'ru'
+                    },
+                    {
+                        code: 'ua',
+                        label: 'ukr'
+                    },
+                    {
+                        code: 'en',
+                        label: 'eng'
+                    }
+                ];
+            }
+
+            settings.currentLanguage = 'ua';
+
+
+    //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
+    //        settings.hiddenTokenAPIURL = '/api/user/';
+    //        settings.hiddenTokenDestructAPIURL = '/api/user/';
+    //
+    //        settings.dataPaths = {
+    //            mfo: '/data/ukrainianMFO.json',
+    //            countryCode: '/data/countryCode.json'
+    //        }
+
+        }(NV));
+    </script>
+
+    <script type="text/javascript">
+        (function (nv, a9) {
+            var settings = nv.settings,
+                    l10n = a9.l10n;
+
+            if (!('locale' in settings)) {
+                settings.locale = 'rus';
+            }
+
+            if (!('dictionary' in settings)) {
+                settings.dictionary = {
+                    copyright: '&copy; {year} 2014 New Vision Productions',
+                    emMadeIn: 'Сделано в',
+                    emStudio: 'Студии Евгения Миллера',
+                    joinUs: 'как попасть<br>в арт-коллектив',
+                    mainPageDetails: 'Подробнее о нас',
+                    eventWillBe: 'проект состоится',
+                    eventPass: 'проект состоялся',
+                    learnMore: 'узнать больше',
+                    ticketType_orderTicket: 'заказать билет',
+                    ticketType_eventIsFree:'вход свободный',
+                    ticketType_getInvite:'получить приглас.',
+                    ticketType_getInviteFull:'получить пригласительный',
+                    ticketType_noSeats:'мест нет',
+                    contactsTitle: 'контактная информация и обратная связь',
+                    address: 'Украина, 02002, г. Киев, ул. Ованеса Туманяна, 15-А, оф. 630<br>Телефон: +38 066 8450056',
+                    feedbackTitle: 'отправить мгновенное сообщение',
+                    feedbackBtnSend:'отправить',
+                    feedbackFields_Name: 'назовитесь:',
+                    feedbackFields_Email: 'Емейл, на который<br/>хотите получить ответ:',
+                    feedbackFields_AntiSpam: 'Антиспам-проверка:<br/>наберите три два один (цифрами)',
+                    feedbackFields_Question: 'Вопрос:',
+                    feedbackFields_checkEntries:'Заполните правильно поля формы',
+                    feedbackFields_thanks :'Спасибо, Ваше сообщение отправлено',
+
+                    authors_subMenu_authors:'Мастера',
+                    authors_subMenu_products:'Работы',
+                    authors_subMenu_search:'Расширенный поиск',
+
+                    authors_subMenu_aboutAuthor:'Об артисте',
+                    authors_subMenu_authorProducts:'Работы артиста',
+                    authors_subMenu_authorEvents:'События с артистом',
+
+                    artists_and_arts:'Мастера и работы',
+
+                    searchFormTitle:'Расширенный поиск',
+                    searchFormSubmitButtonTitle:'показать',
+
+                    tagsFilterShowOnly:'отображается только:',
+                    tagsFilterReset:'сбросить'
+                }
+            }
+
+            l10n.locale = settings.locale;
+            l10n.dictionary = settings.dictionary;
+
+        }(NV, A9));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (nv, a9) {
+            var settings = nv.settings,
+                    l10n = a9.l10n,
+                    controlsDescriptors = settings.controlsDescriptors;
+
+            controlsDescriptors.site = {
+                urlEM: 'http://eugene-miller.com',
+                contentImagesPath: '../images/content/',
+                contentImagesPathAuthors: '../images/content/authors/',
+                contentImagesPathAuthorsThumb: '../images/content/authors/thumb/',
+                contentImagesPathAuthorsOrig: '../images/content/',
+                contentImagesPathProducts: '../images/content/authors/',
+                contentImagesPathAuthorsAvatar: '../images/content/authors/avatar/',
+                contentImagesPathProductsThumb: '../images/content/authors/thumb/',
+                mainPageSlideTimeout: 10000,
+                mainPageUrl: 'index.html',
+                newsPageUrl: 'news.html',
+                eventsPageUrl: 'events.html',
+                eventDetailsPageUrl: 'event-details.html/{id}',
+                newsDetailsPageUrl: 'news-details.html/{id}',
+                mediaPageUrl: 'media.html',
+                siteContentPageUrl: 'authors.html',
+                contactsPageUrl: 'contacts.html',
+                authorsPageUrl:'authors.html',
+                productsPageUrl:'products.html',
+                joinUsUrl: '#',
+                antiSpamAnswer: '321',
+                authorProductItemsInRowCount:4,
+
+                authorAboutPageUrl:'about-author.html#{artist}',
+                authorEventsPageUrl:'about-events.html#{artist}',
+                authorProductsPageUrl:'author-products.html#{artist}',
+                authorProductsDetailsPageUrl:'author-products.html#{artist}',
+
+                searchFilterUrlArtists:'artists/tags/{tagsId}',
+                searchFilterUrlProducts:'products/tags/{tagsId}'
+
+            };
+
+        }(NV, A9));
+    </script>
+
+
+    <!--include "../includes/settings/dataModels/mainMenu.html"-->
+    <!--include "../includes/settings/dataModels/mainPage.html"-->
+    <!--include "../includes/settings/dataModels/events.html"-->
+    <!--include "../includes/settings/dataModels/event.html"-->
+    <!--include "../includes/settings/dataModels/media.html"-->
+    <!--include "../includes/settings/dataModels/news.html"-->
+    <!--include "../includes/settings/dataModels/authors.html"-->
+    <!--include "../includes/settings/dataModels/author.html"-->
+    <!--include "../includes/settings/dataModels/products.html"-->
+    <!--include "../includes/settings/dataModels/newsDetails.html"-->
+    <!--include "../includes/settings/dataModels/siteContent.html"-->
+    <!--include "../includes/settings/dataModels/searchForm.html"-->
+    <!--include "../includes/settings/dataModels/currentTags.html"-->
+
 </head>
 <body>
-<div class="page"></div>
+<div class="page">
+
+</div>
 </body>
 </html>
