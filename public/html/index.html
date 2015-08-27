@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>New Vision Productions</title>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <title>Great Brain &mdash; Education Service</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oranienbaum&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <!-- start script template tags -->
         <script type="text/javascript" src="../scripts/a9/A9.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/a9/helpers/A9.active.js?v=0.0.1"></script>
@@ -51,11 +53,19 @@
         <script type="text/javascript" src="../scripts/libs/faith/faith.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/libs/cnCt/cnCt.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/GB.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/mainPage.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/tmpls_mainPage.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../vendor/scripts/jquery-1.11.2.min.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../vendor/scripts/jquery.bxslider.min.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../vendor/scripts/init.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/init.js?v=0.0.1"></script>
     <!-- end script template tags -->
 
     <!-- start css template tags -->
         <link rel="stylesheet" type="text/css" href="../styles/default.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/pages/index.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../vendor/styles/jquery.bxslider.css?v=0.0.1" media="screen"/>
     <!-- end css template tags -->
 
     <script type="text/javascript">
@@ -82,17 +92,13 @@
                         label: 'ru'
                     },
                     {
-                        code: 'ua',
-                        label: 'ukr'
-                    },
-                    {
                         code: 'en',
                         label: 'eng'
                     }
                 ];
             }
 
-            settings.currentLanguage = 'ua';
+            settings.currentLanguage = 'ru';
 
 
     //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
@@ -118,9 +124,10 @@
 
             if (!('dictionary' in settings)) {
                 settings.dictionary = {
-                    copyright: '&copy; {year} New Vision Productions',
-                    emMadeIn: 'Сделано в',
-                    emStudio: 'Студии Евгения Миллера'
+                    copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                    emMadeIn: 'Сайт создан в',
+                    emStudio: 'Студии Евгения Миллера',
+                    tagsFilterReset:'сбросить'
                 }
             }
 
@@ -132,76 +139,74 @@
 
 
     <script type="text/javascript">
-        (function (gb, a9) {
+        (function (gb) {
             var settings = gb.settings,
-                    l10n = a9.l10n,
+                    //l10n = a9.l10n,
                     controlsDescriptors = settings.controlsDescriptors;
 
             controlsDescriptors.site = {
-                urlEM: 'http://eugene-miller.com'
-
-
+                urlEM: 'http://eugene-miller.com',
+                mainPageImages:'/images/mainPage/'
             };
 
-        }(GB, A9));
+        }(GB));
     </script>
 
 
     <!--include "../includes/settings/dataModels/mainMenu.html"-->
     <script type="text/javascript">
-        (function (gb, a9) {
-            var settings = gb.settings,
-                    dataModels = settings.dataModels;
+        (function (gb) {
 
-            dataModels.mainPage = {
+            gb.settings.dataModels.mainPage = {
                 mainBanners:[
                     {
                         imageSrc:'main.jpg',
                         title:'Спокойствие и связь 27/7',
                         description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
                         sign:'Яна Плотникова, CEO',
-                        signImage:'sign.jpg'
+                        signImage:'data-sign.png'
                     },
                     {
                         imageSrc:'main.jpg',
                         title:'Спокойствие и связь 27/7',
                         description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
                         sign:'Яна Плотникова, CEO',
-                        signImage:'sign.jpg'
+                        signImage:'data-sign.png'
                     },
                     {
                         imageSrc:'main.jpg',
                         title:'Спокойствие и связь 27/7',
                         description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
                         sign:'Яна Плотникова, CEO',
-                        signImage:'sign.jpg'
+                        signImage:'data-sign.png'
                     }
                 ],
-                parallaxImages:['main.jpg','main.jpg','main.jpg','main.jpg'],
+
+                parallaxImages:['parallax-1.png','parallax-2.png'],
 
                 contentAnnouncements:[
                     {
                         title:'Высокий уровень организации процесса',
                         text:'Мы берем под свой контроль...',
-                        image:['main-page-block-bg0.jpg'],
+                        image:['main-page-image1.png'],
                         url:'/highLevel'
                     },
                     {
                         title:'Высокий уровень организации процесса',
                         text:'Мы берем под свой контроль...',
-                        image:['main-page-block-bg0.jpg'],
+                        image:['main-page-image2.png'],
                         url:'/highLevel2'
                     },
                     {
                         title:'Высокий уровень организации процесса',
                         text:'Мы берем под свой контроль...',
-                        image:['main-page-block-bg0.jpg'],
+                        image:['main-page-image3.png'],
                         url:'/highLevel2'
                     }
                 ]
             };
 
-        }(GB, A9));
+        }(GB));
     </script>
 
 
@@ -219,8 +224,8 @@
 
 </head>
 <body>
-<div class="page">
-
+<div class="page main-page">
+    <div id="mainPage"></div>
 </div>
 </body>
 </html>
