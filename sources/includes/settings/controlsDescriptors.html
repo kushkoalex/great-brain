@@ -1,43 +1,14 @@
 <script type="text/javascript">
-    (function (gb, a9) {
+    (function (gb) {
         var settings = gb.settings,
-                l10n = a9.l10n,
+                //l10n = a9.l10n,
                 controlsDescriptors = settings.controlsDescriptors;
 
         controlsDescriptors.site = {
             urlEM: 'http://eugene-miller.com',
-            contentImagesPath: '../images/content/',
-            contentImagesPathAuthors: '../images/content/authors/',
-            contentImagesPathAuthorsThumb: '../images/content/authors/thumb/',
-            contentImagesPathAuthorsOrig: '../images/content/',
-            contentImagesPathProducts: '../images/content/authors/',
-            contentImagesPathAuthorsAvatar: '../images/content/authors/avatar/',
-            contentImagesPathProductsThumb: '../images/content/authors/thumb/',
-            mainPageSlideTimeout: 10000,
-            mainPageUrl: 'index.html',
-            newsPageUrl: 'news.html',
-            eventsPageUrl: 'events.html',
-            eventDetailsPageUrl: 'event-details.html/{id}',
-            newsDetailsPageUrl: 'news-details.html/{id}',
-            mediaPageUrl: 'media.html',
-            siteContentPageUrl: 'authors.html',
-            contactsPageUrl: 'contacts.html',
-            authorsPageUrl:'authors.html',
-            productsPageUrl:'products.html',
-            joinUsUrl: '#',
-            antiSpamAnswer: '321',
-            authorProductItemsInRowCount:4,
-
-            authorAboutPageUrl:'about-author.html#{artist}',
-            authorEventsPageUrl:'about-events.html#{artist}',
-            authorProductsPageUrl:'author-products.html#{artist}',
-            authorProductsDetailsPageUrl:'author-products.html#{artist}',
-
-            searchFilterUrlArtists:'artists/tags/{tagsId}',
-            searchFilterUrlProducts:'products/tags/{tagsId}'
-
+            mainPageImages:'/images/mainPage/'
         };
 
-    }(GB, A9));
+    }(GB));
 </script>
 
