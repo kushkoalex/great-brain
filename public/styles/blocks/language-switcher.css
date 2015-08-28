@@ -1,0 +1,14 @@
+.language-switcher {
+    font-family: 'Oranienbaum', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 70px;
+    margin-top: 7px;
+    position: absolute;
+}
+
+.language-switcher a {
+    color: #ffffff;
+    padding: 4px;
+}

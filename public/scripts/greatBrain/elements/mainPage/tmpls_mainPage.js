@@ -4,10 +4,12 @@
         l10n = a9.l10n,
         u;
 
-
     tmpls.mainPage = function(){
-        return {c:'content'}
+        return [
+            {c:'main-banner'},
+            tmpls.header(),
+            tmpls.footer()
+        ]
     };
-
 
 }(GB));

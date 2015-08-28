@@ -4,20 +4,28 @@
                 l10n = a9.l10n;
 
         if (!('locale' in settings)) {
-            settings.locale = 'rus';
+            settings.locale = 'ru';
         }
 
         if (!('dictionary' in settings)) {
             settings.dictionary = {
-                copyright: '&copy; {year} Great Brain &mdash; Education Service',
-                emMadeIn: 'Сайт создан в',
-                emStudio: 'Студии Евгения Миллера',
-                tagsFilterReset:'сбросить'
+                ru: {
+                    copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                    emMadeIn: 'Сайт создан в',
+                    emStudio: 'Студии Евгения Миллера',
+                    brainBlogLink:'brain-блог'
+                },
+                en:{
+                    copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                    emMadeIn: 'Made by',
+                    emStudio: 'Eugene Miller Studio',
+                    brainBlogLink:'brain-blog'
+                }
             }
         }
 
         l10n.locale = settings.locale;
-        l10n.dictionary = settings.dictionary;
+        l10n.dictionary = settings.dictionary[settings.locale];
 
     }(GB, A9));
 </script>

@@ -1,9 +1,19 @@
-.page{
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+.page {
     position: relative;
     margin: 0 auto;
-    width: 1000px;
-
-
+    width: 1200px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 
     /*font-family: 'Roboto', sans-serif;  300  Roboto Light  */
 

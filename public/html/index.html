@@ -53,6 +53,10 @@
         <script type="text/javascript" src="../scripts/libs/faith/faith.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/libs/cnCt/cnCt.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/GB.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/footer.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/header.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/mainMenu.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/scrollToTop.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/mainPage.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/tmpls_mainPage.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery-1.11.2.min.js?v=0.0.1"></script>
@@ -63,6 +67,9 @@
 
     <!-- start css template tags -->
         <link rel="stylesheet" type="text/css" href="../styles/default.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/footer.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/header.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/language-switcher.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/index.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../vendor/styles/jquery.bxslider.css?v=0.0.1" media="screen"/>
@@ -100,6 +107,8 @@
 
             settings.currentLanguage = 'ru';
 
+            settings.scrollToTopDuration= 1000;
+
 
     //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
     //        settings.hiddenTokenAPIURL = '/api/user/';
@@ -119,20 +128,28 @@
                     l10n = a9.l10n;
 
             if (!('locale' in settings)) {
-                settings.locale = 'rus';
+                settings.locale = 'ru';
             }
 
             if (!('dictionary' in settings)) {
                 settings.dictionary = {
-                    copyright: '&copy; {year} Great Brain &mdash; Education Service',
-                    emMadeIn: 'Сайт создан в',
-                    emStudio: 'Студии Евгения Миллера',
-                    tagsFilterReset:'сбросить'
+                    ru: {
+                        copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                        emMadeIn: 'Сайт создан в',
+                        emStudio: 'Студии Евгения Миллера',
+                        brainBlogLink:'brain-блог'
+                    },
+                    en:{
+                        copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                        emMadeIn: 'Made by',
+                        emStudio: 'Eugene Miller Studio',
+                        brainBlogLink:'brain-blog'
+                    }
                 }
             }
 
             l10n.locale = settings.locale;
-            l10n.dictionary = settings.dictionary;
+            l10n.dictionary = settings.dictionary[settings.locale];
 
         }(GB, A9));
     </script>
@@ -146,7 +163,10 @@
 
             controlsDescriptors.site = {
                 urlEM: 'http://eugene-miller.com',
-                mainPageImages:'/images/mainPage/'
+                mainPageImages:'/images/mainPage/',
+                googleLink:'https://www.google.com.ua',
+                fbLink:'https://www.facebook.com/',
+                instagramLink:'https://instagram.com/'
             };
 
         }(GB));
