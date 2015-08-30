@@ -10,9 +10,15 @@
             c: 'header-top-line', C: [
                 tmpls.languageSwitcher(),
                 tmpls.blogLink(),
-                tmpls.socials()
+                tmpls.socials(),
+                tmpls.feedbackFormWrapper(),
+                tmpls.searchInput()
             ]
         }
+    };
+
+    tmpls.searchInput = function(){
+        return {e:'input',c:'search-input',a:{placeholder:l10n('searchInputText','firstUpper')}}
     };
 
     tmpls.socials = function () {

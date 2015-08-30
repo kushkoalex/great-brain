@@ -2,8 +2,13 @@ GB.mainPage = function ($parent) {
     var gb = this,
         global = gb.global,
         a9=global.A9,
-        tp = global.cnCt.tp;
+        tp = global.cnCt.tp,
+        build,
+        $feedbackFormWrapper;
 
 
-    tp('mainPage', $parent);
+     build = tp('mainPage', $parent);
+     $feedbackFormWrapper = build.feedbackFormWrapper;
+     gb.feedbackForm($feedbackFormWrapper);
+
 };

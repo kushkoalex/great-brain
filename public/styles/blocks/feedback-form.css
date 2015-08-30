@@ -1,0 +1,130 @@
+.feedback-form-wrapper {
+    position: absolute;
+    left: 50%;
+    margin-left: 200px;
+    margin-top: 10px;
+    /*background-color: red;*/
+}
+
+.feedback-form-wrapper .link {
+    cursor: pointer;
+    height: 13px;
+    /*background-color: #0073b9;*/
+    /*width: 140px;*/
+}
+
+.feedback-form-wrapper .link .arrow {
+    float: left;
+    width: 9px;
+    height: 5px;
+    background: url("../../images/feedback-link-arrow.png") no-repeat;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.feedback-form-wrapper .link .text {
+    float: left;
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-left: 7px;
+}
+
+.feedback-form-content-wrapper {
+    margin-left: -80px;
+    position: relative;
+}
+
+.feedback-form {
+    /*opacity:1;*/
+    /*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";*/
+    /*filter: alpha(opacity=1);*/
+    position: absolute;
+}
+
+.feedback-form.hidden {
+    display: none;
+
+    /*-webkit-transition: opacity 0.5s ease-in-out;*/
+    /*-moz-transition: opacity 0.5s ease-in-out;*/
+    /*-o-transition: opacity 0.5s ease-in-out;*/
+    /*transition: opacity 0.5s ease-in-out;*/
+    /*opacity:0;*/
+    /*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
+    /*filter: alpha(opacity=0);*/
+}
+
+.feedback-form-content-wrapper .triangle {
+    width: 15px;
+    height: 15px;
+    border: 15px solid transparent;
+    border-bottom-color: #ffffff;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -30px;
+    position: absolute;
+}
+
+.feedback-form-content-wrapper .feedback-form-content {
+    width: 295px;
+    /*height: 320px;*/
+    background-color: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+    padding: 30px 30px 20px 30px;
+    text-align: center;
+}
+
+.feedback-form-content-wrapper .feedback-form-content .inner-content {
+    border-top: 1px solid #d6d6d6;
+}
+
+.feedback-form-content-wrapper .feedback-form-content .enter-number-text,
+.feedback-form-content-wrapper .feedback-form-content .call-text
+{
+    font-size: 11px;
+    color: #000000;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.feedback-form-content-wrapper .feedback-form-content .phone-number-container{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.feedback-form-content-wrapper .feedback-form-content .send-btn{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 11px;
+    display: inline-block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    letter-spacing: 1px;
+    padding: 5px 15px 3px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.feedback-form-content-wrapper .feedback-form-content .send-btn.active{
+    background-color: forestgreen;
+}
+
+
+.feedback-form-content-wrapper .feedback-form-content .bottom-pattern
+{
+    width: 234px;
+    height: 37px;
+    background: url("../../images/feedback-panel-bottom-pattern.png") no-repeat;
+    margin-top: 13px;
+}

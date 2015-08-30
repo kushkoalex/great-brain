@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    color: #636363;
+}
+
 .clear {
     clear: both;
 }
