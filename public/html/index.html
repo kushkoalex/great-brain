@@ -110,7 +110,7 @@
 
             settings.currentLanguage = 'ru';
 
-            settings.scrollToTopDuration= 1000;
+            settings.scrollToAnnouncementsDuration= 1000;
 
 
     //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
@@ -145,7 +145,9 @@
                         feedbackFormEnterNumberText:'для быстрой связи введите свой номер телефона и нажмите &laquo;отправить&raquo;:',
                         feedbackFormCallText:'или наберите наш номер быстрой связи:',
                         feedbackFormSendBtn:'отправить',
-                        searchInputText:'поиск по сайту'
+                        searchInputText:'поиск по сайту',
+                        showMoreText:'узнайте<br> о преимуществах',
+                        announcementLinkText:'узнать больше'
                     },
                     en:{
                         copyright: '&copy; {year} Great Brain &mdash; Education Service',
@@ -156,7 +158,9 @@
                         feedbackFormEnterNumberText:'для быстрой связи введите свой номер телефона и нажмите &laquo;отправить&raquo;:',
                         feedbackFormCallText:'или наберите наш номер быстрой связи:',
                         feedbackFormSendBtn:'отправить',
-                        searchInputText:'поиск по сайту'
+                        searchInputText:'поиск по сайту',
+                        showMoreText:'узнайте<br> о преимуществах',
+                        announcementLinkText:'узнать больше'
                     }
                 }
             }
@@ -176,10 +180,12 @@
 
             controlsDescriptors.site = {
                 urlEM: 'http://eugene-miller.com',
-                mainPageImages:'/images/mainPage/',
+                mainPageImages:'../images/mainPage/',
                 googleLink:'https://www.google.com.ua',
                 fbLink:'https://www.facebook.com/',
-                instagramLink:'https://instagram.com/'
+                instagramLink:'https://instagram.com/',
+                mainPageSlideTimeout : 5000
+
             };
 
         }(GB));
@@ -193,25 +199,21 @@
             gb.settings.dataModels.mainPage = {
                 mainBanners:[
                     {
-                        imageSrc:'main.jpg',
+                        imageSrc:'main-banner-image.png',
                         title:'Спокойствие и связь 27/7',
                         description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
                         sign:'Яна Плотникова, CEO',
                         signImage:'data-sign.png'
                     },
                     {
-                        imageSrc:'main.jpg',
-                        title:'Спокойствие и связь 27/7',
-                        description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
-                        sign:'Яна Плотникова, CEO',
-                        signImage:'data-sign.png'
+                        imageSrc:'DSCF0083.jpg',
+                        title:'Glass of wine',
+                        description:'With skyscrapers'
+    //                    signImage:'data-sign.png'
                     },
                     {
-                        imageSrc:'main.jpg',
-                        title:'Спокойствие и связь 27/7',
-                        description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
-                        sign:'Яна Плотникова, CEO',
-                        signImage:'data-sign.png'
+                        imageSrc:'cf93572f62a1d942788687f87af8fcf6.jpg',
+                        title:'Bollywood HD'
                     }
                 ],
 
@@ -220,21 +222,21 @@
                 contentAnnouncements:[
                     {
                         title:'Высокий уровень организации процесса',
-                        text:'Мы берем под свой контроль...',
-                        image:['main-page-image1.png'],
-                        url:'/highLevel'
+                        text:'Мы берем под свой контроль все возможные нюансы: от визового сопровождения и обеспечения всеми необходимыми документами, до получения гражданства и рпзрешения любых форс-мажорных ситуаций по месту обучения',
+                        imageSrc:'main-page-image1.png',
+                        url:'#'
                     },
                     {
                         title:'Высокий уровень организации процесса',
-                        text:'Мы берем под свой контроль...',
-                        image:['main-page-image2.png'],
-                        url:'/highLevel2'
+                        text:'Мы берем под свой контроль все возможные нюансы: от визового сопровождения и обеспечения всеми необходимыми документами, до получения гражданства и рпзрешения любых форс-мажорных ситуаций по месту обучения',
+                        imageSrc:'main-page-image2.png',
+                        url:'#'
                     },
                     {
                         title:'Высокий уровень организации процесса',
-                        text:'Мы берем под свой контроль...',
-                        image:['main-page-image3.png'],
-                        url:'/highLevel2'
+                        text:'Мы берем под свой контроль все возможные нюансы: от визового сопровождения и обеспечения всеми необходимыми документами, до получения гражданства и рпзрешения любых форс-мажорных ситуаций по месту обучения',
+                        imageSrc:'main-page-image3.png',
+                        url:'#'
                     }
                 ]
             };
