@@ -1,0 +1,24 @@
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 118px;
+}
+
+.logo .logo-pattern {
+    /*width: 107px;*/
+    height: 132px;
+    background: url("../../images/logo-big-white-pattern.png") no-repeat center;
+}
+
+.logo .logo-sign {
+    width: 118px;
+    height: 36px;
+    background: url("../../images/logo-big-white-sign.png") no-repeat center;
+    margin-top: 6px;
+}
+
+.logo .logo-sign.fixed{
+    position: fixed;
+    top: 0;
+}

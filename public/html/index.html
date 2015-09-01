@@ -55,14 +55,17 @@
         <script type="text/javascript" src="../scripts/greatBrain/GB.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/footer.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/header.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/logo.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/mainMenu.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/modules/scrollToTop.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/stickyPanels.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/feedbackForm/feedbackForm.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/feedbackForm/tmpls_feedbackForm.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/mainPage.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/tmpls_mainPage.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery-1.11.2.min.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery.bxslider.min.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../vendor/scripts/parallax.min.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/init.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/init.js?v=0.0.1"></script>
     <!-- end script template tags -->
@@ -73,6 +76,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/blocks/footer.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/header.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/language-switcher.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/logo.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/index.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../vendor/styles/jquery.bxslider.css?v=0.0.1" media="screen"/>
@@ -111,6 +115,7 @@
             settings.currentLanguage = 'ru';
 
             settings.scrollToAnnouncementsDuration= 1000;
+            settings.scrollToTopDuration= 1000;
 
 
     //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
@@ -192,7 +197,67 @@
     </script>
 
 
-    <!--include "../includes/settings/dataModels/mainMenu.html"-->
+    <script type="text/javascript">
+        (function (gb) {
+
+            var settings = gb.settings;
+
+            settings.dataModels.mainMenu = [
+                {
+                    id:1,
+                    title: 'виды обучения',
+                    selected: true,
+                    active: false,
+                    hasArrow:true,
+                    url: settings.controlsDescriptors.site.eventsPageUrl //: 'events.html'
+
+                },
+                {
+                    id:2,
+                    title: 'наши услуги',
+                    selected: true,
+                    active: true,
+                    hasArrow:true,
+                    url: settings.controlsDescriptors.site.newsPageUrl //'news.html'
+                },
+                {
+                    id:3,
+                    title: 'каталог учебных<br>заведений',
+                    selected: false,
+                    active: false,
+                    hasArrow:false,
+                    url: settings.controlsDescriptors.site.mediaPageUrl //'media.html'
+                },
+                {
+                    id:4,
+                    title: 'новости и<br>события',
+                    selected: false,
+                    active: false,
+                    hasArrow:false,
+                    url: settings.controlsDescriptors.site.siteContentPageUrl //'partnership.html'
+                },
+                {
+                    id:5,
+                    title: 'наши<br>партнеры',
+                    selected: false,
+                    active: false,
+                    hasArrow:false,
+                    url: settings.controlsDescriptors.site.contactsPageUrl //'contacts.html'
+                },
+                {
+                    id:5,
+                    title: 'контакные<br>сведения',
+                    selected: false,
+                    active: false,
+                    hasArrow:false,
+                    url: settings.controlsDescriptors.site.contactsPageUrl //'contacts.html'
+                }
+            ]
+
+        }(GB));
+    </script>
+
+
     <script type="text/javascript">
         (function (gb) {
 
@@ -217,7 +282,7 @@
                     }
                 ],
 
-                parallaxImages:['parallax-1.png','parallax-2.png'],
+                parallaxImages:['DSCF0083.jpg','cf93572f62a1d942788687f87af8fcf6.jpg'],
 
                 contentAnnouncements:[
                     {

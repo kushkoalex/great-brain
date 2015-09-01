@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    (function (gb) {
+
+        var settings = gb.settings;
+
+        settings.dataModels.mainMenu = [
+            {
+                id:1,
+                title: 'виды обучения',
+                selected: true,
+                active: false,
+                hasArrow:true,
+                url: settings.controlsDescriptors.site.eventsPageUrl //: 'events.html'
+
+            },
+            {
+                id:2,
+                title: 'наши услуги',
+                selected: true,
+                active: true,
+                hasArrow:true,
+                url: settings.controlsDescriptors.site.newsPageUrl //'news.html'
+            },
+            {
+                id:3,
+                title: 'каталог учебных<br>заведений',
+                selected: false,
+                active: false,
+                hasArrow:false,
+                url: settings.controlsDescriptors.site.mediaPageUrl //'media.html'
+            },
+            {
+                id:4,
+                title: 'новости и<br>события',
+                selected: false,
+                active: false,
+                hasArrow:false,
+                url: settings.controlsDescriptors.site.siteContentPageUrl //'partnership.html'
+            },
+            {
+                id:5,
+                title: 'наши<br>партнеры',
+                selected: false,
+                active: false,
+                hasArrow:false,
+                url: settings.controlsDescriptors.site.contactsPageUrl //'contacts.html'
+            },
+            {
+                id:5,
+                title: 'контакные<br>сведения',
+                selected: false,
+                active: false,
+                hasArrow:false,
+                url: settings.controlsDescriptors.site.contactsPageUrl //'contacts.html'
+            }
+        ]
+
+    }(GB));
+</script>
+

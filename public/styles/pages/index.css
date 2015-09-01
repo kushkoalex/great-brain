@@ -139,8 +139,31 @@
 
 }
 
-.parallax img{
-    width: 1200px;
+.main-page-announcements .parallax-window{
+    height: 330px;
 }
 
 
+.scroll-to-top{
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+
+    position: fixed;
+    width: 32px;
+    height: 33px;
+    background: url("../../images/scroll-top.png") no-repeat;
+    top: 500px;
+    margin-left: 1130px;
+    cursor: pointer;
+}
+
+.scroll-to-top.active{
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}

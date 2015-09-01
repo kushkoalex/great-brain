@@ -5,7 +5,7 @@ A9.ready(function (a9, global) {
         //tp = global.cnCt.tp,
         $ = a9.$,
         $mainPage = $('mainPage'),
-        $scrollToTop = $('scrollToTop'),
+        $scrollToTop,
 
 
     //domNodesQuery = a9.$cs('showDetails'),
@@ -20,9 +20,11 @@ A9.ready(function (a9, global) {
         gb.mainPage($mainPage);
     }
 
-
+    $scrollToTop = $('scrollToTop');
     if ($scrollToTop !== null) {
         gb.scrollToTop($scrollToTop);
     }
+
+    gb.stickyPanels();
 
 });

@@ -7,10 +7,17 @@
     tmpls.mainPage = function () {
         return [
             {c: 'main-banner', n: 'mainImageContentWrapper'},
+            tmpls.mainMenu(),
+            tmpls.logo(),
             tmpls.mainPageAnnouncements(),
             tmpls.header(),
-            tmpls.footer()
+            tmpls.footer(),
+            tmpls.scrollToTop()
         ]
+    };
+
+    tmpls.scrollToTop = function(){
+        return{c:'scroll-to-top',a:{id:'scrollToTop'}}
     };
 
     tmpls.mainPageAnnouncements = function () {
@@ -28,8 +35,12 @@
 
             content.push({c: 'clear'});
 
+            //if(parallaxImages[i]){
+            //    content.push({c:'parallax-container',C:{c: 'parallax',C:{e:'img',a:{src:gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]}}}} );
+            //}
+
             if(parallaxImages[i]){
-                content.push({c: 'parallax',C:{e:'img',a:{src:gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]}}});
+                content.push({c: 'parallax-window', a:{'data-parallax':'scroll', 'data-image-src':gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]}});
             }
 
             content.push({c: 'clear'});

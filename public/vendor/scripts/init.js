@@ -1,3 +1,9 @@
+//$(document).ready(function(){
+//    $('.parallax').parallax();
+//});
+//
+
+
 //$(function () {
 //    $('.bxslider').bxSlider({
 //        minSlides: 3,
