@@ -26,6 +26,9 @@ GB.mainPage = function ($parent) {
     build = tp('mainPage', $parent);
     $mainImageContentWrapper = build.mainImageContentWrapper;
 
+
+    gb.popupForm($parent);
+
     $fragment = global.document.createDocumentFragment();
 
     var j=0;

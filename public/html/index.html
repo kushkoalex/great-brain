@@ -63,6 +63,8 @@
         <script type="text/javascript" src="../scripts/greatBrain/elements/feedbackForm/tmpls_feedbackForm.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/mainPage.js?v=0.0.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/tmpls_mainPage.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/popupForm/popupForm.js?v=0.0.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/popupForm/tmpls_popupForm.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery-1.11.2.min.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery.bxslider.min.js?v=0.0.1"></script>
         <script type="text/javascript" src="../vendor/scripts/parallax.min.js?v=0.0.1"></script>
@@ -78,6 +80,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/blocks/language-switcher.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/logo.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.0.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/popup-form.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/index.css?v=0.0.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../vendor/styles/jquery.bxslider.css?v=0.0.1" media="screen"/>
     <!-- end css template tags -->
@@ -152,7 +155,8 @@
                         feedbackFormSendBtn:'отправить',
                         searchInputText:'поиск по сайту',
                         showMoreText:'узнайте<br> о преимуществах',
-                        announcementLinkText:'узнать больше'
+                        announcementLinkText:'узнать больше',
+                        selectEducationCountry:'выберите страну обучения'
                     },
                     en:{
                         copyright: '&copy; {year} Great Brain &mdash; Education Service',
@@ -165,7 +169,8 @@
                         feedbackFormSendBtn:'отправить',
                         searchInputText:'поиск по сайту',
                         showMoreText:'узнайте<br> о преимуществах',
-                        announcementLinkText:'узнать больше'
+                        announcementLinkText:'узнать больше',
+                        selectEducationCountry:'выберите страну обучения'
                     }
                 }
             }
@@ -310,7 +315,18 @@
     </script>
 
 
-    <!--include "../includes/settings/dataModels/events.html"-->
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.educationCountries = [
+                {title:'Швеция',url:'#'},
+                {title:'Великобритания',url:'#'}
+            ];
+
+        }(GB));
+    </script>
+
+
     <!--include "../includes/settings/dataModels/event.html"-->
     <!--include "../includes/settings/dataModels/media.html"-->
     <!--include "../includes/settings/dataModels/news.html"-->

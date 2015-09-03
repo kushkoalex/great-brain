@@ -1,0 +1,27 @@
+.layout {
+    background: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    /*display: none;*/
+    z-index: 10001;
+}
+
+.layout .popup {
+    width: 750px;
+    /*min-height: 600px;*/
+    position: relative;
+    /*background: url("../../images/search-form-bg.png");*/
+    background-color: #ffffff;
+    top: 50%;
+    margin: -300px auto 0;
+    padding: 50px 50px 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+
+

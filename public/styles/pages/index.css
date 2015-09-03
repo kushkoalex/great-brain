@@ -139,12 +139,11 @@
 
 }
 
-.main-page-announcements .parallax-window{
+.main-page-announcements .parallax-window {
     height: 330px;
 }
 
-
-.scroll-to-top{
+.scroll-to-top {
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     -o-transition: opacity 0.5s ease-in-out;
@@ -162,8 +161,58 @@
     cursor: pointer;
 }
 
-.scroll-to-top.active{
+.scroll-to-top.active {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=1);
 }
+
+.select-country-form {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+}
+
+.select-country-form a {
+    color: #2b6d9d;
+}
+
+.select-country-form .frame {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.select-education-country {
+    margin: 120px 0;
+}
+
+.select-education-country .link-container {
+    margin: 10px;
+}
+
+.select-country-form .frame .title-wrapper {
+    margin-top: -20px;
+}
+
+.select-country-form .frame .title-wrapper .title {
+
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 0 26px;
+}
+
+.select-country-form .frame .logo-wrapper {
+    margin-top: -20px;
+}
+
+.select-country-form .frame .logo-wrapper .select-country-form-logo {
+    height: 63px;
+    background: #ffffff url("../../images/select-country-form-logo.png") no-repeat center;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin: -30px auto 0 -50px;
+}
+
