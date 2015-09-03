@@ -17,7 +17,7 @@
 
 
         menuItem = {
-            e: 'li', c:'popup-link', C: {
+            e: 'li', c: 'popup-link', C: {
                 e: 'span', C: [{c: 'arrow'}, {
                     e: 'a',
 
@@ -105,11 +105,13 @@
 
         return {
             c: 'main-menu', a: {id: 'mainMenu'},
-            C: {
-                e: 'ul', C: [
+            C: [
+                {c: 'background-layer'},
+                {
+                    e: 'ul', C: [
                     menuItems
                 ]
-            }
+                }]
         }
     }
 
