@@ -216,3 +216,11 @@
     margin: -30px auto 0 -50px;
 }
 
+.popup-link{
+    cursor: pointer;
+
+}
+
+.popup-link a{
+    text-decoration: underline;
+}

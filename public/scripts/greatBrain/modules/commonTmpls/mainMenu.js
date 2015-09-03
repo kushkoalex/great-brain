@@ -20,7 +20,7 @@
             e: 'li', c:'popup-link', C: {
                 e: 'span', C: [{c: 'arrow'}, {
                     e: 'a',
-                    h: '#',
+
                     H: menuData[0].title
                 }, {c: 'arrow'}]
             }
