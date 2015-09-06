@@ -6,11 +6,11 @@
 
 
     tmpls.popupForm = function () {
-        var educationCountries = gb.settings.dataModels.educationCountries,
+        var educationCountries = gb.settings.dataModels.educationalCountries,
             countriesContent = [];
 
 
-        a9.each(educationCountries, function (country) {
+        a9.each(educationalCountries, function (country) {
             countriesContent.push({c:'link-container', C:{e: 'a', h: country.url, t: country.title}});
         });
 
