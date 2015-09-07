@@ -32,13 +32,7 @@
             else {
                 content.push([tmpls.announcementImage(announcement), tmpls.announcementInfo(announcement)]);
             }
-
             content.push({c: 'clear'});
-
-            //if(parallaxImages[i]){
-            //    content.push({c:'parallax-container',C:{c: 'parallax',C:{e:'img',a:{src:gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]}}}} );
-            //}
-
             if(parallaxImages[i]){
                 content.push({c: 'parallax-window', a:{'data-parallax':'scroll', 'data-image-src':gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]}});
             }

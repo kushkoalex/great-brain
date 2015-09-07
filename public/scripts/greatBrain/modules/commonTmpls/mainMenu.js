@@ -4,7 +4,7 @@
         l10n = a9.l10n,
         u;
 
-    tmpls.mainMenu = function () {
+    tmpls.mainMenu = function (activeMenuItemId) {
         var
             menuData = gb.settings.dataModels.mainMenu,
             menuItems = [],
@@ -16,6 +16,11 @@
 
         for (i = 0; i < menuData.length; i++) {
             menuItemState = menuData[i].state;
+
+            if(activeMenuItemId===i){
+                menuItemState = 'active';
+            }
+
             menuItemClassName = menuItemState;
 
             if (menuData[i].popup) {

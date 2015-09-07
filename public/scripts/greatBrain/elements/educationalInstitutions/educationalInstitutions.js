@@ -7,11 +7,25 @@ GB.educationalInstitutions = function($parent){
         doc = global.document,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
 
-
+        pageData = settings.dataModels.educationalInstitutions,
         build,
+        buildItem,
+        $educationalInstitutionsContentItems,
         $fragment;
 
     build = tp('educationalInstitutions', $parent);
-
+    $educationalInstitutionsContentItems = build.educationalInstitutionsContentItems;
     gb.popupForm($parent);
+
+    $fragment = global.document.createDocumentFragment();
+
+
+    a9.each(pageData,function(dataItem){
+
+        buildItem = tp('educationalInstitutionsContentItem', dataItem, $fragment);
+
+    });
+
+    $educationalInstitutionsContentItems.appendChild($fragment);
+
 };

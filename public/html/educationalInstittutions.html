@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Great Brain &mdash; Education Service</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oranienbaum&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <!-- start script template tags -->
+        <script type="text/javascript" src="../scripts/a9/A9.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.active.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.cursorPosition.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.focusInOutEvents.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.forArguments.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.formatDigit.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.hover.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.inputSelection.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.repeatedInspections.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.request.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.simpleInstancesBinding.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/A9.storeManager.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/DOMClasses.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/DOMDoings.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/DOMEvents.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/DOMSearch.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/JSON.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/PagesManager.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/animation.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/arrayExtedns.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/arrayMap.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/checkPasswordSecurity.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/cookie.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/cssDoings.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/customEvents.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/dates.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/each.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/fns.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/getJSON.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/getPosition.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/initModules.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/keys.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/localization.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/objectExtends.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/pureCSS.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/router.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/sticky.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/stickyPanels.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/storage.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/substrDiff.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/text.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/a9/helpers/viewport.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/libs/awareness/awareness.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/libs/faith/faith.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/libs/cnCt/cnCt.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/GB.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/footer.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/header.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/logo.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/commonTmpls/mainMenu.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/scrollToTop.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/modules/stickyPanels.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/educationalInstitutionDetails/educationalInstitutionDetails.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/educationalInstitutionDetails/tmpls_educationalInstitutionDetails.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/educationalInstitutions/educationalInstitutions.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/educationalInstitutions/tmpls_educationalInstitutions.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/feedbackForm/feedbackForm.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/feedbackForm/tmpls_feedbackForm.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/mainPage.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/mainPage/tmpls_mainPage.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/popupForm/popupForm.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/popupForm/tmpls_popupForm.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../vendor/scripts/jquery-1.11.2.min.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../vendor/scripts/jquery.bxslider.min.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../vendor/scripts/parallax.min.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../vendor/scripts/init.js?v=0.0.2"></script>
+        <script type="text/javascript" src="../scripts/init.js?v=0.0.2"></script>
+    <!-- end script template tags -->
+
+    <!-- start css template tags -->
+        <link rel="stylesheet" type="text/css" href="../styles/default.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/common.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/feedback-form.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/footer.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/header.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/language-switcher.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/logo.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/blocks/popup-form.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/pages/index.css?v=0.0.2" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../vendor/styles/jquery.bxslider.css?v=0.0.2" media="screen"/>
+    <!-- end css template tags -->
+
+    <script type="text/javascript">
+        (function (gb) {
+            var settings;
+            if (gb.settings === null) {
+                gb.settings = settings = {};
+            } else {
+                settings = gb.settings;
+            }
+
+            if (!('controlsDescriptors' in settings)) {
+                settings.controlsDescriptors = {};
+            }
+
+            if (!('dataModels' in settings)) {
+                settings.dataModels = {};
+            }
+
+            if (!('languages' in settings)) {
+                settings.languages = [
+                    {
+                        code: 'ru',
+                        label: 'ru'
+                    },
+                    {
+                        code: 'en',
+                        label: 'eng'
+                    }
+                ];
+            }
+
+            settings.currentLanguage = 'ru';
+
+            settings.scrollToAnnouncementsDuration= 1000;
+            settings.scrollToTopDuration= 1000;
+
+
+    //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
+    //        settings.hiddenTokenAPIURL = '/api/user/';
+    //        settings.hiddenTokenDestructAPIURL = '/api/user/';
+    //
+    //        settings.dataPaths = {
+    //            mfo: '/data/ukrainianMFO.json',
+    //            countryCode: '/data/countryCode.json'
+    //        }
+
+        }(GB));
+    </script>
+
+    <script type="text/javascript">
+        (function (gb, a9) {
+            var settings = gb.settings,
+                    l10n = a9.l10n;
+
+            if (!('locale' in settings)) {
+                settings.locale = 'ru';
+            }
+
+            if (!('dictionary' in settings)) {
+                settings.dictionary = {
+                    ru: {
+                        copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                        emMadeIn: 'Сайт создан в',
+                        emStudio: 'Студии Евгения Миллера',
+                        brainBlogLink:'brain-блог',
+                        feedbackLinkText:'связаться быстро',
+                        feedbackFormEnterNumberText:'для быстрой связи введите свой номер телефона и нажмите &laquo;отправить&raquo;:',
+                        feedbackFormCallText:'или наберите наш номер быстрой связи:',
+                        feedbackFormSendBtn:'отправить',
+                        searchInputText:'поиск по сайту',
+                        showMoreText:'узнайте<br> о преимуществах',
+                        announcementLinkText:'узнать больше',
+                        selectEducationCountry:'выберите страну обучения'
+                    },
+                    en:{
+                        copyright: '&copy; {year} Great Brain &mdash; Education Service',
+                        emMadeIn: 'Made by',
+                        emStudio: 'Eugene Miller Studio',
+                        brainBlogLink:'brain-blog',
+                        feedbackLinkText:'связаться быстро',
+                        feedbackFormEnterNumberText:'для быстрой связи введите свой номер телефона и нажмите &laquo;отправить&raquo;:',
+                        feedbackFormCallText:'или наберите наш номер быстрой связи:',
+                        feedbackFormSendBtn:'отправить',
+                        searchInputText:'поиск по сайту',
+                        showMoreText:'узнайте<br> о преимуществах',
+                        announcementLinkText:'узнать больше',
+                        selectEducationCountry:'выберите страну обучения'
+                    }
+                }
+            }
+
+            l10n.locale = settings.locale;
+            l10n.dictionary = settings.dictionary[settings.locale];
+
+        }(GB, A9));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+            var settings = gb.settings,
+                    //l10n = a9.l10n,
+                    controlsDescriptors = settings.controlsDescriptors;
+
+            controlsDescriptors.site = {
+                urlEM: 'http://eugene-miller.com',
+                mainPageImages:'../images/mainPage/',
+                googleLink:'https://www.google.com.ua',
+                fbLink:'https://www.facebook.com/',
+                instagramLink:'https://instagram.com/',
+                mainPageSlideTimeout : 5000,
+
+                educationalTypesUrl:'/',
+                servicesUrl:'/',
+                educationalInstitutionsCatalogueUrl:'/',
+                newsUrl:'/',
+                partnersUrl:'/',
+                contactsUrl:'/'
+            };
+
+        }(GB));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+
+            var settings = gb.settings;
+
+            settings.dataModels.mainMenu = [
+                {
+                    id: 1,
+                    title: 'виды обучения',
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: true
+                },
+                {
+                    id: 2,
+                    title: 'наши услуги',
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: true,
+                    url: settings.controlsDescriptors.site.servicesUrl //'news.html'
+                },
+                {
+                    id: 3,
+                    title: 'каталог учебных<br>заведений',
+                    state: 'plain', // 'active', 'activeClickable'
+                    hasArrow: false,
+                    url: settings.controlsDescriptors.site.educationalInstitutionsCatalogueUrl //'media.html'
+                },
+                {
+                    id: 4,
+                    title: 'новости и<br>события',
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: false,
+                    url: settings.controlsDescriptors.site.newsUrl //'partnership.html'
+                },
+                {
+                    id: 5,
+                    title: 'наши<br>партнеры',
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: false,
+                    url: settings.controlsDescriptors.site.partnersUrl //'contacts.html'
+                },
+                {
+                    id: 5,
+                    title: 'контакные<br>сведения',
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: false,
+                    url: settings.controlsDescriptors.site.contactsUrl //'contacts.html'
+                }
+            ]
+
+        }(GB));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.mainPage = {
+                mainBanners:[
+                    {
+                        imageSrc:'main-banner-image.png',
+                        title:'Спокойствие и связь 27/7',
+                        description:'Мы на связи с Вами и Вашим ребенком действительно ежечасно и по-настоящему круглосуточно — это один из основных принципов нашей работы',
+                        sign:'Яна Плотникова, CEO',
+                        signImage:'data-sign.png'
+                    },
+                    {
+                        imageSrc:'DSCF0083.jpg',
+                        title:'Glass of wine',
+                        description:'With skyscrapers'
+    //                    signImage:'data-sign.png'
+                    },
+                    {
+                        imageSrc:'cf93572f62a1d942788687f87af8fcf6.jpg',
+                        title:'Bollywood HD'
+                    }
+                ],
+
+                parallaxImages:['DSCF0083.jpg','cf93572f62a1d942788687f87af8fcf6.jpg'],
+
+                contentAnnouncements:[
+                    {
+                        title:'Высокий уровень организации процесса',
+                        text:'Мы берем под свой контроль все возможные нюансы: от визового сопровождения и обеспечения всеми необходимыми документами, до получения гражданства и рпзрешения любых форс-мажорных ситуаций по месту обучения',
+                        imageSrc:'main-page-image1.png',
+                        url:'#'
+                    },
+                    {
+                        title:'Высокий уровень организации процесса',
+                        text:'Мы берем под свой контроль все возможные нюансы: от визового сопровождения и обеспечения всеми необходимыми документами, до получения гражданства и рпзрешения любых форс-мажорных ситуаций по месту обучения',
+                        imageSrc:'main-page-image2.png',
+                        url:'#'
+                    },
+                    {
+                        title:'Высокий уровень организации процесса',
+                        text:'Мы берем под свой контроль все возможные нюансы: от визового сопровождения и обеспечения всеми необходимыми документами, до получения гражданства и рпзрешения любых форс-мажорных ситуаций по месту обучения',
+                        imageSrc:'main-page-image3.png',
+                        url:'#'
+                    }
+                ]
+            };
+
+        }(GB));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.educationalCountries = [
+                {title:'Швеция',url:'#'},
+                {title:'Великобритания',url:'#'}
+            ];
+
+        }(GB));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.educationalInstitutions = [
+                {
+                    title:'Abbotsholme School',
+                    titleEng:'Abbotsholme School',
+                    location:'Rochester, Great Britain',
+                    gender:'both',
+                    type:'school',
+                    logoSrc:'',
+                    previewImageSrc:'',
+                    address:'',
+                    mapLocation:'',
+                    minAge:'',
+                    yearOfFoundation:1889,
+                    numberOfStudents:280,
+                    rector:'Стив Фэирклоу',
+                    contacts:'',
+                    description:'',
+                    createDate:''
+                }
+            ];
+
+        }(GB));
+    </script>
+
+
+    <!--include "../includes/settings/dataModels/media.html"-->
+    <!--include "../includes/settings/dataModels/news.html"-->
+    <!--include "../includes/settings/dataModels/authors.html"-->
+    <!--include "../includes/settings/dataModels/author.html"-->
+    <!--include "../includes/settings/dataModels/products.html"-->
+    <!--include "../includes/settings/dataModels/newsDetails.html"-->
+    <!--include "../includes/settings/dataModels/siteContent.html"-->
+    <!--include "../includes/settings/dataModels/searchForm.html"-->
+    <!--include "../includes/settings/dataModels/currentTags.html"-->
+
+</head>
+<body>
+<div class="page">
+    <div id="educationalInstitutions"></div>
+</div>
+</body>
+</html>

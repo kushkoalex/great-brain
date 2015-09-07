@@ -1,7 +1,11 @@
 .header-top-line {
     height: 31px;
-    width: 100%;
+    position: relative;
+}
+
+.main-page .header-top-line{
     position: absolute;
+    width: 100%;
     top: 0;
 }
 
@@ -90,4 +94,12 @@
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color:    #e5e5e5;
+}
+
+
+
+.header-bottom-line{
+    height: 185px;
+    background: #2b6d9d url("../../images/menu-layer1.png") no-repeat;
+    background-size: cover;
 }

@@ -5,17 +5,26 @@
     width: 118px;
 }
 
+
+
 .logo .logo-pattern {
-    /*width: 107px;*/
     height: 132px;
+    background: url("../../images/logo-big-black-pattern.png") no-repeat center;
+}
+
+.main-page .logo .logo-pattern{
     background: url("../../images/logo-big-white-pattern.png") no-repeat center;
 }
 
 .logo .logo-sign {
     width: 118px;
     height: 36px;
-    background: url("../../images/logo-big-white-sign.png") no-repeat center;
+    background: url("../../images/logo-big-black-sign.png") no-repeat center;
     margin-top: 6px;
+}
+
+.main-page .logo-sign{
+    background: url("../../images/logo-big-white-sign.png") no-repeat center;
 }
 
 .logo .logo-sign.fixed{

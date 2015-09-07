@@ -1,7 +1,9 @@
 <script type="text/javascript">
     (function (gb) {
 
-        var settings = gb.settings;
+        var settings = gb.settings,
+                descriptors = settings.controlsDescriptors.site;
+
 
         settings.dataModels.mainMenu = [
             {
@@ -15,35 +17,35 @@
                 title: 'наши услуги',
                 state: 'plain', // 'active', 'activeClickable'
                 popup: true,
-                url: settings.controlsDescriptors.site.servicesUrl //'news.html'
+                url: descriptors.servicesUrl //'news.html'
             },
             {
                 id: 3,
                 title: 'каталог учебных<br>заведений',
                 state: 'plain', // 'active', 'activeClickable'
                 hasArrow: false,
-                url: settings.controlsDescriptors.site.educationalInstitutionsCatalogueUrl //'media.html'
+                url: descriptors.educationalInstitutionsCatalogueUrl //'media.html'
             },
             {
                 id: 4,
                 title: 'новости и<br>события',
                 state: 'plain', // 'active', 'activeClickable'
                 popup: false,
-                url: settings.controlsDescriptors.site.newsUrl //'partnership.html'
+                url: descriptors.newsUrl //'partnership.html'
             },
             {
                 id: 5,
                 title: 'наши<br>партнеры',
                 state: 'plain', // 'active', 'activeClickable'
                 popup: false,
-                url: settings.controlsDescriptors.site.partnersUrl //'contacts.html'
+                url: descriptors.partnersUrl //'contacts.html'
             },
             {
                 id: 5,
                 title: 'контакные<br>сведения',
                 state: 'plain', // 'active', 'activeClickable'
                 popup: false,
-                url: settings.controlsDescriptors.site.contactsUrl //'contacts.html'
+                url: descriptors.contactsUrl //'contacts.html'
             }
         ]
 

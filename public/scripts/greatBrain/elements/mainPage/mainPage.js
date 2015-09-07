@@ -40,7 +40,6 @@ GB.mainPage = function ($parent) {
     });
 
     var sm = tp('showMore',$fragment);
-
     a9.addEvent(sm.r, eventOnPointerEnd, showDetails);
 
     function showDetails() {
