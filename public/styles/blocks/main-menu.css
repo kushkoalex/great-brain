@@ -72,6 +72,7 @@
 }
 
 .main-menu ul li .arrow{
+    display: none;
     width: 9px;
     height: 5px;
     margin: 0 5px;
@@ -80,5 +81,21 @@
 
 .main-menu ul li a{
     color: #ffffff;
-
 }
+
+.main-menu ul li.popup-link .arrow{
+    display: inline-block;
+}
+
+.main-menu ul li.active,
+.main-menu ul li.activeClickable a
+{
+    color: #f26522;
+}
+
+.main-menu ul li.active,
+.main-menu ul li.activeClickable{
+    border-bottom: 3px solid #f26522;
+    height: 37px;
+}
+

@@ -6,7 +6,7 @@
 
 
     tmpls.popupForm = function () {
-        var educationCountries = gb.settings.dataModels.educationalCountries,
+        var educationalCountries = gb.settings.dataModels.educationalCountries,
             countriesContent = [];
 
 

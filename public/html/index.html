@@ -194,8 +194,14 @@
                 googleLink:'https://www.google.com.ua',
                 fbLink:'https://www.facebook.com/',
                 instagramLink:'https://instagram.com/',
-                mainPageSlideTimeout : 5000
+                mainPageSlideTimeout : 5000,
 
+                educationalTypesUrl:'/',
+                servicesUrl:'/',
+                educationalInstitutionsCatalogueUrl:'/',
+                newsUrl:'/',
+                partnersUrl:'/',
+                contactsUrl:'/'
             };
 
         }(GB));
@@ -209,53 +215,45 @@
 
             settings.dataModels.mainMenu = [
                 {
-                    id:1,
+                    id: 1,
                     title: 'виды обучения',
-                    selected: true,
-                    active: false,
-                    hasArrow:true,
-                    url: settings.controlsDescriptors.site.eventsPageUrl //: 'events.html'
-
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: true
                 },
                 {
-                    id:2,
+                    id: 2,
                     title: 'наши услуги',
-                    selected: true,
-                    active: true,
-                    hasArrow:true,
-                    url: settings.controlsDescriptors.site.newsPageUrl //'news.html'
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: true,
+                    url: settings.controlsDescriptors.site.servicesUrl //'news.html'
                 },
                 {
-                    id:3,
+                    id: 3,
                     title: 'каталог учебных<br>заведений',
-                    selected: false,
-                    active: false,
-                    hasArrow:false,
-                    url: settings.controlsDescriptors.site.mediaPageUrl //'media.html'
+                    state: 'plain', // 'active', 'activeClickable'
+                    hasArrow: false,
+                    url: settings.controlsDescriptors.site.educationalInstitutionsCatalogueUrl //'media.html'
                 },
                 {
-                    id:4,
+                    id: 4,
                     title: 'новости и<br>события',
-                    selected: false,
-                    active: false,
-                    hasArrow:false,
-                    url: settings.controlsDescriptors.site.siteContentPageUrl //'partnership.html'
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: false,
+                    url: settings.controlsDescriptors.site.newsUrl //'partnership.html'
                 },
                 {
-                    id:5,
+                    id: 5,
                     title: 'наши<br>партнеры',
-                    selected: false,
-                    active: false,
-                    hasArrow:false,
-                    url: settings.controlsDescriptors.site.contactsPageUrl //'contacts.html'
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: false,
+                    url: settings.controlsDescriptors.site.partnersUrl //'contacts.html'
                 },
                 {
-                    id:5,
+                    id: 5,
                     title: 'контакные<br>сведения',
-                    selected: false,
-                    active: false,
-                    hasArrow:false,
-                    url: settings.controlsDescriptors.site.contactsPageUrl //'contacts.html'
+                    state: 'plain', // 'active', 'activeClickable'
+                    popup: false,
+                    url: settings.controlsDescriptors.site.contactsUrl //'contacts.html'
                 }
             ]
 
@@ -327,7 +325,34 @@
     </script>
 
 
-    <!--include "../includes/settings/dataModels/event.html"-->
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.educationallInstitutions = [
+                {
+                    title:'Abbotsholme School',
+                    titleEng:'Abbotsholme School',
+                    location:'Rochester, Great Britain',
+                    gender:'both',
+                    type:'school',
+                    logoSrc:'',
+                    previewImageSrc:'',
+                    address:'',
+                    mapLocation:'',
+                    minAge:'',
+                    yearOfFoundation:1889,
+                    numberOfStudents:280,
+                    rector:'Стив Фэирклоу',
+                    contacts:'',
+                    description:'',
+                    createDate:''
+                }
+            ];
+
+        }(GB));
+    </script>
+
+
     <!--include "../includes/settings/dataModels/media.html"-->
     <!--include "../includes/settings/dataModels/news.html"-->
     <!--include "../includes/settings/dataModels/authors.html"-->
