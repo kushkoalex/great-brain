@@ -65,8 +65,9 @@
     tmpls.announcementImage = function (announcement) {
         return {
             c: 'announcement-image',
-            e: 'img',
-            a: {src: gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc}
+            //e: 'img',
+            //a: {src: gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc}
+            a:{style:'background-image:url('+gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc+')'}
         }
     };
 
@@ -102,7 +103,9 @@
         return {
             c: 'main-image-content', C: [
                 {
-                    e: 'img', c: 'banner', a: {src: controlsDescriptors.site.mainPageImages + mainBanner.imageSrc}
+                    //e: 'img',
+                    c: 'banner', //a: {src: controlsDescriptors.site.mainPageImages + mainBanner.imageSrc}
+                    a:{style:'background-image:url('+controlsDescriptors.site.mainPageImages + mainBanner.imageSrc+')'}
                 },
                 {
                     c: 'main-page-info-wrapper', C: content

@@ -1,12 +1,13 @@
 .main-banner {
-    width: 1200px;
+    /*width: 1200px;*/
     height: 670px;
     /*background: url("../../images/mainPage/main-banner-image.png");*/
 }
 
 .main-banner .main-image-content {
     position: absolute;
-
+    width: 100%;
+    height: 670px;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -14,13 +15,14 @@
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
-
 }
 
-.main-banner .main-image-content img.banner {
+.main-banner .main-image-content .banner {
     position: absolute;
-    width: 1200px;
+    width: 100%;
+    /*width: 1200px;*/
     height: 670px;
+    background-size: cover;
 }
 
 .main-banner .main-image-content.active {
@@ -74,8 +76,10 @@
 
 .show-more {
     position: absolute;
+
     margin-top: 550px;
-    margin-left: 540px;
+    left: 50%;
+    margin-left: -60px;
     padding-top: 1px;
     z-index: 10000;
     text-align: center;
@@ -94,9 +98,14 @@
 .announcement-info,
 .announcement-image {
     float: left;
-    width: 600px;
+    width: 50%;
     height: 679px;
 }
+
+.announcement-image{
+    background-size: cover;
+}
+
 
 .announcement-info {
     text-align: center;
@@ -157,7 +166,7 @@
     height: 33px;
     background: url("../../images/scroll-top.png") no-repeat;
     top: 500px;
-    margin-left: 1130px;
+    right: 40px;
     cursor: pointer;
 }
 

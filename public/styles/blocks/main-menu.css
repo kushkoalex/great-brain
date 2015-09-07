@@ -40,12 +40,13 @@
 {
     position: fixed;
     top: 0;
-    width: 1200px;
+    /*width: 1200px;*/
 }
 
 .main-menu ul{
     position: absolute;
-    width: 1050px;
+    /*width: 1050px;*/
+    right: 0;
     left: 150px;
     text-align: center;
     margin-top: 10px;
@@ -56,6 +57,7 @@
     display: inline-block;
     list-style: none;
     /*width: 145px;*/
+
     margin: 0 30px;
 
     vertical-align: top;
