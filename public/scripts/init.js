@@ -5,6 +5,7 @@ A9.ready(function (a9, global) {
         //tp = global.cnCt.tp,
         $ = a9.$,
         $mainPage = $('mainPage'),
+        $educationalInstitutions = $('educationalInstitutions'),
         $scrollToTop,
 
 
@@ -19,6 +20,12 @@ A9.ready(function (a9, global) {
     if ($mainPage !== null) {
         gb.mainPage($mainPage);
     }
+
+    if ($educationalInstitutions !== null) {
+        gb.educationalInstitutions($educationalInstitutions);
+    }
+
+
 
     $scrollToTop = $('scrollToTop');
     if ($scrollToTop !== null) {
