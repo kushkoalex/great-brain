@@ -1,0 +1,74 @@
+.banners {
+    text-align: center;
+    vertical-align: top;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.banners a {
+    text-decoration: none;
+}
+
+.banners img,
+.banners .image
+{
+    height: 170px;
+}
+
+.banners .banner {
+    display: inline-block;
+    width: 380px;
+    margin: 25px;
+    text-align: left;
+    position: relative;
+
+}
+
+.banners .banner .title {
+    color: #ffffff;
+    /*height: 35px;*/
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.3);
+    /*background-color: black;*/
+    /*margin-top: -35px;*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+
+.banners .banner .caption {
+    display: inline-block;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px;
+    height: 22px;
+    letter-spacing: 1px;
+}
+
+.banners .banner.blog .caption {
+    background-color: #255487;
+
+}
+
+.banners .banner.specialOffer .caption,
+.banners .banner.specialOffer .title {
+    background-color: #559e0e;
+}
+
+.banners .banner.news .caption {
+    background-color: #ff621f;
+}
+
+.banners .banner.default .caption {
+
+}
+
+
+

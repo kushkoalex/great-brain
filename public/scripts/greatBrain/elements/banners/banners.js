@@ -1,0 +1,3 @@
+GB.banners = function($parent){
+
+};

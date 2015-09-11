@@ -10,7 +10,8 @@
             tmpls.header(),
             tmpls.headerBottom(),
             tmpls.educationalInstitutionsContent(),
-            //tmpls.paging(),
+            tmpls.paging(),
+            tmpls.banners(),
             tmpls.footer(),
             tmpls.mainMenu(2),
             tmpls.logo()
