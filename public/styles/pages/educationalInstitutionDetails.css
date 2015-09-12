@@ -44,6 +44,7 @@
 
 .educational-institution-details-info-wrapper{
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .educational-institution-details-carousel
@@ -67,25 +68,24 @@
     text-align: left;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+
 }
 
 .educational-institution-details-info-container{
     margin-right: 100px;
-    height: 200px;
     background-color: #fafafa;
-    padding: 50px 30px;
+    padding: 40px 30px;
     font-style: italic;
     font-family: 'Lato', sans-serif;
 }
 
 .educational-institution-details-info-container-description{
     margin-right: 100px;
-    height: 200px;
     padding: 30px 30px;
-
     font-weight: 300;
     font-size: 15px;
     color: #555555;
+    line-height: 27px;
 }
 
 .educational-institution-details-info-container span.label{
@@ -100,4 +100,18 @@ font-family: 'Roboto', sans-serif;
     font-style: normal;
     padding-left: 55px;
     font-size: 14px;
+}
+
+.educational-institution-details-info-container .line,
+.educational-institution-details-info-container .email,
+.educational-institution-details-info-container .website
+{
+    margin-top: 10px;
+}
+
+.educational-institution-details-info-container .email,
+.educational-institution-details-info-container .website{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    /*font-weight: 700;*/
 }

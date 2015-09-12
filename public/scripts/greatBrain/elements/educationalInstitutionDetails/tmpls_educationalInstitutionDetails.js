@@ -56,14 +56,62 @@
             c: 'educational-institution-details-info', C: [
                 {
                     c: 'educational-institution-details-info-container', C: [
-                    {
+                    {c:'line',
                         C: [{
                             e: 'span',
                             c: 'label',
                             t: l10n('educationalInstitutionDetailsAddress', 'firstUpper')
                         }, {e: 'span', t: pageData.address}]
                     },
-                    {c: 'show-on-map', e: 'a', h: '#', t:l10n('educationalInstitutionDetailsShowOnMap','firstUpper')}
+                    {c: 'show-on-map', e: 'a', h: '#', t: l10n('educationalInstitutionDetailsShowOnMap', 'firstUpper')},
+                    {c:'line',
+                        C: [{
+                            e: 'span',
+                            c: 'label',
+                            t: l10n('educationalInstitutionDetailsEducation', 'firstUpper')
+                        }, {
+                            e: 'span',
+                            H: l10n('educationalInstitutionDetailsEducationGenderBothShort', 'firstUpper') + a9.supplant(l10n('educationalInstitutionDetailsEducationMinAge'), {age: pageData.minAge})
+                        }]
+                    },
+                    {c:'line',
+                        C: [{
+                            e: 'span',
+                            c: 'label',
+                            t: l10n('educationalInstitutionDetailsYearOfFoundation', 'firstUpper')
+                        }, {e: 'span', t: pageData.yearOfFoundation}]
+                    },
+                    {c:'line',
+                        C: [{
+                            e: 'span',
+                            c: 'label',
+                            t: l10n('educationalInstitutionDetailsRector', 'firstUpper')
+                        }, {e: 'span', t: pageData.rector}]
+                    },
+                    {c:'line',
+                        C: [
+                            {
+                                e: 'span',
+                                c: 'label',
+                                t: l10n('educationalInstitutionDetailsContacts', 'firstUpper')
+                            },
+                            {e: 'span', t: pageData.contacts},
+                            {
+                                c: 'email',
+                                C: {
+                                    e: 'a',
+                                    h: 'mailto:' + pageData.email,
+                                    t: pageData.email
+                                }
+                            },
+                            {
+                                c: 'website', C: {
+                                e: 'a', h: pageData.website,
+                                t: pageData.website
+                            }
+                            }]
+                    }
+
 
                 ]
                 },
