@@ -3,9 +3,8 @@
     top: 40px;
     left: 40px;
     width: 118px;
+    display: block;
 }
-
-
 
 .logo .logo-pattern {
     height: 132px;
@@ -21,6 +20,7 @@
     height: 36px;
     background: url("../../images/logo-big-black-sign.png") no-repeat center;
     margin-top: 6px;
+    display: block;
 }
 
 .main-page .logo-sign{

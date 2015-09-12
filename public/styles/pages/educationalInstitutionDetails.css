@@ -1,0 +1,103 @@
+.educational-institution-details {
+    text-align: center;
+}
+
+
+.educational-institution-details .educational-institution-details-content-title {
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    margin-top: 45px;
+    font-family: 'Oranienbaum', serif;
+}
+
+.educational-institution-details .educational-institution-details-content-title .educational-institution-details-content-title-caption-wrapper {
+    margin-top: -10px;
+
+}
+
+
+.educational-institution-details .educational-institution-details-content-title .educational-institution-details-content-title-caption-wrapper .educational-institution-details-content-title-caption {
+    display: inline-block;
+    background-color: #ffffff;
+    margin-bottom: -10px;
+    font-size: 15px;
+    padding: 0 16px;
+
+}
+
+.educational-institution-details .educational-institution-details-content-title .educational-institution-name{
+    font-size: 32px;
+    color: #313131;
+    margin: 30px 70px 0;
+}
+.educational-institution-details .educational-institution-details-content-title .educational-institution-name-eng{
+    font-size: 18px;
+    color: #959595;
+    margin-top: 5px;
+}
+
+.educational-institution-logo
+{
+    display: inline-block;
+    margin: 25px 70px 35px;
+}
+
+.educational-institution-details-info-wrapper{
+    margin-top: 50px;
+}
+
+.educational-institution-details-carousel
+{
+    float: left;
+    width: 50%;
+}
+
+.educational-institution-details-carousel-wrapper{
+    background-color: #f26522;
+    width: 597px;
+    height: 495px;
+    float: right;
+    margin-right: 30px;
+}
+
+.educational-institution-details-info{
+    width: 50%;
+    float: left;
+    left: 50%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.educational-institution-details-info-container{
+    margin-right: 100px;
+    height: 200px;
+    background-color: #fafafa;
+    padding: 50px 30px;
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+}
+
+.educational-institution-details-info-container-description{
+    margin-right: 100px;
+    height: 200px;
+    padding: 30px 30px;
+
+    font-weight: 300;
+    font-size: 15px;
+    color: #555555;
+}
+
+.educational-institution-details-info-container span.label{
+    color: #f26e2f;
+    font-style: italic;
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.educational-institution-details-info-container .show-on-map{
+font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    padding-left: 55px;
+    font-size: 14px;
+}

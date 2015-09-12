@@ -48,6 +48,10 @@
     position: relative;
 }
 
+.educational-institutions-catalogue-item a{
+    text-decoration: none;
+}
+
 .educational-institutions-catalogue-item .image-wrapper {
     width: 390px;
     height: 250px;

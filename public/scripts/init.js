@@ -1,11 +1,12 @@
 A9.ready(function (a9, global) {
     var gb = global.GB,
-        //settings = gb.settings,
-        //$body = global.document.body,
-        //tp = global.cnCt.tp,
+    //settings = gb.settings,
+    //$body = global.document.body,
+    //tp = global.cnCt.tp,
         $ = a9.$,
         $mainPage = $('mainPage'),
         $educationalInstitutions = $('educationalInstitutions'),
+        $educationalInstitutionDetails = $('educationalInstitutionDetails'),
         $scrollToTop,
 
 
@@ -25,6 +26,9 @@ A9.ready(function (a9, global) {
         gb.educationalInstitutions($educationalInstitutions);
     }
 
+    if ($educationalInstitutionDetails !== null) {
+        gb.educationalInstitutionDetails($educationalInstitutionDetails);
+    }
 
 
     $scrollToTop = $('scrollToTop');

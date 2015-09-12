@@ -7,13 +7,13 @@
     tmpls.educationalInstitutions = function () {
         return [
 
-            tmpls.header(),
             tmpls.headerBottom(),
             tmpls.educationalInstitutionsContent(),
             tmpls.paging(),
             tmpls.banners(),
             tmpls.footer(),
             tmpls.mainMenu(2),
+            tmpls.header(),
             tmpls.logo()
         ];
     };
@@ -71,15 +71,15 @@
         }
 
 
-        if(isSpecial){
-            itemContent.push({c:'special-offer-title',t:l10n('specialOfferTitle')})
+        if (isSpecial) {
+            itemContent.push({c: 'special-offer-title', t: l10n('specialOfferTitle')})
         }
 
         itemContent.push({
             c: 'image-wrapper',
             C: {
                 e: 'img',
-                a: {src: gb.settings.controlsDescriptors.site.educationalInstitutionsCataloguePreviewImages + dataItem.previewImageSrc}
+                a: {src: gb.settings.controlsDescriptors.site.educationalInstitutionCataloguePreviewImages + dataItem.previewImageSrc}
             }
         });
 
@@ -95,7 +95,8 @@
         });
 
         return {
-            c: itemClassName, C: itemContent
+            c: itemClassName, C: {e: 'a', h:gb.settings.controlsDescriptors.site.educationalInstitutionDetailsUrl, C: itemContent}
+            //c: itemClassName, C: itemContent
         }
     };
 

@@ -6,7 +6,7 @@ GB.educationalInstitutions = function($parent){
         settings = gb.settings,
         doc = global.document,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
-
+        $feedbackFormWrapper,
         pageData = settings.dataModels.educationalInstitutions,
         build,
         buildItem,
@@ -25,6 +25,10 @@ GB.educationalInstitutions = function($parent){
         buildItem = tp('educationalInstitutionsContentItem', dataItem, $fragment);
 
     });
+
+    $feedbackFormWrapper = build.feedbackFormWrapper;
+    gb.feedbackForm($feedbackFormWrapper);
+
 
     $educationalInstitutionsContentItems.appendChild($fragment);
 

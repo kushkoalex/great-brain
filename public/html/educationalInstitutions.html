@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oranienbaum&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700italic,400italic' rel='stylesheet' type='text/css'>
     <!-- start script template tags -->
         <script type="text/javascript" src="../scripts/a9/A9.js?v=0.1.1"></script>
         <script type="text/javascript" src="../scripts/a9/helpers/A9.active.js?v=0.1.1"></script>
@@ -90,6 +91,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/blocks/logo.css?v=0.1.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.1.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/popup-form.css?v=0.1.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/pages/educationalInstitutionDetails.css?v=0.1.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/educationalInstitutions.css?v=0.1.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/index.css?v=0.1.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../vendor/styles/jquery.bxslider.css?v=0.1.1" media="screen"/>
@@ -175,7 +177,11 @@
 
                         bannerBlogCaption:'brain-блог',
                         bannerSpecialOfferCaption:'специальное предложение!',
-                        bannerNewsCaption:'новости'
+                        bannerNewsCaption:'новости',
+
+
+                        educationalInstitutionDetailsAddress:'адрес:',
+                        educationalInstitutionDetailsShowOnMap:'смотреть на карте'
 
                     },
                     en:{
@@ -214,27 +220,32 @@
     <script type="text/javascript">
         (function (gb) {
             var settings = gb.settings,
-                    //l10n = a9.l10n,
+            //l10n = a9.l10n,
                     controlsDescriptors = settings.controlsDescriptors;
 
             controlsDescriptors.site = {
                 urlEM: 'http://eugene-miller.com',
-                mainPageImages:'../images/mainPage/',
-                googleLink:'https://www.google.com.ua',
-                fbLink:'https://www.facebook.com/',
-                instagramLink:'https://instagram.com/',
+                mainPageImages: '../images/mainPage/',
+                googleLink: 'https://www.google.com.ua',
+                fbLink: 'https://www.facebook.com/',
+                instagramLink: 'https://instagram.com/',
+                mainPageUrl: 'index.html',
 
-                mainPageSlideTimeout : 5000,
 
-                educationalTypesUrl:'#',
-                servicesUrl:'#',
-                educationalInstitutionsCatalogueUrl:'educationalInstitutions.html',
-                newsUrl:'#',
-                partnersUrl:'#',
-                contactsUrl:'#',
+                mainPageSlideTimeout: 5000,
 
-                educationalInstitutionsCataloguePreviewImages:'../images/educational-institutions-catalogue/',
-                bannerImages:'../images/banners/'
+                educationalTypesUrl: '#',
+                servicesUrl: '#',
+                educationalInstitutionsCatalogueUrl: 'educationalInstitutions.html',
+                educationalInstitutionDetailsUrl: 'educationalInstitutionDetails.html',
+                newsUrl: '#',
+                partnersUrl: '#',
+                contactsUrl: '#',
+
+                educationalInstitutionCataloguePreviewImages: '../images/educational-institutions-catalogue/',
+                educationalInstitutionDetailsCarouselImages: '../images/educational-institutions-catalogue/',
+                educationalInstitutionDetailsLogo: '../images/educational-institutions-catalogue/logo/',
+                bannerImages: '../images/banners/'
 
             };
 
@@ -508,6 +519,35 @@
                 }
             ];
 
+        }(GB));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.educationalInstitutionDetails =
+                {
+                    title:'Абботсхолмская школа',
+                    titleEng:'Abbotsholme School',
+                    location:'Рочестер, Великобритания',
+                    gender:'both',
+                    type:'school',
+                    previewImageSrc:'educationalInstitutionsCataloguePreviewImage1.png',
+                    address:'Rocester, Uttoxeter Staffordshire, ST14 5BS, United Kingdom',
+                    mapLocation:'',
+                    minAge:'5',
+                    yearOfFoundation:1889,
+                    numberOfStudents:280,
+                    rector:'Стив Фэирклоу',
+                    contacts:'+44 (0) 1889 590217',
+                    email:'admissions@abbotsholme.co.uk',
+                    website:'http://www.abbotsholme.co.uk',
+                    description:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально — купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    createDate:'',
+                    logoImageSrc:'abbotsholme-school-logo.png',
+                    images:['educationalInstitutionDetailsImage.png']
+                };
         }(GB));
     </script>
 

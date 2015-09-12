@@ -9,6 +9,12 @@
     top: 0;
 }
 
+.header-top-line{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
 .main-page .header-top-line {
     background-color: rgba(0, 0, 0, .25);
 }
@@ -99,7 +105,9 @@
 
 
 .header-bottom-line{
-    height: 185px;
+    height: 216px;
     background: #2b6d9d url("../../images/menu-layer1.png") no-repeat;
     background-size: cover;
+    padding-top: 1px;
+
 }

@@ -4,7 +4,7 @@
         l10n = a9.l10n,
         u;
 
-    tmpls.mainMenu = function (activeMenuItemId) {
+    tmpls.mainMenu = function (activeMenuItemId, clickable) {
         var
             menuData = gb.settings.dataModels.mainMenu,
             menuItems = [],
@@ -19,6 +19,9 @@
 
             if(activeMenuItemId===i){
                 menuItemState = 'active';
+                if(clickable===true){
+                    menuItemState = 'activeClickable'
+                }
             }
 
             menuItemClassName = menuItemState;

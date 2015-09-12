@@ -8,7 +8,7 @@
         return [
             {c: 'main-banner', n: 'mainImageContentWrapper'},
             tmpls.mainMenu(),
-            tmpls.logo(),
+            tmpls.logo(true),
             tmpls.mainPageAnnouncements(),
             tmpls.header(),
             tmpls.footer(),
