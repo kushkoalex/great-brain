@@ -7,6 +7,7 @@ A9.ready(function (a9, global) {
         $mainPage = $('mainPage'),
         $educationalInstitutions = $('educationalInstitutions'),
         $educationalInstitutionDetails = $('educationalInstitutionDetails'),
+        $educationKinds = $('educationKinds'),
         $scrollToTop,
 
 
@@ -28,6 +29,10 @@ A9.ready(function (a9, global) {
 
     if ($educationalInstitutionDetails !== null) {
         gb.educationalInstitutionDetails($educationalInstitutionDetails);
+    }
+
+    if ($educationKinds !== null) {
+        gb.educationKinds($educationKinds);
     }
 
 
