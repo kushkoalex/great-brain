@@ -20,9 +20,34 @@
         return {
             c: 'education-kinds-content', C: [
                 tmpls.countrySelector(),
-                tmpls.educationCategoriesMenu()
+                tmpls.educationCategoriesMenu(1),
+                tmpls.categoryContent()
             ]
         }
+    };
+
+    tmpls.categoryContent = function () {
+        var educationKindList = gb.settings.dataModels.educationKinds;
+        return [
+            {
+                c: 'category-content-title', t: educationKindList[0].educationCategories[0].title
+            },
+            {
+                c: 'select-group',t:l10n('selectAgeGroup')
+            },
+            tmpls.categoryContentWrapper()
+        ]
+    };
+
+    tmpls.categoryContentWrapper = function(){
+        return {c:'category-content-wrapper',C:[tmpls.ageGroupSelector()]}
+    };
+
+    tmpls.ageGroupSelector = function(){
+        return {c:'age-group-selector-wrapper',C:{
+                c: 'age-group-selector',
+                C: [{c:'age-group', t:'asd'}, {c: 'triangle'}]
+        }}
     };
 
     tmpls.countrySelector = function () {
@@ -45,16 +70,34 @@
         }
     };
 
-    tmpls.educationCategoriesMenu = function () {
+    tmpls.educationCategoriesMenu = function (activeMenuItemId) {
         var educationKindList = gb.settings.dataModels.educationKinds,
-            educationKinds = [];
+            educationKinds = [],
+            menuItem,
+            i,
+            menuItemClassName,
+            linkContent,
+            menuItemState;
+
 
         a9.each(educationKindList[0].educationCategories, function (category) {
 
-            educationKinds.push({e: 'li', C: [{c: 'title', t: category.title}, {c: 'age', t: category.age}]});
-        });
+            if (activeMenuItemId == category.id) {
+                menuItem = {e: 'li', c: 'active', C: [{c: 'title', t: category.title}, {c: 'age', t: category.age}]};
+            } else {
+                menuItem = {
+                    e: 'li',
+                    C: {
+                        e: 'a',
+                        h: '#',
+                        C: [{c: 'title', e: 'a', h: '#', t: category.title}, {c: 'age', t: category.age}]
+                    }
+                };
+            }
 
-        console.log(educationKindList);
+
+            educationKinds.push(menuItem);
+        });
 
 
         return {c: 'education-category-menu', C: {e: 'ul', C: educationKinds}}
