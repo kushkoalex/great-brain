@@ -41,16 +41,13 @@
 
     tmpls.categoryContentWrapper = function (dataModel) {
         return {
-            c: 'category-content-wrapper', C: [tmpls.ageGroupSelector(),
+            c: 'category-content-wrapper', C: [tmpls.ageGroupSelector(dataModel),
                 tmpls.categoryContentInnerWrapper(dataModel)]
         }
     };
 
 
     tmpls.categoryContentInnerWrapper = function (dataModel) {
-
-        console.log(dataModel);
-
         return {
             c: 'category-content-inner-wrapper', C: [
                 {c: 'image-container',C:[{e:'img',a:{src:gb.settings.controlsDescriptors.site.educationKindsImages+ 'girl-with-books.png'}}]},
@@ -60,11 +57,11 @@
         }
     };
 
-    tmpls.ageGroupSelector = function () {
+    tmpls.ageGroupSelector = function (dataModel) {
         return {
             c: 'age-group-selector-wrapper', C: {
                 c: 'age-group-selector',
-                C: [{c: 'age-group', t: 'asd'}, {c: 'triangle'}]
+                C: [{c: 'age-group', t: dataModel[0].educationCategories[0].ageGroups[0].age}, {c: 'triangle'}]
             }
         }
     };
