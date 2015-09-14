@@ -16,38 +16,57 @@
         ];
     };
 
-    tmpls.educationKindsContent = function (pageData) {
+    tmpls.educationKindsContent = function (dataModel) {
         return {
             c: 'education-kinds-content', C: [
                 tmpls.countrySelector(),
                 tmpls.educationCategoriesMenu(1),
-                tmpls.categoryContent()
+                tmpls.categoryContent(dataModel)
             ]
         }
     };
 
-    tmpls.categoryContent = function () {
+    tmpls.categoryContent = function (dataModel) {
         var educationKindList = gb.settings.dataModels.educationKinds;
         return [
             {
                 c: 'category-content-title', t: educationKindList[0].educationCategories[0].title
             },
             {
-                c: 'select-group',t:l10n('selectAgeGroup')
+                c: 'select-group', t: l10n('selectAgeGroup')
             },
-            tmpls.categoryContentWrapper()
+            tmpls.categoryContentWrapper(dataModel)
         ]
     };
 
-    tmpls.categoryContentWrapper = function(){
-        return {c:'category-content-wrapper',C:[tmpls.ageGroupSelector()]}
+    tmpls.categoryContentWrapper = function (dataModel) {
+        return {
+            c: 'category-content-wrapper', C: [tmpls.ageGroupSelector(),
+                tmpls.categoryContentInnerWrapper(dataModel)]
+        }
     };
 
-    tmpls.ageGroupSelector = function(){
-        return {c:'age-group-selector-wrapper',C:{
+
+    tmpls.categoryContentInnerWrapper = function (dataModel) {
+
+        console.log(dataModel);
+
+        return {
+            c: 'category-content-inner-wrapper', C: [
+                {c: 'image-container',C:[{e:'img',a:{src:gb.settings.controlsDescriptors.site.educationKindsImages+ 'girl-with-books.png'}}]},
+                {c: 'text-container',C:{H:dataModel[0].educationCategories[0].ageGroups[0].text}},
+                {c: 'clear'}
+            ]
+        }
+    };
+
+    tmpls.ageGroupSelector = function () {
+        return {
+            c: 'age-group-selector-wrapper', C: {
                 c: 'age-group-selector',
-                C: [{c:'age-group', t:'asd'}, {c: 'triangle'}]
-        }}
+                C: [{c: 'age-group', t: 'asd'}, {c: 'triangle'}]
+            }
+        }
     };
 
     tmpls.countrySelector = function () {

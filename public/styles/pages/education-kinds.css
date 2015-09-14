@@ -129,9 +129,23 @@
 
     margin: 30px 90px;
 
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
 
-    height: 200px;
+.category-content-inner-wrapper{
+    margin-top: 70px;
+}
+
+.category-content-inner-wrapper .image-container{
+    float: left;
+    width: 460px;
+    height: 500px;
+    margin-top: 60px;
+}
+
+.category-content-inner-wrapper .text-container{
+    margin-left: 470px;
+
 }

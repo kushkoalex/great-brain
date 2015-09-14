@@ -49,7 +49,7 @@
         return {
             c: 'announcement-info', C: [
                 {c: 'title',t:announcement.title},
-                {c:'logo'},
+                {c:'announcement-info-logo'},
                 {c: 'text',t:announcement.text},
                 {e:'a', h:announcement.url, c:'link', t:l10n('announcementLinkText')}
             ]
