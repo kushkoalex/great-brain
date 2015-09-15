@@ -7,6 +7,7 @@ GB.educationalInstitutionDetails = function($parent){
         doc = global.document,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
         $feedbackFormWrapper,
+        $educationalInstitutionDetailsImagesCarousel,
         pageData = settings.dataModels.educationalInstitutionDetails,
         build,
         buildItem,
@@ -15,6 +16,9 @@ GB.educationalInstitutionDetails = function($parent){
 
 
     build = tp('educationalInstitutionDetails', pageData, $parent);
+
+    $educationalInstitutionDetailsImagesCarousel = build.educationalInstitutionDetailsImagesCarousel;
+    a9.imageSlider($educationalInstitutionDetailsImagesCarousel);
     gb.popupForm($parent);
 
     $feedbackFormWrapper = build.feedbackFormWrapper;

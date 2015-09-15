@@ -12,7 +12,7 @@
             tmpls.paging(),
             tmpls.banners(),
             tmpls.footer(),
-            tmpls.mainMenu(4, true),
+            tmpls.mainMenu(3, true),
             tmpls.header(),
             tmpls.logo()
         ];

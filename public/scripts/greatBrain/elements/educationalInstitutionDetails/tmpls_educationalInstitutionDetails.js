@@ -6,7 +6,6 @@
 
     tmpls.educationalInstitutionDetails = function (pageData) {
         return [
-
             tmpls.headerBottom(),
             tmpls.educationalInstitutionDetailsContent(pageData),
             tmpls.paging(),
@@ -51,14 +50,21 @@
     };
 
     tmpls.educationalInstitutionDetailsContentCarousel = function (pageData) {
+        var carousel = {
+            n: 'educationalInstitutionDetailsImagesCarousel',
+            images: pageData.images,
+            imagesPath:gb.settings.controlsDescriptors.site.educationalInstitutionDetailsCarouselImages
+        };
 
         return {
             c: 'educational-institution-details-carousel',
             C: {
-                c: 'educational-institution-details-carousel-wrapper', C: {
-                    e: 'img',
-                    a: {src: gb.settings.controlsDescriptors.site.educationalInstitutionDetailsCarouselImages + pageData.images[0]}
-                }
+                c: 'educational-institution-details-carousel-wrapper', C:
+                    tmpls.imageSlider(carousel)
+                //{
+                //    e: 'img',
+                //    a: {src: gb.settings.controlsDescriptors.site.educationalInstitutionDetailsCarouselImages + pageData.images[0]}
+                //}
             }
         }
     };
