@@ -19,10 +19,22 @@
     };
 
     tmpls.educationalInstitutionDetailsContent = function (pageData) {
+        var
+            dataItem =gb.settings.dataModels.educationalInstitutionDetails,
+            descriptors = gb.settings.controlsDescriptors.site,
+            data = {
+                url: descriptors.educationalInstitutionsCatalogueUrl,
+                urlText:l10n('educationalInstitutionsCatalogueTitle'),
+                title:dataItem.title,
+                subTitle:dataItem.titleEng,
+                logo:descriptors.educationalInstitutionDetailsLogo + dataItem.logoImageSrc
+            };
+
+
         return {
             c: 'educational-institution-details', C: [
-                tmpls.educationalInstitutionDetailsContentTitle(),
-                {c: 'clear'},
+                tmpls.siteContentTitleContainer(data),
+                //{c: 'clear'},
                 tmpls.educationalInstitutionDetailsInfoWrapper(pageData)
             ]
         }
@@ -121,39 +133,7 @@
     };
 
 
-    tmpls.educationalInstitutionDetailsContentTitle = function () {
-        var data = gb.settings.dataModels.educationalInstitutionDetails,
-            controlsDescriptors = gb.settings.controlsDescriptors.site;
 
-
-        return {
-            c: 'educational-institution-details-content-title',
-            C: [
-                {
-                    c: 'educational-institution-details-content-title-caption-wrapper',
-                    C: {
-                        c: 'educational-institution-details-content-title-caption',
-                        C: [{
-                            e: 'a',
-                            h: controlsDescriptors.educationalInstitutionsCatalogueUrl,
-                            t: l10n('educationalInstitutionsCatalogueTitle')
-                        }, {e: 'span', t: ' /'}
-                        ]
-                    }
-                },
-                {
-                    c: 'educational-institution-name', t: data.title
-                },
-                {
-                    c: 'educational-institution-name-eng', t: data.titleEng
-                },
-                {
-                    c: 'educational-institution-logo',
-                    C: {e: 'img', a: {src: controlsDescriptors.educationalInstitutionDetailsLogo + data.logoImageSrc}}
-                }
-            ]
-        }
-    }
 
 
 }(GB));

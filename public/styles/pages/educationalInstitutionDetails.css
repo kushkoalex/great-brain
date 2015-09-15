@@ -3,20 +3,20 @@
 }
 
 
-.educational-institution-details .educational-institution-details-content-title {
+.educational-institution-details .site-content-title {
     display: inline-block;
     border: 1px solid #e5e5e5;
     margin-top: 45px;
     font-family: 'Oranienbaum', serif;
 }
 
-.educational-institution-details .educational-institution-details-content-title .educational-institution-details-content-title-caption-wrapper {
+.educational-institution-details .site-content-title .caption-wrapper {
     margin-top: -10px;
 
 }
 
 
-.educational-institution-details .educational-institution-details-content-title .educational-institution-details-content-title-caption-wrapper .educational-institution-details-content-title-caption {
+.educational-institution-details .site-content-title .caption-wrapper .caption {
     display: inline-block;
     background-color: #ffffff;
     margin-bottom: -10px;
@@ -25,18 +25,18 @@
 
 }
 
-.educational-institution-details .educational-institution-details-content-title .educational-institution-name{
+.educational-institution-details .site-content-title .title{
     font-size: 32px;
     color: #313131;
     margin: 30px 70px 0;
 }
-.educational-institution-details .educational-institution-details-content-title .educational-institution-name-eng{
+.educational-institution-details .site-content-title .sub-title{
     font-size: 18px;
     color: #959595;
     margin-top: 5px;
 }
 
-.educational-institution-logo
+.educational-institution-details .site-content-title .logo
 {
     display: inline-block;
     margin: 25px 70px 35px;
@@ -54,7 +54,6 @@
 }
 
 .educational-institution-details-carousel-wrapper{
-    background-color: #f26522;
     width: 597px;
     height: 495px;
     float: right;
