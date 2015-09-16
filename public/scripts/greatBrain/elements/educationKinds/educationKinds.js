@@ -17,6 +17,9 @@ GB.educationKinds = function($parent){
     build = tp('educationKinds', pageData, $parent);
     gb.popupForm($parent);
 
+
+
+
     $feedbackFormWrapper = build.feedbackFormWrapper;
     gb.feedbackForm($feedbackFormWrapper);
 };

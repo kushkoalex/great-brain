@@ -7,8 +7,7 @@
             selectedIndex = 0,
             eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
             CSSPrevButton = 'slider-prev-button',
-            CSSNextButton = 'slider-next-button',
-            u;
+            CSSNextButton = 'slider-next-button';
 
         var onPrevButtonClick = function () {
             if (selectedIndex == 0) {

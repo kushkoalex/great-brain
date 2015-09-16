@@ -72,6 +72,8 @@
 
 
         countries.push({c: 'country', t: countryList[0].title});
+        //countries.push({c: 'country', t: countryList[0].title});
+        //countries.push({c: 'country', t: countryList[0].title});
 
         //a9.each(countries,function(){
         //$countries.push({})
@@ -80,7 +82,7 @@
         return {
             c: 'country-selector-wrapper',
             C: [{c: 'select-country', t: l10n('selectCountry', 'firstUpper')}, {
-                c: 'country-selector',
+                c: 'dropdown country-selector',
                 C: [countries, {c: 'triangle'}]
             }]
         }
