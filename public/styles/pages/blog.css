@@ -1,0 +1,54 @@
+.blog-list {
+    text-align: center;
+    margin: 0 50px;
+}
+
+.blog-content-title {
+    text-align: center;
+    font-family: 'Oranienbaum', serif;
+    font-size: 43px;
+    margin: 50px auto 20px auto;
+}
+
+.blog-list-content
+{
+    vertical-align: top;
+}
+
+.blog-content-item {
+    font-family: 'Roboto', sans-serif;
+    width: 290px;
+    display: inline-block;
+    margin: 11px;
+    position: relative;
+    padding: 23px;
+    background-color: #fafafa;
+    text-align: left;
+    vertical-align: top;
+}
+
+.blog-content-item .thumb {
+    width: 247px;
+    height: 247px;
+}
+
+
+.blog-content-item .date {
+    font-weight: 300;
+    font-size: 14px;
+    color: #ababab;
+    padding-top: 7px;
+}
+
+.blog-content-item .title {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.blog-content-item .short-description{
+    padding-top: 10px;
+    font-size: 13px;
+    line-height: 20px;
+}

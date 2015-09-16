@@ -66,6 +66,8 @@
         <script type="text/javascript" src="../scripts/greatBrain/modules/stickyPanels.js?v=0.6.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/banners/banners.js?v=0.6.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/banners/tmpls_banners.js?v=0.6.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/blog/blog.js?v=0.6.1"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/blog/tmpls_blog.js?v=0.6.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/educationKinds/educationKinds.js?v=0.6.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/educationKinds/tmpls_educationKinds.js?v=0.6.1"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/educationalInstitutionDetails/educationalInstitutionDetails.js?v=0.6.1"></script>
@@ -101,6 +103,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/blocks/logo.css?v=0.6.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/main-menu.css?v=0.6.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/blocks/popup-form.css?v=0.6.1" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../styles/pages/blog.css?v=0.6.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/education-kinds.css?v=0.6.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/educationalInstitutionDetails.css?v=0.6.1" media="screen"/>
         <link rel="stylesheet" type="text/css" href="../styles/pages/educationalInstitutions.css?v=0.6.1" media="screen"/>
@@ -267,6 +270,8 @@
                 newsDetailsUrl: 'newsDetails.html',
                 partnersUrl: '#',
                 contactsUrl: '#',
+                blogUrl:'blog.html',
+                blogDetailsUrl: 'blog.html',
 
                 educationalInstitutionCataloguePreviewImages: '../images/educational-institutions-catalogue/',
                 educationalInstitutionDetailsCarouselImages: '../images/news/',
@@ -274,8 +279,9 @@
                 educationKindsImages: '../images/education-kinds/',
                 newsImages: '../images/news/',
                 newsThumbnails: '../images/news/thumb/',
+                blogImages: '../images/blog/',
+                blogThumbnails: '../images/blog/thumb/',
                 bannerImages: '../images/banners/'
-
             };
 
         }(GB));
@@ -715,6 +721,72 @@
                     shortDescription:'Несмотря на многочисленные заявления о популярности интернета, мы решились на этот шаг навстречу знаниям и общению!',
                     text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
                     thumb:'news.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                }
+            ];
+
+        }(GB));
+    </script>
+
+
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.blog = [
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих!',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                },
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих!',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                },
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих!',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                },
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! ',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                },
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих!',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                },
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих! Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих!',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
+                    images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
+                },
+                {
+                    date:'16.11.2015',
+                    title:'Обзор важности английских шляп',
+                    shortDescription:'Мнения редакции разошлись в этом вопросе, но данный обзор раскроет тайны успеха многих!',
+                    text:'Библиотека предлагает лицензионные копии, поэтому только часть коллекции бесплатна. Оптимально &mdash; купить абонемент, сообщается на сайте. На особых условиях к фонду могут подключиться вузы и школы',
+                    thumb:'Michael.png',
                     images:['news.png','news1.png','news2.png','news3.png','news4.png','news5.png','news6.png','news7.png']
                 }
             ];

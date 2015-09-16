@@ -35,6 +35,10 @@
 
 }
 
+.blog-link a{
+    color: inherit;
+}
+
 .socials {
     position: absolute;
     left: 50%;

@@ -32,7 +32,7 @@
     };
 
     tmpls.blogLink = function () {
-        return {c: 'blog-link', t: l10n('brainBlogLink')}
+        return {c: 'blog-link', C:{e:'a',h:gb.settings.controlsDescriptors.site.blogUrl, t: l10n('brainBlogLink')} }
     };
 
     tmpls.languageSwitcher = function () {

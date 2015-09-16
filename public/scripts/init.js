@@ -10,6 +10,7 @@ A9.ready(function (a9, global) {
         $educationKinds = $('educationKinds'),
         $news = $('news'),
         $newsDetails = $('newsDetails'),
+        $blog = $('blog'),
         $scrollToTop,
 
 
@@ -43,6 +44,10 @@ A9.ready(function (a9, global) {
 
     if ($newsDetails !== null) {
         gb.newsDetails($newsDetails);
+    }
+
+    if ($blog !== null) {
+        gb.blog($blog);
     }
 
 
