@@ -37,6 +37,13 @@ GB.feedbackForm = function ($parent) {
 
     function onKeyFeedbackFormKeyPress(e) {
         var keyCode = e.keyCode ? e.keyCode : e.which;
+
+
+        if (keyCode == 13 && phoneNumber.length == 12) {
+            submitForm();
+        }
+
+
         //console.log(keyCode);
         //0-9
         if ((keyCode >= 48 && keyCode <= 57 || keyCode >= 96 && keyCode <= 105) && phoneNumber.length < 12) {
@@ -87,8 +94,8 @@ GB.feedbackForm = function ($parent) {
         else if (keyCode == 8 || keyCode == 46) {
             phoneNumber.pop();
         }
-
         renderPhoneNumber();
+        e.preventDefault();
     }
 
 
