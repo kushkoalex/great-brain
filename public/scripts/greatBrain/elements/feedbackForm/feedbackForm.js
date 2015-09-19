@@ -6,12 +6,21 @@ GB.feedbackForm = function ($parent) {
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
         $body = document.body,
         build,
+        $digits,
+        phoneNumber = [],
         $feedbackFormLink,
-        $feedbackForm;
+        $submitButton,
+        $feedbackForm,
+        u;
 
     build = tp('feedbackForm', $parent);
     $feedbackFormLink = build.feedbackFormLink;
     $feedbackForm = build.feedbackFormContent;
+    $submitButton = build.submitButton;
+
+
+    $digits = a9.$c('digit', build.phoneNumber);
+
 
     a9.addEvent($feedbackFormLink, eventOnPointerEnd, feedbackFormLinkClick);
     a9.addEvent($body, eventOnPointerEnd, closeFeedbackForm);
@@ -25,12 +34,104 @@ GB.feedbackForm = function ($parent) {
         }
     }
 
-    function closeFeedbackForm(){
-        a9.addClass($feedbackForm,'hidden');
+
+    function onKeyFeedbackFormKeyPress(e) {
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+        //console.log(keyCode);
+        //0-9
+        if ((keyCode >= 48 && keyCode <= 57 || keyCode >= 96 && keyCode <= 105) && phoneNumber.length < 12) {
+            switch (keyCode) {
+                case 48:
+                case 96:
+                    phoneNumber.push('0');
+                    break;
+                case 49:
+                case 97:
+                    phoneNumber.push('1');
+                    break;
+                case 50:
+                case 98:
+                    phoneNumber.push('2');
+                    break;
+                case 51:
+                case 99:
+                    phoneNumber.push('3');
+                    break;
+                case 52:
+                case 100:
+                    phoneNumber.push('4');
+                    break;
+                case 53:
+                case 101:
+                    phoneNumber.push('5');
+                    break;
+                case 54:
+                case 102:
+                    phoneNumber.push('6');
+                    break;
+                case 55:
+                case 103:
+                    phoneNumber.push('7');
+                    break;
+                case 56:
+                case 104:
+                    phoneNumber.push('8');
+                    break;
+                case 57:
+                case 105:
+                    phoneNumber.push('9');
+                    break;
+            }
+        }
+        // backspase, delete
+        else if (keyCode == 8 || keyCode == 46) {
+            phoneNumber.pop();
+        }
+
+        renderPhoneNumber();
     }
 
-    function showFeedbackForm(){
-        a9.removeClass($feedbackForm,'hidden');
+
+    function renderPhoneNumber() {
+        for (var i = 0; i < $digits.length; i++) {
+            if (phoneNumber[i] !== u) {
+                a9.addClass($digits[i], 'active');
+                $digits[i].innerText = phoneNumber[i];
+            }
+            else {
+                a9.removeClass($digits[i], 'active');
+                $digits[i].innerText = '0';
+            }
+        }
+
+        if (phoneNumber.length === 12) {
+            a9.addClass($submitButton, 'active');
+
+        } else {
+            a9.removeClass($submitButton, 'active');
+
+        }
+    }
+
+
+    a9.addEvent($submitButton, eventOnPointerEnd, submitForm);
+
+
+    function submitForm() {
+        if (phoneNumber.length === 12) {
+            //a9.request();
+            closeFeedbackForm();
+        }
+    }
+
+    function closeFeedbackForm() {
+        a9.addClass($feedbackForm, 'hidden');
+        a9.removeEvent($body, 'keydown', onKeyFeedbackFormKeyPress);
+    }
+
+    function showFeedbackForm() {
+        a9.removeClass($feedbackForm, 'hidden');
+        a9.addEvent($body, 'keydown', onKeyFeedbackFormKeyPress);
     }
 
     function feedbackFormLinkClick(e) {
