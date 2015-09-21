@@ -4,6 +4,7 @@ GB.popupForm = function($parent){
         a9 = global.A9,
         tp = global.cnCt.tp,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
+        $body = document.body,
         settings = gb.settings,
         $popuplink,
         $layout,
@@ -22,7 +23,15 @@ GB.popupForm = function($parent){
     $popuplink = a9.$c($popuoClassName)[0];
 
     a9.addEvent($layout, eventOnPointerEnd, function(){
-        this.style.display ='none';
+        $layout.style.display ='none';
+    });
+
+    a9.addEvent($body,'keydown',function(e){
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+        // esc
+        if(keyCode==27){
+            $layout.style.display ='none';
+        }
     });
 
     a9.addEvent($popup, 'click', function(e){

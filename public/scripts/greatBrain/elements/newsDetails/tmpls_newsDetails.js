@@ -19,9 +19,8 @@
     };
 
 
-    tmpls.newsDetailsContent = function (pageData) {
+    tmpls.newsDetailsContent = function (newsItem) {
         var
-            newsItem = gb.settings.dataModels.news[0],
             descriptors = gb.settings.controlsDescriptors.site,
             data = {
                 url: descriptors.newsUrl,
@@ -33,7 +32,7 @@
         return {
             c: 'news-details-content', C: [
                 tmpls.siteContentTitleContainer(data),
-                tmpls.newsDetailsInfoWrapper(pageData)
+                tmpls.newsDetailsInfoWrapper(newsItem)
             ]
         }
 

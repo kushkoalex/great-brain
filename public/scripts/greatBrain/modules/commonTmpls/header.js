@@ -5,11 +5,12 @@
         u;
 
 
-    tmpls.header = function () {
+    tmpls.header = function (showBlog,showRoadMap) {
         return {
             c: 'header-top-line', C: [
                 tmpls.languageSwitcher(),
-                tmpls.blogLink(),
+                tmpls.roadMapLink(showRoadMap),
+                tmpls.blogLink(showBlog),
                 tmpls.socials(),
                 tmpls.feedbackFormWrapper(),
                 tmpls.searchInput()
@@ -31,8 +32,18 @@
         }
     };
 
-    tmpls.blogLink = function () {
-        return {c: 'blog-link', C:{e:'a',h:gb.settings.controlsDescriptors.site.blogUrl, t: l10n('brainBlogLink')} }
+    tmpls.blogLink = function (current) {
+        if(current===true){
+            return {c: 'blog-link', C:{H: l10n('brainBlogLink')} }
+        }
+        return {c: 'blog-link', C:{e:'a',h:gb.settings.controlsDescriptors.site.blogUrl, H: l10n('brainBlogLink')} }
+    };
+
+    tmpls.roadMapLink = function (current) {
+        if(current===true){
+            return {c: 'road-map-link', C:{H: l10n('roadMapLink')} }
+        }
+        return {c: 'road-map-link', C:{e:'a',h:gb.settings.controlsDescriptors.site.roadMapUrl, H: l10n('roadMapLink')} }
     };
 
     tmpls.languageSwitcher = function () {

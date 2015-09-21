@@ -11,8 +11,8 @@
             tmpls.paging(),
             tmpls.banners(),
             tmpls.footer(),
-            tmpls.mainMenu(3),
-            tmpls.header(),
+            tmpls.mainMenu(),
+            tmpls.header(true),
             tmpls.logo()
         ];
     };

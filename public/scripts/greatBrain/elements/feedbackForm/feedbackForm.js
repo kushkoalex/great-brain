@@ -8,6 +8,7 @@ GB.feedbackForm = function ($parent) {
         build,
         $digits,
         phoneNumber = [],
+        $phoneNumber,
         $feedbackFormLink,
         $submitButton,
         $feedbackForm,
@@ -17,9 +18,9 @@ GB.feedbackForm = function ($parent) {
     $feedbackFormLink = build.feedbackFormLink;
     $feedbackForm = build.feedbackFormContent;
     $submitButton = build.submitButton;
+    $phoneNumber = build.phoneNumber;
 
-
-    $digits = a9.$c('digit', build.phoneNumber);
+    $digits = a9.$c('digit', $phoneNumber);
 
 
     a9.addEvent($feedbackFormLink, eventOnPointerEnd, feedbackFormLinkClick);
@@ -95,19 +96,41 @@ GB.feedbackForm = function ($parent) {
             phoneNumber.pop();
         }
         renderPhoneNumber();
-        e.preventDefault();
+
+        if (keyCode == 8) {
+            e.preventDefault();
+        }
+        // esc
+        if(keyCode==27){
+            closeFeedbackForm();
+        }
     }
 
+    function onPhoneNumberClick() {
+        if(phoneNumber.length<12) {
+            for (var i = 0; i < $digits.length; i++) {
+                a9.addClass($digits[phoneNumber.length], 'active');
+            }
+        }
+    }
 
     function renderPhoneNumber() {
-        for (var i = 0; i < $digits.length; i++) {
+        var i;
+
+        for (i = 0; i < $digits.length; i++) {
             if (phoneNumber[i] !== u) {
                 a9.addClass($digits[i], 'active');
                 $digits[i].innerText = phoneNumber[i];
             }
             else {
                 a9.removeClass($digits[i], 'active');
-                $digits[i].innerText = '0';
+                $digits[i].innerText = '_';
+            }
+        }
+
+        if (phoneNumber.length < 12) {
+            for (i = 0; i < $digits.length; i++) {
+                a9.addClass($digits[phoneNumber.length], 'active');
             }
         }
 
@@ -139,6 +162,7 @@ GB.feedbackForm = function ($parent) {
     function showFeedbackForm() {
         a9.removeClass($feedbackForm, 'hidden');
         a9.addEvent($body, 'keydown', onKeyFeedbackFormKeyPress);
+        a9.addEvent($phoneNumber, eventOnPointerEnd, onPhoneNumberClick);
     }
 
     function feedbackFormLinkClick(e) {

@@ -33,24 +33,24 @@
                                     {c:'phone-number-container',n:'phoneNumber',C:
                                         [
                                             {e:'span',t:'+'},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'},
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'},
                                             {e:'span',t:' '},
                                             {e:'span',t:'('},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'},
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'},
                                             {e:'span',t:')'},
                                             {e:'span',t:' '},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'},
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'},
                                             {e:'span',t:'-'},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'},
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'},
                                             {e:'span',t:'-'},
-                                            {e:'span',c:'digit',t:'0'},
-                                            {e:'span',c:'digit',t:'0'}
+                                            {e:'span',c:'digit',t:'_'},
+                                            {e:'span',c:'digit',t:'_'}
                                         ]
                                         //t:'+00 (000) 000-00-00'
                                     },

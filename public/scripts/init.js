@@ -11,6 +11,11 @@ A9.ready(function (a9, global) {
         $news = $('news'),
         $newsDetails = $('newsDetails'),
         $blog = $('blog'),
+        $roadMap = $('roadMap'),
+        $blogDetails = $('blogDetails'),
+        $partners = $('partners'),
+        $contacts = $('contacts'),
+        $intro = $('intro'),
         $scrollToTop,
 
 
@@ -49,6 +54,27 @@ A9.ready(function (a9, global) {
     if ($blog !== null) {
         gb.blog($blog);
     }
+
+    if ($blogDetails !== null) {
+        gb.blogDetails($blogDetails);
+    }
+
+    if ($roadMap !== null) {
+        gb.simpleSiteContent($roadMap);
+    }
+
+    if ($partners !== null) {
+        gb.partners($partners);
+    }
+
+    if ($contacts !== null) {
+        gb.contacts($contacts);
+    }
+
+    if ($intro !== null) {
+        gb.intro($intro);
+    }
+
 
 
     $scrollToTop = $('scrollToTop');

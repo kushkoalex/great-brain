@@ -10,16 +10,33 @@
 
         var content = [];
 
-        content.push({
-            c: 'caption-wrapper', C: {
-                c: 'caption', C: [{
-                    e: 'a',
-                    h: data.url,
-                    t: data.urlText
-                }, {e: 'span', t: ' /'}
-                ]
-            }
-        });
+        if(data.url){
+            content.push({
+                c: 'caption-wrapper', C: {
+                    c: 'caption', C: [{
+                        e: 'a',
+                        h: data.url,
+                        t: data.urlText
+                    }, {e: 'span', t: ' /'}
+                    ]
+                }
+            });
+        }
+        else
+        {
+            //content.push({
+            //    c: 'caption-wrapper', C: {
+            //        c: 'caption', C: [{
+            //            e: 'a',
+            //            h: data.url,
+            //            t: data.urlText
+            //        }, {e: 'span', t: ' /'}
+            //        ]
+            //    }
+            //});
+        }
+
+
 
         content.push({
             c: 'title', H: data.title
