@@ -315,6 +315,10 @@
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
     filter: alpha(opacity=1);
 }
+
+.maze-layout-text-small span{
+    color: #40a83d;
+}
 .maze-layout-text-small.hidden{
     opacity:0;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
