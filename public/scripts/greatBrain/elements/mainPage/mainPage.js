@@ -72,10 +72,8 @@ GB.mainPage = function ($parent) {
 
     $mainImageContentWrapper.appendChild($fragment);
 
-
     $feedbackFormWrapper = build.feedbackFormWrapper;
     gb.feedbackForm($feedbackFormWrapper);
-
 
     setTimeout(slideImageFrame, 10);
 
