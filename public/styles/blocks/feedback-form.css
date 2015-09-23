@@ -37,22 +37,31 @@
 }
 
 .feedback-form {
-    /*opacity:1;*/
-    /*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";*/
-    /*filter: alpha(opacity=1);*/
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+
     position: absolute;
+    height: auto;
 }
 
 .feedback-form.hidden {
-    display: none;
 
-    /*-webkit-transition: opacity 0.5s ease-in-out;*/
-    /*-moz-transition: opacity 0.5s ease-in-out;*/
-    /*-o-transition: opacity 0.5s ease-in-out;*/
-    /*transition: opacity 0.5s ease-in-out;*/
-    /*opacity:0;*/
-    /*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
-    /*filter: alpha(opacity=0);*/
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
 }
 
 .feedback-form-content-wrapper .triangle {
