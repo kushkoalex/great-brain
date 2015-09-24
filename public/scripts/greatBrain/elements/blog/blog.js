@@ -4,12 +4,15 @@ GB.blog = function($parent){
         tp = global.cnCt.tp,
         settings = gb.settings,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         blogData = settings.dataModels.blog,
         build;
 
 
     build = tp('blog', blogData, $parent);
     gb.popupForm($parent);
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
 
 
     $feedbackFormWrapper = build.feedbackFormWrapper;

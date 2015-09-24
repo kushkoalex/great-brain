@@ -9,6 +9,7 @@
             menuData = gb.settings.dataModels.mainMenu,
             menuItems = [],
             menuItem,
+            menuItemInnerContent=[],
             i,
             menuItemClassName,
             linkContent,
@@ -30,6 +31,10 @@
                 menuItemClassName += ' popup-link'
             }
 
+            if(menuData[i].isServiceMenuItem){
+                menuItemClassName += ' popup-link service-menu-link'
+            }
+
             if (menuItemState == 'active' || menuData[i].url === u) {
                 linkContent = {
                     e: 'span',
@@ -43,12 +48,22 @@
                 };
             }
 
+
+
+
+
+            menuItemInnerContent = [
+                {c: 'arrow'},
+                linkContent,
+                {c: 'arrow'}
+            ];
+
+            if(menuData[i].isServiceMenuItem){
+                menuItemInnerContent.unshift(tmpls.servicesMenuWrapper())
+            }
+
             menuItem = {
-                e: 'li', c: menuItemClassName, C: [
-                    {c: 'arrow'},
-                    linkContent,
-                    {c: 'arrow'}
-                ]
+                e: 'li', c: menuItemClassName, C: menuItemInnerContent
             };
             menuItems.push(menuItem);
         }

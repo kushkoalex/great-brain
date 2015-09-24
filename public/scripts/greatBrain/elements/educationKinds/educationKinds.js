@@ -7,6 +7,7 @@ GB.educationKinds = function($parent){
         doc = global.document,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         pageData = settings.dataModels.educationKinds,
         build,
         buildItem,
@@ -16,6 +17,9 @@ GB.educationKinds = function($parent){
 
     build = tp('educationKinds', pageData, $parent);
     gb.popupForm($parent);
+
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
 
 
 

@@ -6,6 +6,7 @@ GB.news = function($parent){
         settings = gb.settings,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         newsData = settings.dataModels.news,
         build,
         u;
@@ -13,7 +14,8 @@ GB.news = function($parent){
 
     build = tp('news', newsData, $parent);
     gb.popupForm($parent);
-
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
 
     $feedbackFormWrapper = build.feedbackFormWrapper;
     gb.feedbackForm($feedbackFormWrapper);

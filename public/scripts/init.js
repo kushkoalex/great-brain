@@ -82,6 +82,7 @@ A9.ready(function (a9, global) {
         gb.scrollToTop($scrollToTop);
     }
 
+
     gb.stickyPanels();
 
 });

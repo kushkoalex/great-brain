@@ -7,6 +7,7 @@ GB.educationalInstitutions = function($parent){
         doc = global.document,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         pageData = settings.dataModels.educationalInstitutions,
         build,
         buildItem,
@@ -16,7 +17,8 @@ GB.educationalInstitutions = function($parent){
     build = tp('educationalInstitutions', $parent);
     $educationalInstitutionsContentItems = build.educationalInstitutionsContentItems;
     gb.popupForm($parent);
-
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
     $fragment = global.document.createDocumentFragment();
 
 

@@ -15,6 +15,7 @@ GB.mainPage = function ($parent) {
         buildBanner,
         mainPageData = settings.dataModels.mainPage,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         mainPageSlideTimeout= settings.controlsDescriptors.site.mainPageSlideTimeout | 3000,
         $fragment,
         currentVisibleFrameIndex = -1,
@@ -25,9 +26,14 @@ GB.mainPage = function ($parent) {
 
     build = tp('mainPage', $parent);
     $mainImageContentWrapper = build.mainImageContentWrapper;
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
 
+    $feedbackFormWrapper = build.feedbackFormWrapper;
+    gb.feedbackForm($feedbackFormWrapper);
 
     gb.popupForm($parent);
+
 
     $fragment = global.document.createDocumentFragment();
 
@@ -72,8 +78,8 @@ GB.mainPage = function ($parent) {
 
     $mainImageContentWrapper.appendChild($fragment);
 
-    $feedbackFormWrapper = build.feedbackFormWrapper;
-    gb.feedbackForm($feedbackFormWrapper);
+
+
 
     setTimeout(slideImageFrame, 10);
 

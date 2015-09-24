@@ -57,7 +57,7 @@
     vertical-align: top;
     text-transform: uppercase;
     line-height: 17px;
-
+position: relative;
 }
 
 .main-page .main-menu ul li
@@ -121,4 +121,112 @@
     color: #f26522;
 }
 
+.service-menu-wrapper{
+    position: absolute;
+    top: 40px;
+    left: -300px;
+    cursor:auto;
+    z-index: 9999;
+}
+
+.service-menu{
+    display: block;
+}
+
+.service-menu .close-button{
+    position: absolute;
+    width: 29px;
+    height: 28px;
+    background: url("../../images/close-btn.png");
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.service-menu-wrapper.hidden{
+    display: none;
+}
+
+.service-menu .triangle {
+    width: 15px;
+    height: 15px;
+    border: 15px solid transparent;
+    border-bottom-color: #ffffff;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -30px;
+    position: absolute;
+}
+
+.service-menu .service-menu-content{
+
+    width: 718px;
+    /*height: 320px;*/
+    background-color: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*margin-top: 15px;*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+
+.service-menu .items-block,
+.service-menu .separator
+{
+    display: inline-block;
+}
+
+.service-menu .items-block{
+    width: 50%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.service-menu .items-block .content{
+    border-right: 2px solid #f69263;
+    padding:  0 40px;
+    margin-bottom: 30px;
+}
+
+.service-menu .items-block.last .content{
+    border: none;
+
+}
+
+.service-menu .items-block .content .menu-item{
+    margin: 20px 0;
+    position: relative;
+    display: block;
+}
+.service-menu .items-block .content .menu-item  a{
+    color: #0072bc;
+    text-transform: none;
+font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+
+.service-menu .items-block .content .menu-item.special{
+    background-color: #feefe8;
+padding: 10px 25px;
+    margin-top: 40px;
+}
+.service-menu .items-block .content .menu-item.special a{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.service-menu .items-block .title{
+    color: #f26522;
+    position: relative;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    text-transform: none;
+    margin-bottom: 25px;
+
+}
 

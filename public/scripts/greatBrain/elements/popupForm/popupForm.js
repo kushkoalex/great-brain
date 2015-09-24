@@ -9,7 +9,7 @@ GB.popupForm = function($parent){
         $popuplink,
         $layout,
         $popup,
-        $popuoClassName = 'popup-link',
+        $popupClassName = 'popup-link',
 
         build,
         u;
@@ -20,7 +20,7 @@ GB.popupForm = function($parent){
     $layout = build.r;
     $popup = build.popup;
 
-    $popuplink = a9.$c($popuoClassName)[0];
+    $popuplink = a9.$c($popupClassName)[0];
 
     a9.addEvent($layout, eventOnPointerEnd, function(){
         $layout.style.display ='none';

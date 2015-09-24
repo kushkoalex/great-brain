@@ -4,6 +4,7 @@ GB.simpleSiteContent = function ($parent) {
         tp = global.cnCt.tp,
         settings = gb.settings,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         contentData = settings.dataModels.siteContent[0],
         build;
 
@@ -12,6 +13,8 @@ GB.simpleSiteContent = function ($parent) {
     build = tp('simpleSiteContent', contentData, $parent);
     gb.popupForm($parent);
 
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
 
     $feedbackFormWrapper = build.feedbackFormWrapper;
     gb.feedbackForm($feedbackFormWrapper);

@@ -7,6 +7,7 @@ GB.educationalInstitutionDetails = function($parent){
         doc = global.document,
         eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
         $feedbackFormWrapper,
+        $serviceMenuWrapper,
         $educationalInstitutionDetailsImagesCarousel,
         pageData = settings.dataModels.educationalInstitutionDetails,
         build,
@@ -20,6 +21,8 @@ GB.educationalInstitutionDetails = function($parent){
     $educationalInstitutionDetailsImagesCarousel = build.educationalInstitutionDetailsImagesCarousel;
     a9.imageSlider($educationalInstitutionDetailsImagesCarousel);
     gb.popupForm($parent);
+    $serviceMenuWrapper= build.servicesMenuWrapper;
+    gb.servicesMenu($serviceMenuWrapper);
 
     $feedbackFormWrapper = build.feedbackFormWrapper;
     gb.feedbackForm($feedbackFormWrapper);
