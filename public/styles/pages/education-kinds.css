@@ -5,64 +5,106 @@
     margin-top: 30px;
 }
 
-.country-selector-wrapper .select-country,
-.country-selector-wrapper .country-selector {
-    display: inline-block;
+.country-selector-wrapper .select-country-text {
     height: 45px;
-    padding: 5px;
-}
-
-.country-selector-wrapper .select-country {
+    display: inline-block;
     color: #276c9f;
     padding-right: 10px;
+    padding-top: 9px;
 }
 
-.country-selector-wrapper .country-selector {
-    background-color: #276c9f;
+
+
+
+.country-selector{
+
+}
+.country-selector .drop-down-list-head,
+.country-selector .item
+{
+    background-color:#276c9f;
     color: #ffffff;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    padding: 10px 40px 10px 25px;
-    position: relative;
-    margin-right: 50px;
 }
 
-.country-selector-wrapper .country-selector .triangle {
-    width: 6px;
-    height: 6px;
-    border: 6px solid transparent;
-    border-top-color: #ffffff;
-    position: absolute;
-    top: 20px;
-    right: 15px;
+.country-selector .drop-down-list-items .item.selected{
+    color: #6dcff6;
 }
+
+.country-selector .drop-down-list-items .item:hover {
+    background-color: #4c88b1;
+}
+
+.country-selector .drop-down-list-head .triangle{
+    border-top-color: #ffffff;
+}
+
 
 .age-group-selector-wrapper{
     text-align: center;
     margin-top: -20px;
 }
-.age-group-selector-wrapper .age-group-selector {
-    background-color: #ff9634;
-    color: #ffffff;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    padding: 10px 40px 10px 25px;
-    position: relative;
-    margin-right: 50px;
-    display: inline-block;
+
+.age-group-selector{
+    margin-left: -100px;
+
 }
 
-.age-group-selector-wrapper .age-group-selector .triangle {
-    width: 6px;
-    height: 6px;
-    border: 6px solid transparent;
-    border-top-color: #ffffff;
-    position: absolute;
-    top: 20px;
-    right: 15px;
+.age-group-selector .drop-down-list-head{
+    border: 1px solid #ff8713;
 }
+
+.age-group-selector .drop-down-list-head .splitter{
+    border-right: 2px solid #ff8713;
+}
+
+.age-group-selector .drop-down-list-head{
+    padding-right: 47px;
+}
+
+
+.age-group-selector .drop-down-list-head,
+.age-group-selector .item
+{
+    background-color:#ff9634;
+    color: #ffffff;
+}
+
+.age-group-selector .drop-down-list-items .item.selected{
+    color: #cb6200;
+}
+
+.age-group-selector .drop-down-list-items .item:hover {
+    background-color: #ffbc66;
+}
+
+.age-group-selector .drop-down-list-head .triangle{
+    border-top-color: #ffffff;
+}
+
+/*.age-group-selector-wrapper .age-group-selector {*/
+    /*background-color: #ff9634;*/
+    /*color: #ffffff;*/
+    /*-webkit-border-radius: 6px;*/
+    /*-moz-border-radius: 6px;*/
+    /*border-radius: 6px;*/
+    /*padding: 10px 40px 10px 25px;*/
+    /*position: relative;*/
+    /*margin-right: 50px;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.age-group-selector-wrapper .age-group-selector .triangle {*/
+    /*width: 6px;*/
+    /*height: 6px;*/
+    /*border: 6px solid transparent;*/
+    /*border-top-color: #ffffff;*/
+    /*position: absolute;*/
+    /*top: 20px;*/
+    /*right: 15px;*/
+/*}*/
+
+
+
 
 
 

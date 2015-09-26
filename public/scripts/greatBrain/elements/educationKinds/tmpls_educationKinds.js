@@ -50,8 +50,14 @@
     tmpls.categoryContentInnerWrapper = function (dataModel) {
         return {
             c: 'category-content-inner-wrapper', C: [
-                {c: 'image-container',C:[{e:'img',a:{src:gb.settings.controlsDescriptors.site.educationKindsImages+ 'girl-with-books.png'}}]},
-                {c: 'text-container',C:{H:dataModel[0].educationCategories[0].ageGroups[0].text}},
+                {
+                    c: 'image-container',
+                    C: [{
+                        e: 'img',
+                        a: {src: gb.settings.controlsDescriptors.site.educationKindsImages + 'girl-with-books.png'}
+                    }]
+                },
+                {c: 'text-container', C: {H: dataModel[0].educationCategories[0].ageGroups[0].text}},
                 {c: 'clear'}
             ]
         }
@@ -59,34 +65,26 @@
 
     tmpls.ageGroupSelector = function (dataModel) {
         return {
-            c: 'age-group-selector-wrapper', C: {
-                c: 'age-group-selector',
-                C: [{c: 'age-group', t: dataModel[0].educationCategories[0].ageGroups[0].age}, {c: 'triangle'}]
-            }
+            c: 'age-group-selector-wrapper', C:
+
+            {n:'dropDownAgeGroups',c:'drop-down-list age-group-selector'}
+            //{
+            //    c: 'age-group-selector',
+            //    C: [{c: 'age-group', t: dataModel[0].educationCategories[0].ageGroups[0].age}, {c: 'triangle'}]
+            //}
         }
     };
 
     tmpls.countrySelector = function () {
-        var countryList = gb.settings.dataModels.educationalCountries,
-            countries = [];
-
-
-        countries.push({c: 'country', t: countryList[0].title});
-        //countries.push({c: 'country', t: countryList[0].title});
-        //countries.push({c: 'country', t: countryList[0].title});
-
-        //a9.each(countries,function(){
-        //$countries.push({})
-        //});
-
         return {
             c: 'country-selector-wrapper',
-            C: [{c: 'select-country', t: l10n('selectCountry', 'firstUpper')}, {
-                c: 'dropdown country-selector',
-                C: [countries, {c: 'triangle'}]
-            }]
+            C: [
+                {c: 'select-country-text', t: l10n('selectCountry', 'firstUpper')},
+                {n:'dropDownCountries',c:'drop-down-list country-selector'}
+            ]
         }
     };
+
 
     tmpls.educationCategoriesMenu = function (activeMenuItemId) {
         var educationKindList = gb.settings.dataModels.educationKinds,
