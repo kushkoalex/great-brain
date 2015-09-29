@@ -252,3 +252,17 @@ body{
 .popup-link a{
     text-decoration: underline;
 }
+
+
+.map-frame{
+    /*-webkit-box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);*/
+    /*-moz-box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);*/
+    box-shadow:  3px 0 10px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin: 5px;
+}
+
+.map-container{
+    height: 570px;
+    background-color: red;
+}

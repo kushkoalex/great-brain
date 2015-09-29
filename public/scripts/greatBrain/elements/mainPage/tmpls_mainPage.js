@@ -10,14 +10,15 @@
             tmpls.mainMenu(),
             tmpls.logo(true),
             tmpls.mainPageAnnouncements(),
+            tmpls.map(),
             tmpls.header(),
             tmpls.footer(),
             tmpls.scrollToTop()
         ]
     };
 
-    tmpls.scrollToTop = function(){
-        return{c:'scroll-to-top',a:{id:'scrollToTop'}}
+    tmpls.scrollToTop = function () {
+        return {c: 'scroll-to-top', a: {id: 'scrollToTop'}}
     };
 
     tmpls.mainPageAnnouncements = function () {
@@ -33,8 +34,14 @@
                 content.push([tmpls.announcementImage(announcement), tmpls.announcementInfo(announcement)]);
             }
             content.push({c: 'clear'});
-            if(parallaxImages[i]){
-                content.push({c: 'parallax-window', a:{'data-parallax':'scroll', 'data-image-src':gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]}});
+            if (parallaxImages[i]) {
+                content.push({
+                    c: 'parallax-window',
+                    a: {
+                        'data-parallax': 'scroll',
+                        'data-image-src': gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]
+                    }
+                });
             }
 
             content.push({c: 'clear'});
@@ -48,10 +55,10 @@
     tmpls.announcementInfo = function (announcement) {
         return {
             c: 'announcement-info', C: [
-                {c: 'title',t:announcement.title},
-                {c:'announcement-info-logo'},
-                {c: 'text',t:announcement.text},
-                {e:'a', h:announcement.url, c:'link', t:l10n('announcementLinkText')}
+                {c: 'title', t: announcement.title},
+                {c: 'announcement-info-logo'},
+                {c: 'text', t: announcement.text},
+                {e: 'a', h: announcement.url, c: 'link', t: l10n('announcementLinkText')}
             ]
         }
     };
@@ -61,7 +68,7 @@
             c: 'announcement-image',
             //e: 'img',
             //a: {src: gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc}
-            a:{style:'background-image:url('+gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc+')'}
+            a: {style: 'background-image:url(' + gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc + ')'}
         }
     };
 
@@ -99,13 +106,17 @@
                 {
                     //e: 'img',
                     c: 'banner', //a: {src: controlsDescriptors.site.mainPageImages + mainBanner.imageSrc}
-                    a:{style:'background-image:url('+controlsDescriptors.site.mainPageImages + mainBanner.imageSrc+')'}
+                    a: {style: 'background-image:url(' + controlsDescriptors.site.mainPageImages + mainBanner.imageSrc + ')'}
                 },
                 {
                     c: 'main-page-info-wrapper', C: content
                 }
             ]
         }
+    };
+
+    tmpls.map = function () {
+        return {c: 'map-frame', C: {c: 'map-container', a: {id: 'map'},n:'map'}}
     };
 
 

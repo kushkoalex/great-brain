@@ -15,6 +15,7 @@ GB.mainPage = function ($parent) {
         buildBanner,
         mainPageData = settings.dataModels.mainPage,
         $feedbackFormWrapper,
+        $map,
         $serviceMenuWrapper,
         mainPageSlideTimeout= settings.controlsDescriptors.site.mainPageSlideTimeout | 3000,
         $fragment,
@@ -27,6 +28,47 @@ GB.mainPage = function ($parent) {
     build = tp('mainPage', $parent);
     $mainImageContentWrapper = build.mainImageContentWrapper;
     $serviceMenuWrapper= build.servicesMenuWrapper;
+    $map = build.map;
+
+
+    //var map;
+    function initMap() {
+        //map = new google.maps.Map(document.getElementById('map'), {
+        //    center: {lat: -34.397, lng: 150.644},
+        //    zoom: 8
+        //});
+        var lat = -34.397;
+        var lng = 150.644;
+
+        google.load('maps','3',{callback:function(){
+            var coordinates = new google.maps.LatLng(lat, lng);
+
+            var mapOptions = {
+                center: coordinates,
+                mapTypeControl: false,
+                zoom: 14
+            };
+
+            var map = new google.maps.Map($map, mapOptions);
+            var infoWindow = new google.maps.InfoWindow({
+                content: 'hello'
+            });
+
+            var marker = new google.maps.Marker({
+                position: coordinates,
+                map: map,
+                title: 'piu'
+            });
+
+            infoWindow.open(map, marker);
+
+        }});
+    }
+
+
+    initMap();
+
+
     gb.servicesMenu($serviceMenuWrapper);
 
     $feedbackFormWrapper = build.feedbackFormWrapper;
