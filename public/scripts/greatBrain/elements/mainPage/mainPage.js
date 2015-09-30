@@ -13,57 +13,84 @@ GB.mainPage = function ($parent) {
         duration = gb.settings.scrollToAnnouncementsDuration || 200,
         build,
         buildBanner,
+        $buildLocationLinks=[],
         mainPageData = settings.dataModels.mainPage,
         $feedbackFormWrapper,
         $map,
         $serviceMenuWrapper,
-        mainPageSlideTimeout= settings.controlsDescriptors.site.mainPageSlideTimeout | 3000,
+        mainPageSlideTimeout = settings.controlsDescriptors.site.mainPageSlideTimeout | 3000,
         $fragment,
         currentVisibleFrameIndex = -1,
         i,
+        $mapLocationLinks,
         $mainImageContentWrapper,
         $contentImages = [];
 
 
     build = tp('mainPage', $parent);
     $mainImageContentWrapper = build.mainImageContentWrapper;
-    $serviceMenuWrapper= build.servicesMenuWrapper;
+    $serviceMenuWrapper = build.servicesMenuWrapper;
     $map = build.map;
+    $mapLocationLinks = build.mapLocationLinks;
 
 
     //var map;
-    function initMap() {
+    function initMap(index) {
+        index = index||0;
+        var location  = settings.dataModels.mapLocations[index];
         //map = new google.maps.Map(document.getElementById('map'), {
         //    center: {lat: -34.397, lng: 150.644},
         //    zoom: 8
         //});
-        var lat = -34.397;
-        var lng = 150.644;
+        var lat = location.location.lat;
+        var lng = location.location.lng;
 
-        google.load('maps','3',{callback:function(){
-            var coordinates = new google.maps.LatLng(lat, lng);
 
-            var mapOptions = {
-                center: coordinates,
-                mapTypeControl: false,
-                zoom: 14
-            };
+        console.log(location);
 
-            var map = new google.maps.Map($map, mapOptions);
-            var infoWindow = new google.maps.InfoWindow({
-                content: 'hello'
-            });
-
-            var marker = new google.maps.Marker({
-                position: coordinates,
-                map: map,
-                title: 'piu'
-            });
-
-            infoWindow.open(map, marker);
-
-        }});
+        google.load('maps', '3', {
+            callback: function () {
+                var coordinates = new google.maps.LatLng(lat, lng);
+                var mapOptions = {
+                    center: coordinates,
+                    mapTypeControl: false,
+                    zoom: 14
+                };
+                var map = new google.maps.Map($map, mapOptions);
+                var infoWindow = new google.maps.InfoWindow({
+                    content: location.location.content
+                });
+                var marker = new google.maps.Marker({
+                    position: coordinates,
+                    map: map,
+                    title: location.location.title
+                });
+                infoWindow.open(map, marker);
+            }
+        });
     }
+
+    $fragment = global.document.createDocumentFragment();
+
+    a9.each(settings.dataModels.mapLocations, function (mapLocation, index) {
+
+        $buildLocationLinks[index] = tp('mapLocationLink', mapLocation, $fragment).r;
+        if (index === 0) {
+            a9.addClass($buildLocationLinks[index], 'active');
+        }
+
+        a9.addEvent($buildLocationLinks[index], eventOnPointerEnd, function () {
+            a9.each($buildLocationLinks,function(buildLocationLink){
+                a9.removeClass(buildLocationLink,'active');
+            });
+            a9.addClass(this,'active');
+            initMap(index);
+        });
+
+
+    });
+
+    $mapLocationLinks.appendChild($fragment);
 
 
     initMap();
@@ -79,15 +106,15 @@ GB.mainPage = function ($parent) {
 
     $fragment = global.document.createDocumentFragment();
 
-    var j=0;
-    a9.each(mainPageData.mainBanners, function(mainBanner){
-        mainBanner.order=j;
+    var j = 0;
+    a9.each(mainPageData.mainBanners, function (mainBanner) {
+        mainBanner.order = j;
         buildBanner = tp('mainImageContent', mainBanner, $fragment);
         $contentImages.push(buildBanner.r);
         j++;
     });
 
-    var sm = tp('showMore',$fragment);
+    var sm = tp('showMore', $fragment);
     a9.addEvent(sm.r, eventOnPointerEnd, showDetails);
 
     function showDetails() {
@@ -119,8 +146,6 @@ GB.mainPage = function ($parent) {
     }
 
     $mainImageContentWrapper.appendChild($fragment);
-
-
 
 
     setTimeout(slideImageFrame, 10);

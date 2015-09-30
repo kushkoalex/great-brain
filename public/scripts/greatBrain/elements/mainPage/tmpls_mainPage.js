@@ -116,7 +116,11 @@
     };
 
     tmpls.map = function () {
-        return {c: 'map-frame', C: {c: 'map-container', a: {id: 'map'},n:'map'}}
+        return {c: 'map-frame', C: [{c: 'map-container', a: {id: 'map'},n:'map'},{c:'map-location-links',n:'mapLocationLinks'}]}
+    };
+
+    tmpls.mapLocationLink = function(mapLocation){
+        return {c:'map-location-link',C:{e:'span', t:mapLocation.title}}
     };
 
 
