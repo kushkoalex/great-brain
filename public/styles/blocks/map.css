@@ -42,3 +42,27 @@
 .map-location-link a{
     color: inherit;
 }
+
+.map-location-info-content{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding-left: 180px;
+    padding-top: 35px;
+    padding-right: 10px;
+    background: url("../../images/map-location-info-logo.png") no-repeat 20px 20px;
+    height: 220px;
+    color: #000000;
+    line-height: 25px;
+}
+
+.map-location-info-content .address{
+
+}
+.map-location-info-content .phone,
+.map-location-info-content .email{
+margin-top: 10px;
+}
+
+.map-location-info-content a{
+    color:#00aeef;
+}
