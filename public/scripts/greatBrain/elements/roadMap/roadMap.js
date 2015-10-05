@@ -1,4 +1,4 @@
-GB.simpleSiteContent = function ($parent) {
+GB.roadMap = function ($parent) {
     var gb = this,
         global = gb.global,
         tp = global.cnCt.tp,

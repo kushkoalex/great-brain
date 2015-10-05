@@ -1,0 +1,35 @@
+.simple-site-content{
+    text-align: center;
+}
+
+.simple-site-content .site-content-title {
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    margin-top: 45px;
+    font-family: 'Oranienbaum', serif;
+    max-width: 550px;
+}
+
+.simple-site-content .site-content-title .title{
+    font-size: 32px;
+    color: #313131;
+    margin: 30px 70px 30px;
+}
+
+.simple-site-info{
+    margin-top: 50px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 80px;
+}
+
+.simple-site-info .text{
+    position: relative;
+    margin: 50px 90px 0 90px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #555555;
+    line-height: 27px;
+}
+

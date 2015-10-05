@@ -5,17 +5,21 @@ GB.contacts = function($parent){
         settings = gb.settings,
         $feedbackFormWrapper,
         $serviceMenuWrapper,
-        contentData = settings.dataModels.siteContent[2],
+        contentData = settings.dataModels.contacts,
+        $map,
+        $mapLocationLinks,
         build;
 
     contentData.activeMenuItemId = 5;
 
-    build = tp('simpleSiteContent', contentData, $parent);
-    gb.popupForm($parent);
+    build = tp('contacts', contentData, $parent);
     $serviceMenuWrapper= build.servicesMenuWrapper;
-    gb.servicesMenu($serviceMenuWrapper);
-
-
+    $map=build.map;
+    $mapLocationLinks=build.mapLocationLinks;
     $feedbackFormWrapper = build.feedbackFormWrapper;
+
+    gb.popupForm($parent);
+    gb.servicesMenu($serviceMenuWrapper);
+    gb.map($map,$mapLocationLinks);
     gb.feedbackForm($feedbackFormWrapper);
 };

@@ -1,0 +1,19 @@
+.contacts-title{
+    font-family: 'Oranienbaum', serif;
+    font-size: 43px;
+    margin-top: 40px;
+}
+
+
+#contacts .map-frame{
+    /*-webkit-box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);*/
+    /*-moz-box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);*/
+    /*box-shadow: none;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+}
+
+#contacts .map-container{
+    height: 665px;
+    margin: 50px 90px 0 90px;
+}

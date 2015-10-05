@@ -33,68 +33,7 @@ GB.mainPage = function ($parent) {
     $map = build.map;
     $mapLocationLinks = build.mapLocationLinks;
 
-
-    //var map;
-    function initMap(index) {
-        index = index||0;
-        var location  = settings.dataModels.mapLocations[index];
-        //map = new google.maps.Map(document.getElementById('map'), {
-        //    center: {lat: -34.397, lng: 150.644},
-        //    zoom: 8
-        //});
-        var lat = location.location.lat;
-        var lng = location.location.lng;
-
-
-        console.log(location);
-
-        google.load('maps', '3', {
-            callback: function () {
-                var coordinates = new google.maps.LatLng(lat, lng);
-                var mapOptions = {
-                    center: coordinates,
-                    mapTypeControl: false,
-                    zoom: 14
-                };
-                var map = new google.maps.Map($map, mapOptions);
-                var infoWindow = new google.maps.InfoWindow({
-                    content: location.location.content
-                });
-                var marker = new google.maps.Marker({
-                    position: coordinates,
-                    map: map,
-                    title: location.location.title
-                });
-                infoWindow.open(map, marker);
-            }
-        });
-    }
-
-    $fragment = global.document.createDocumentFragment();
-
-    a9.each(settings.dataModels.mapLocations, function (mapLocation, index) {
-
-        $buildLocationLinks[index] = tp('mapLocationLink', mapLocation, $fragment).r;
-        if (index === 0) {
-            a9.addClass($buildLocationLinks[index], 'active');
-        }
-
-        a9.addEvent($buildLocationLinks[index], eventOnPointerEnd, function () {
-            a9.each($buildLocationLinks,function(buildLocationLink){
-                a9.removeClass(buildLocationLink,'active');
-            });
-            a9.addClass(this,'active');
-            initMap(index);
-        });
-
-
-    });
-
-    $mapLocationLinks.appendChild($fragment);
-
-
-    initMap();
-
+    gb.map($map, $mapLocationLinks);
 
     gb.servicesMenu($serviceMenuWrapper);
 
@@ -102,7 +41,6 @@ GB.mainPage = function ($parent) {
     gb.feedbackForm($feedbackFormWrapper);
 
     gb.popupForm($parent);
-
 
     $fragment = global.document.createDocumentFragment();
 

@@ -1,8 +1,5 @@
 (function (gb) {
-    var tmpls = gb.tmpls,
-        a9 = gb.global.A9,
-        l10n = a9.l10n,
-        u;
+    var tmpls = gb.tmpls;
 
     tmpls.simpleSiteContent = function (pageData) {
         return [
@@ -12,7 +9,7 @@
             tmpls.banners(),
             tmpls.footer(),
             tmpls.mainMenu(pageData.activeMenuItemId),
-            tmpls.header(pageData.showBlog,pageData.showRoadMap),
+            tmpls.header(pageData.showBlog, pageData.showRoadMap),
             tmpls.logo()
         ];
     };
@@ -24,7 +21,7 @@
             };
 
         return {
-            c: 'blog-details-content', C: [
+            c: 'simple-site-content', C: [
                 tmpls.siteContentTitleContainer(data),
                 tmpls.simpleSiteContentInfo(blogItem)
             ]
@@ -34,10 +31,7 @@
 
     tmpls.simpleSiteContentInfo = function (pageData) {
         return {
-            c: 'blog-details-info', C: [
-                //{
-                //    c: 'description', H: pageData.shortDescription
-                //},
+            c: 'simple-site-info', C: [
                 {
                     c: 'text', H: pageData.text
                 }

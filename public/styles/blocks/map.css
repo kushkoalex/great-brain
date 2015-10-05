@@ -1,0 +1,44 @@
+.map-frame{
+    position: relative;
+}
+
+.map-container{
+    position: relative;
+}
+
+.map-location-links{
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    /*width: 100%;*/
+}
+
+.map-location-link{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+    margin: 6px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+}
+
+.map-location-link.active{
+    cursor: default;
+}
+
+.map-location-link span{
+    border-bottom: 1px dashed #ffffff;
+}
+
+.map-location-link.active span{
+    border: none;
+}
+
+.map-location-link a{
+    color: inherit;
+}

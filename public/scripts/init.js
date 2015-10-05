@@ -60,7 +60,7 @@ A9.ready(function (a9, global) {
     }
 
     if ($roadMap !== null) {
-        gb.simpleSiteContent($roadMap);
+        gb.roadMap($roadMap);
     }
 
     if ($partners !== null) {

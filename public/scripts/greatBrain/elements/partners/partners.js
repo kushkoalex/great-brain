@@ -5,7 +5,7 @@ GB.partners = function($parent){
         settings = gb.settings,
         $feedbackFormWrapper,
         $serviceMenuWrapper,
-        contentData = settings.dataModels.siteContent[1],
+        contentData = settings.dataModels.partners,
         build;
 
     contentData.activeMenuItemId = 4;
