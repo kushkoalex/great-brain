@@ -41,9 +41,9 @@
         return {
             c: 'filter', C: {
                 e: 'ul', C: [
-                    {e: 'li', c: 'location'},
-                    {e: 'li', c: 'gender'},
-                    {e: 'li', c: 'type'}
+                    {e: 'li', c: 'location',C:{n:'dropDownInstitutionLocation',c:'drop-down-list educational-institutions-filter-selector'}},
+                    {e: 'li', c: 'gender',C:{n:'dropDownGender',c:'drop-down-list educational-institutions-filter-selector'}},
+                    {e: 'li', c: 'type',C:{n:'dropDownInstitutionType',c:'drop-down-list educational-institutions-filter-selector'}}
 
                 ]
             }

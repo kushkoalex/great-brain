@@ -17,25 +17,95 @@
 
 .educational-institutions-catalogue .filter ul li {
     display: inline-block;
+    list-style: none;
     cursor: pointer;
     margin: 0 25px;
-    height: 35px;
+    height: 40px;
+    z-index: 9999;
+    position: relative;
 }
 
-.educational-institutions-catalogue .filter ul li.location {
-    background: url("../../images/educational-institutions-catalogue-filter-location.png");
-    width: 222px;
+/*.educational-institutions-catalogue .filter ul li.location {*/
+    /*background: url("../../images/educational-institutions-catalogue-filter-location.png");*/
+    /*width: 222px;*/
+/*}*/
+
+/*.educational-institutions-catalogue .filter ul li.gender {*/
+    /*background: url("../../images/educational-institutions-catalogue-filter-gender.png");*/
+    /*width: 156px;*/
+/*}*/
+
+/*.educational-institutions-catalogue .filter ul li.type {*/
+    /*background: url("../../images/educational-institutions-catalogue-filter-type.png");*/
+    /*width: 156px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.educational-institutions-filter-selector{
+    /*margin-left: -100px;*/
 }
 
-.educational-institutions-catalogue .filter ul li.gender {
-    background: url("../../images/educational-institutions-catalogue-filter-gender.png");
-    width: 156px;
+.educational-institutions-filter-selector .drop-down-list-head{
+    border: 1px solid #ff8713;
 }
 
-.educational-institutions-catalogue .filter ul li.type {
-    background: url("../../images/educational-institutions-catalogue-filter-type.png");
-    width: 156px;
+.educational-institutions-filter-selector .drop-down-list-head .splitter{
+    border-right: 2px solid #ff8713;
 }
+
+.educational-institutions-filter-selector .drop-down-list-head{
+    padding-right: 47px;
+}
+
+
+.educational-institutions-filter-selector .drop-down-list-head,
+.educational-institutions-filter-selector .item
+{
+    background-color:#ff9634;
+    color: #ffffff;
+}
+
+.educational-institutions-filter-selector .drop-down-list-items .item.selected{
+    color: #cb6200;
+}
+
+.educational-institutions-filter-selector .drop-down-list-items .item:hover {
+    background-color: #ffbc66;
+}
+
+.educational-institutions-filter-selector .drop-down-list-head .triangle{
+    border-top-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .educational-institutions-catalogue .content {
     margin-top: 40px;

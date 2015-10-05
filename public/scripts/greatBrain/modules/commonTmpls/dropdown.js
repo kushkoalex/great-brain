@@ -6,7 +6,8 @@
             listItems = data.listItems,
             itemClassName,
             selectedText = '',
-            dropDownListHeadContent = [];
+            dropDownListHeadContent = [],
+            u;
 
         if (listItems.length > 0) {
             selectedText = listItems[0].text;
@@ -21,12 +22,11 @@
                 itemClassName += ' last';
             }
             if (options) {
-                if ((options.selectedIndex && options.selectedIndex === i) || (options.selectedValue && options.selectedValue == listItems[i].value)) {
+                if ((options.selectedIndex !== u && options.selectedIndex === i) || (options.selectedValue !== u && options.selectedValue == listItems[i].value)) {
                     itemClassName += ' selected';
                     selectedText = listItems[i].text;
                 }
             }
-
             dropDownListItems.push({c: itemClassName, H: listItems[i].text, a: {value: listItems[i].value}})
         }
 

@@ -3,6 +3,9 @@
     cursor: pointer;
     text-align: center;
     position: absolute;
+    white-space: nowrap;
+    position: relative;
+    height: 50px;
 }
 
 .drop-down-list-head,
@@ -29,6 +32,8 @@
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
     filter: alpha(opacity=1);
     height: auto;
+    position: absolute;
+    width: 100%;
 }
 .drop-down-list-items.hidden{
     height: 0;

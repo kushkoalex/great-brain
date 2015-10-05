@@ -12,20 +12,80 @@ GB.educationalInstitutions = function($parent){
         build,
         buildItem,
         $educationalInstitutionsContentItems,
+
+        $dropDownInstitutionLocation,
+        $dropDownGender,
+        $dropDownInstitutionType,
+
+        dropDownInstitutionLocationListItems=[],
+        dropDownGenderListItems=[],
+        dropDownInstitutionTypeListItems=[],
+
+        dropDownInstitutionLocationSelectedIndex=0,
+        dropDownGenderSelectedIndex=0,
+        dropDownInstitutionTypeSelectedIndex=0,
+
         $fragment;
 
     build = tp('educationalInstitutions', $parent);
     $educationalInstitutionsContentItems = build.educationalInstitutionsContentItems;
-    gb.popupForm($parent);
     $serviceMenuWrapper= build.servicesMenuWrapper;
+    $dropDownInstitutionLocation = build.dropDownInstitutionLocation;
+    $dropDownGender=build.dropDownGender;
+    $dropDownInstitutionType=build.dropDownInstitutionType;
+
     gb.servicesMenu($serviceMenuWrapper);
+    gb.popupForm($parent);
+
     $fragment = global.document.createDocumentFragment();
 
 
+
+
+    a9.each(settings.dataModels.educationalInstitutionFilterLocation, function (item,i) {
+        dropDownInstitutionLocationListItems.push({text: item.title, value: item.value});
+        if(item.selected===true){
+            dropDownInstitutionLocationSelectedIndex=i;
+        }
+    });
+    a9.each(settings.dataModels.educationalInstitutionFilterGender, function (item,i) {
+        dropDownGenderListItems.push({text: item.title, value: item.value});
+        if(item.selected===true){
+            dropDownGenderSelectedIndex=i;
+        }
+    });
+    a9.each(settings.dataModels.educationalInstitutionFilterType, function (item,i) {
+        dropDownInstitutionTypeListItems.push({text: item.title, value: item.value});
+        if(item.selected===true){
+            dropDownInstitutionTypeSelectedIndex=i;
+        }
+    });
+
+    console.log(dropDownInstitutionTypeSelectedIndex);
+
+
+    var dropDownInstitutionLocationOptions = {
+        selectedIndex: dropDownInstitutionLocationSelectedIndex,
+        hasSplitter:true
+    };
+
+    var dropDownGenderOptions = {
+        selectedIndex: dropDownGenderSelectedIndex,
+        hasSplitter:true
+    };
+    var dropDownInstitutionTypeOptions = {
+        selectedIndex: dropDownInstitutionTypeSelectedIndex,
+        hasSplitter:true
+    };
+
+    a9.dropdown($dropDownInstitutionLocation,dropDownInstitutionLocationListItems,dropDownInstitutionLocationOptions);
+    a9.dropdown($dropDownGender,dropDownGenderListItems,dropDownGenderOptions);
+    a9.dropdown($dropDownInstitutionType,dropDownInstitutionTypeListItems,dropDownInstitutionTypeOptions);
+
+
+
     a9.each(pageData,function(dataItem){
-
         buildItem = tp('educationalInstitutionsContentItem', dataItem, $fragment);
-
     });
 
     $feedbackFormWrapper = build.feedbackFormWrapper;
