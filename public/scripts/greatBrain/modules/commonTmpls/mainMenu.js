@@ -4,7 +4,7 @@
         l10n = a9.l10n,
         u;
 
-    tmpls.mainMenu = function (activeMenuItemId, clickable) {
+    tmpls.mainMenu = function () {
         var
             menuData = gb.settings.dataModels.mainMenu,
             menuItems = [],
@@ -18,12 +18,12 @@
         for (i = 0; i < menuData.length; i++) {
             menuItemState = menuData[i].state;
 
-            if(activeMenuItemId===i){
-                menuItemState = 'active';
-                if(clickable===true){
-                    menuItemState = 'activeClickable'
-                }
-            }
+            //if(menuData[i].active===true){
+            //    menuItemState = 'active';
+            //    if(menuData[i].clickable===true){
+            //        menuItemState = 'activeClickable'
+            //    }
+            //}
 
             menuItemClassName = menuItemState;
 

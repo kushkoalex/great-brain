@@ -29,7 +29,6 @@
                 default :
                     bannerClassName = 'default';
                     break;
-
             }
 
 

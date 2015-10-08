@@ -39,7 +39,7 @@
                     c: 'parallax-window',
                     a: {
                         'data-parallax': 'scroll',
-                        'data-image-src': gb.settings.controlsDescriptors.site.mainPageImages + parallaxImages[i]
+                        'data-image-src': gb.settings.controlsDescriptors.site.parallaxImages + parallaxImages[i]
                     }
                 });
             }
@@ -68,7 +68,7 @@
             c: 'announcement-image',
             //e: 'img',
             //a: {src: gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc}
-            a: {style: 'background-image:url(' + gb.settings.controlsDescriptors.site.mainPageImages + announcement.imageSrc + ')'}
+            a: {style: 'background-image:url(' + gb.settings.controlsDescriptors.site.contentAnnouncementImages + announcement.imageSrc + ')'}
         }
     };
 
@@ -106,7 +106,7 @@
                 {
                     //e: 'img',
                     c: 'banner', //a: {src: controlsDescriptors.site.mainPageImages + mainBanner.imageSrc}
-                    a: {style: 'background-image:url(' + controlsDescriptors.site.mainPageImages + mainBanner.imageSrc + ')'}
+                    a: {style: 'background-image:url(' + controlsDescriptors.site.mainBannerImages + mainBanner.imageSrc + ')'}
                 },
                 {
                     c: 'main-page-info-wrapper', C: content

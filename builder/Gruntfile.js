@@ -294,4 +294,9 @@ module.exports = function (grunt) {
             'includes:prod',
             'clean:prod'
         ]);
+    grunt.registerTask('dev',
+        [
+            'concat',
+            'replace:cssFixURLs'
+        ]);
 };
