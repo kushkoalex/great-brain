@@ -1,4 +1,4 @@
-(function (gb) {
+(function (gb,a9) {
     var tmpls = gb.tmpls,
         a9 = gb.global.A9,
         l10n = a9.l10n,
@@ -57,4 +57,4 @@
         return {c:itemsBlockClassName,C:[{c: 'title', t: title}, {c:'content', C: data}]}
     };
 
-}(GB));
+}(GB,A9));

@@ -1,9 +1,10 @@
-(function (gb) {
+(function (gb,a9) {
     gb.tmpls.dropdown = function (data) {
         var dropDownListItems = [],
             i,
             options = data.options,
             listItems = data.listItems,
+            submitUrl = options.submitUrl,
             itemClassName,
             selectedText = '',
             dropDownListHeadContent = [],
@@ -39,9 +40,11 @@
 
         return [
             {
+                e:'form', n:'selectForm', a:{method:'post', action:''}, C:{
                 c: 'drop-down-list-head',
                 n: 'dropDownListHead',
                 C: dropDownListHeadContent
+            }
             },
             {
                 c: 'drop-down-list-items hidden', n: 'items', C: dropDownListItems
@@ -50,7 +53,7 @@
         ];
     };
 
-}(GB));
+}(GB,A9));
 
 
 (function (a9, gb) {
@@ -64,10 +67,15 @@
             eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
             eventOnPointerUp = a9.deviceInfo.eventOnPointerUp;
 
+
         build = tp('dropdown', {options: options, listItems: listItems}, $parent);
         $head = build.dropDownListHead;
         $items = build.items;
         $selectedText = build.selectedText;
+
+        var $form = build.selectForm;
+
+        console.log($form);
 
         a9.addEvent($head, eventOnPointerEnd, showItems);
         a9.addEvent($body, eventOnPointerEnd, hideItems);
@@ -85,6 +93,9 @@
 
         function selectItem(e) {
             $selectedText.innerHTML = e.target.innerHTML;
+            $form.setAttribute('action',a9.supplant(options.submitUrl,{value:e.target.getAttribute('value')}));
+            $form.submit();
+            //console.log($form.getAttribute('action'));
         }
 
         function preventHideItems(e) {

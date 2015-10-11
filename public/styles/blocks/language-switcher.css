@@ -6,9 +6,15 @@
     margin-left: 78px;
     margin-top: 7px;
     position: absolute;
+
 }
 
 .language-switcher a {
     color: #ffffff;
     padding: 4px 4px 4px 15px;
 }
+
+.language-switcher span{
+    padding-left: 14px;
+}
+

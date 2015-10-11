@@ -20,17 +20,23 @@
         return {
             c: 'education-kinds-content', C: [
                 tmpls.countrySelector(),
-                tmpls.educationCategoriesMenu(1),
+                tmpls.educationCategoriesMenu(),
                 tmpls.categoryContent(dataModel)
             ]
         }
     };
 
     tmpls.categoryContent = function (dataModel) {
-        var educationKindList = gb.settings.dataModels.educationKinds;
+        var title;
+        for(var i=0;i<dataModel.educationCategories.length; i++){
+            if(dataModel.educationCategories[i].active===true) {
+                title = dataModel.educationCategories[i].title;
+            }
+        }
+
         return [
             {
-                c: 'category-content-title', t: educationKindList[0].educationCategories[0].title
+                c: 'category-content-title', t: title
             },
             {
                 c: 'select-group', t: l10n('selectAgeGroup')
@@ -48,6 +54,23 @@
 
 
     tmpls.categoryContentInnerWrapper = function (dataModel) {
+
+        var ageGroups,
+            ageGroup,
+            i;
+        for(i=0;i<dataModel.educationCategories.length; i++){
+            if(dataModel.educationCategories[i].active===true) {
+                ageGroups = dataModel.educationCategories[i].ageGroups;
+            }
+        }
+
+        for(i=0;i<ageGroups.length; i++){
+             if(ageGroups[i].active===true){
+                 ageGroup = ageGroups[i];
+             }
+        }
+
+
         return {
             c: 'category-content-inner-wrapper', C: [
                 {
@@ -57,7 +80,7 @@
                         a: {src: gb.settings.controlsDescriptors.site.educationKindsImages + 'girl-with-books.png'}
                     }]
                 },
-                {c: 'text-container', C: {H: dataModel[0].educationCategories[0].ageGroups[0].text}},
+                {c: 'text-container', C: {H: ageGroup.text}},
                 {c: 'clear'}
             ]
         }
@@ -86,9 +109,8 @@
     };
 
 
-    tmpls.educationCategoriesMenu = function (activeMenuItemId) {
-        var educationKindList = gb.settings.dataModels.educationKinds,
-            educationKinds = [],
+    tmpls.educationCategoriesMenu = function () {
+        var educationKinds = [],
             menuItem,
             i,
             menuItemClassName,
@@ -96,9 +118,9 @@
             menuItemState;
 
 
-        a9.each(educationKindList[0].educationCategories, function (category) {
+        a9.each(gb.settings.dataModels.educationKinds.educationCategories, function (category) {
 
-            if (activeMenuItemId == category.id) {
+            if (category.active===true) {
                 menuItem = {e: 'li', c: 'active', C: [{c: 'title', t: category.title}, {c: 'age', t: category.age}]};
             } else {
                 menuItem = {
@@ -106,12 +128,10 @@
                     C: {
                         e: 'a',
                         h: '#',
-                        C: [{c: 'title', e: 'a', h: '#', t: category.title}, {c: 'age', t: category.age}]
+                        C: [{c: 'title', e: 'a', h: category.url, t: category.title}, {c: 'age', t: category.age}]
                     }
                 };
             }
-
-
             educationKinds.push(menuItem);
         });
 

@@ -1,4 +1,4 @@
-GB.educationKinds = function($parent){
+GB.educationKinds = function ($parent) {
     var gb = this,
         global = gb.global,
         a9 = global.A9,
@@ -11,9 +11,9 @@ GB.educationKinds = function($parent){
         $dropdownCountries,
         $dropdownAgeGroups,
         countryList = gb.settings.dataModels.educationalCountries,
-        dropdownSelectCountryListItems=[],
-        ageGroupList = gb.settings.dataModels.educationKinds[0].educationCategories[0].ageGroups,
-        dropdownAgeGroupListItems=[],
+        dropdownSelectCountryListItems = [],
+        ageGroupList = [],
+        dropdownAgeGroupListItems = [],
         pageData = settings.dataModels.educationKinds,
         build,
         buildItem,
@@ -25,13 +25,38 @@ GB.educationKinds = function($parent){
     $dropdownAgeGroups = build.dropDownAgeGroups;
 
 
+    var getSelectedAgeGroup = function () {
+        for (var i = 0; i < pageData.educationCategories.length; i++) {
+            if (pageData.educationCategories[i].active === true) {
+                for (var j = 0; j < pageData.educationCategories[i].ageGroups.length; j++) {
+                    if (pageData.educationCategories[i].ageGroups[j].active === true) {
+                        return pageData.educationCategories[i].ageGroups[j].name;
+                    }
+                }
+            }
+        }
+    };
+
+    var getCurrentEducationCategoryName = function(){
+        for (var i = 0; i < pageData.educationCategories.length; i++) {
+            if (pageData.educationCategories[i].active === true) {
+                return pageData.educationCategories[i].name;
+            }
+        }
+    };
+
+
     var dropDownCountriesOptions = {
-        selectedValue: 'gb'
+        selectedValue: gb.settings.selectedCountry,
+        submitUrl:'/'+settings.currentLanguage+'/{value}'
     };
 
     var dropDownAgeGroupsOptions = {
-        selectedIndex: 1,
-        hasSplitter:true
+        //selectedIndex: 1,
+        //selectedValue: gb.settings.selectedAgeGroup,
+        selectedValue: getSelectedAgeGroup(),
+        hasSplitter: true,
+        submitUrl:'/'+settings.currentLanguage+'/'+ settings.selectedCountry +'/'+ getCurrentEducationCategoryName() +'/{value}'
     };
 
 
@@ -39,17 +64,25 @@ GB.educationKinds = function($parent){
         dropdownSelectCountryListItems.push({text: item.title, value: item.code});
     });
 
+
+    for (var i = 0; i < pageData.educationCategories.length; i++) {
+        if (pageData.educationCategories[i].active === true) {
+            ageGroupList = pageData.educationCategories[i].ageGroups
+        }
+    }
+
+
     a9.each(ageGroupList, function (item) {
-        dropdownAgeGroupListItems.push({text: item.age, value: item.id});
+        dropdownAgeGroupListItems.push({text: item.age, value: item.name});
     });
 
 
-    a9.dropdown($dropdownCountries,dropdownSelectCountryListItems,dropDownCountriesOptions);
-    a9.dropdown($dropdownAgeGroups,dropdownAgeGroupListItems,dropDownAgeGroupsOptions);
+    a9.dropdown($dropdownCountries, dropdownSelectCountryListItems, dropDownCountriesOptions);
+    a9.dropdown($dropdownAgeGroups, dropdownAgeGroupListItems, dropDownAgeGroupsOptions);
 
     gb.popupForm($parent);
 
-    $serviceMenuWrapper= build.servicesMenuWrapper;
+    $serviceMenuWrapper = build.servicesMenuWrapper;
     gb.servicesMenu($serviceMenuWrapper);
 
     $feedbackFormWrapper = build.feedbackFormWrapper;

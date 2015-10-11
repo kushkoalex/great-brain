@@ -14,6 +14,8 @@ A9.ready(function (a9, global) {
         $roadMap = $('roadMap'),
         $blogDetails = $('blogDetails'),
         $partners = $('partners'),
+        $services = $('services'),
+        $siteContent = $('siteContent'),
         $contacts = $('contacts'),
         $intro = $('intro'),
         $scrollToTop,
@@ -65,6 +67,14 @@ A9.ready(function (a9, global) {
 
     if ($partners !== null) {
         gb.partners($partners);
+    }
+
+    if ( $services!== null) {
+        gb.services($services);
+    }
+
+    if ($siteContent!== null) {
+        gb.siteContent($siteContent);
     }
 
     if ($contacts !== null) {

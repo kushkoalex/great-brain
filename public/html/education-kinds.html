@@ -99,10 +99,13 @@
         <script type="text/javascript" src="../scripts/greatBrain/elements/popupForm/popupForm.js?v=0.9.17"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/popupForm/tmpls_popupForm.js?v=0.9.17"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/roadMap/roadMap.js?v=0.9.17"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/services/services.js?v=0.9.17"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/services/tmpls_services.js?v=0.9.17"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/servicesMenu/servicesMenu.js?v=0.9.17"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/servicesMenu/tmpls_servicesMenu.js?v=0.9.17"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/simpleSiteContent/simpleSiteContent.js?v=0.9.17"></script>
         <script type="text/javascript" src="../scripts/greatBrain/elements/simpleSiteContent/tmpls_simpleSiteContent.js?v=0.9.17"></script>
+        <script type="text/javascript" src="../scripts/greatBrain/elements/siteContent/siteContent.js?v=0.9.17"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery-1.11.2.min.js?v=0.9.17"></script>
         <script type="text/javascript" src="../vendor/scripts/jquery.bxslider.min.js?v=0.9.17"></script>
         <script type="text/javascript" src="../vendor/scripts/parallax.min.js?v=0.9.17"></script>
@@ -169,10 +172,9 @@
             }
 
             settings.currentLanguage = 'ru';
-
+            settings.selectedCountry='swe';
             settings.scrollToAnnouncementsDuration= 1000;
             settings.scrollToTopDuration= 1000;
-
 
     //        settings.hiddenToken = '6e5db10da6b6fcae366bdf4e4ce50f1b';
     //        settings.hiddenTokenAPIURL = '/api/user/';
@@ -679,31 +681,39 @@
     <script type="text/javascript">
         (function (gb) {
 
-            gb.settings.dataModels.educationKinds = [
+            gb.settings.dataModels.educationKinds =
                 {
-                    country: 'sw',
                     educationCategories: [
                         {
                             id:1,
                             title: 'Подготовительная школа',
+                            active:true,
+                            name:'123',
+                            url:'#',
                             age: 'Возраст: 3 — 14 лет',
                             ageGroups: [
                                 {
                                     id:1,
+                                    name:'3-6',
                                     age: 'от 3 до 6 лет',
                                     text: 'По достижении 7-ми лет дети переходят на вторую ступень начального образования (Key Stage Two) — это Junior Schools, учреждения для младших школьников.<br>В эти четыре года обязательными для изучения являются 11 предметов, среди которых — математика, английский, дизайн, естественные и технические науки, история и география.<br>С сентября 2014 года у учеников появилась возможность выбрать для изучения один из современных или классических (латынь, древнегреческий и т.д.) языков.<br>По достижении 11 лет ученики, которые хотят перейти в частные школы, сдают общий вступительный экзамен — Common Entrance Examination (СЕЕ) — по основным и дополнительным предметам.<br>Обязательными являются экзамены по английскому языку, математике и естественным наукам. Для многих школ также требуются история, география, религиоведение и, как минимум, один иностранный язык.<br>Какой тип школы выбрать, чтобы ребёнку было максимально комфортно и интересно? Варианты выбора:<br>— государственная или частная;<br>— пансион или дневная школа;<br>— смешанная (для девочек и мальчиков) или раздельная.<br>Наша команда поможет определиться с типом школы, учитывая все требования клиента и особенности характера ребёнка.<br>',
+                                    active:true,
                                     imageSrc: '',
                                     parallaxImageSrc: ''
                                 },
                                 {
                                     id:2,
+                                    name:'7-11',
                                     age: 'от 7 до 11 лет',
+
                                     text: '',
                                     imageSrc: '',
                                     parallaxImageSrc: ''
+
                                 },
                                 {
                                     id:3,
+                                    name:'12-14',
                                     age: 'от 12 до 14 лет',
                                     text: '',
                                     imageSrc: '',
@@ -715,6 +725,8 @@
                         {
                             id:2,
                             title: 'Старшая школа',
+                            url:'#',
+                            name:'456',
                             age: 'Возраст: 14 — 18 лет',
                             ageGroups: [
                                 {
@@ -736,6 +748,8 @@
                         {
                             id:3,
                             title: 'Высше образование',
+                            name:'456',
+                            url:'#',
                             age: 'Возраст: 18 лет',
                             ageGroups: [
                                 {
@@ -749,6 +763,8 @@
                         {
                             id:4,
                             title: 'Курсы и тренинги',
+                            name:'456',
+                            url:'#',
                             age: 'Возраст: от 10 лет',
                             ageGroups: [
                                 {
@@ -766,11 +782,7 @@
                             ]
                         }
                     ]
-                },
-
-
-                {country: 'gb'}
-            ];
+                };
 
         }(GB));
     </script>
@@ -969,6 +981,26 @@
             gb.settings.dataModels.partners ={
                 title: 'Наши партнеры',
                 text: 'partners partners partners partners partners partners partners partners partners partners partners partners partners partners partners partners partners partners '
+            }
+
+        }(GB));
+    </script>
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.siteContent ={
+                title: 'Контент',
+                text: 'content content content'
+            }
+
+        }(GB));
+    </script>
+    <script type="text/javascript">
+        (function (gb) {
+
+            gb.settings.dataModels.services ={
+                title: 'Наши Услуги',
+                text: 'services services services services services services '
             }
 
         }(GB));
