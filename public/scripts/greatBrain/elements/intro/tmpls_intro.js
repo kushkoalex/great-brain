@@ -21,7 +21,7 @@
                 ]
                 },
                 tmpls.finalLayout(),
-                {c: 'skip-intro-wrapper',n:'skipIntroWrapperButton', C: {c: 'skip-intro', e: 'a', h: 'index.html', t: l10n('intro_skipIntro')}}]
+                {c: 'skip-intro-wrapper',n:'skipIntroWrapperButton', C: {c: 'skip-intro', e: 'a', h:gb.settings.controlsDescriptors.site.mainPageUrl, t: l10n('intro_skipIntro')}}]
         }
     };
 

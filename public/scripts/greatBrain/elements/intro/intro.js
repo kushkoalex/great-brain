@@ -13,7 +13,7 @@ GB.intro = function ($parent) {
         u;
 
 
-    build = tp('intro', introData, $parent);
+    build = tp('intro', $parent);
 
     var $asUsual = build.asUsual;
     var $child = build.child;
