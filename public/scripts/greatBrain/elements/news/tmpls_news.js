@@ -37,19 +37,20 @@
 
 
     tmpls.newsContentItem = function (newsItem) {
+        var url = a9.supplant(gb.settings.controlsDescriptors.site.newsDetailsUrl,{id:newsItem.name});
         return {
             c: 'news-content-item',
             C: [
                 {
                     c: 'thumb',
-                    C: {e:'a', h:gb.settings.controlsDescriptors.site.newsDetailsUrl,C:{ e: 'img', a: {src: gb.settings.controlsDescriptors.site.newsThumbnails + newsItem.thumb}}}
+                    C: {e:'a', h:url,C:{ e: 'img', a: {src: gb.settings.controlsDescriptors.site.newsThumbnails + newsItem.thumb}}}
                 },
                 {
                     c: 'info', C: [
                     {c: 'date',t: newsItem.date},
                     {
                         c: 'info-block', C: [
-                        {c: 'title',C:{ e:'a',h:gb.settings.controlsDescriptors.site.newsDetailsUrl, H:newsItem.title}},
+                        {c: 'title',C:{ e:'a',h:url, H:newsItem.title}},
                         {c: 'short-description',H:newsItem.shortDescription}]
                     }]
                 }]

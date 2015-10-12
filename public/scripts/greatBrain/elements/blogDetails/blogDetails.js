@@ -5,7 +5,7 @@ GB.blogDetails = function ($parent) {
         settings = gb.settings,
         $serviceMenuWrapper,
         $feedbackFormWrapper,
-        newsData = settings.dataModels.blog[0],
+        newsData = settings.dataModels.blogDetails,
         build;
 
     build = tp('blogDetails', newsData, $parent);

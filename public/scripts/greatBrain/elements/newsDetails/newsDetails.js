@@ -9,7 +9,7 @@ GB.newsDetails = function ($parent) {
         $serviceMenuWrapper,
         $newsImagesCarousel,
         //$sliderImages,
-        newsData = settings.dataModels.news[0],
+        newsData = settings.dataModels.newsDetails,
         build,
         u;
 

@@ -28,7 +28,7 @@
 
         return {
             c: 'blog-list',
-            C: [{c: 'blog-content-title', t: l10n('siteMenuNewsTitle', 'firstUpper')}, {
+            C: [{c: 'blog-content-title', t: l10n('siteMenuBlogTitle', 'firstUpper')}, {
                 c: 'blog-list-content',
                 C: blogContentItems
             }]
@@ -37,6 +37,7 @@
 
 
     tmpls.blogContentItem = function (blogItem) {
+        var url = a9.supplant(gb.settings.controlsDescriptors.site.blogDetailsUrl,{id:blogItem.name});
         return {
             c: 'blog-content-item',
             C: [
@@ -44,12 +45,12 @@
                     c: 'thumb',
                     C: {
                         e: 'a',
-                        h: gb.settings.controlsDescriptors.site.blogDetailsUrl,
+                        h: url,
                         C: {e: 'img', a: {src: gb.settings.controlsDescriptors.site.blogThumbnails + blogItem.thumb}}
                     }
                 },
                 {c: 'date', t: blogItem.date},
-                {c: 'title', C: {e: 'a', h: gb.settings.controlsDescriptors.site.blogDetailsUrl, H: blogItem.title}},
+                {c: 'title', C: {e: 'a', h: url, H: blogItem.title}},
                 {c: 'short-description', H: blogItem.shortDescription}
             ]
         }
