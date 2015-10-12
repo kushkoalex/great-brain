@@ -34,12 +34,13 @@
     font-size: 18px;
     color: #959595;
     margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .educational-institution-details .site-content-title .logo
 {
     display: inline-block;
-    margin: 25px 70px 35px;
+    margin: 0 70px 35px;
 }
 
 .educational-institution-details-info-wrapper{

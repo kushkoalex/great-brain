@@ -66,16 +66,19 @@ GB.educationalInstitutions = function($parent){
 
     var dropDownInstitutionLocationOptions = {
         selectedIndex: dropDownInstitutionLocationSelectedIndex,
-        hasSplitter:true
+        hasSplitter:true,
+        submitUrl:'/'+settings.currentLanguage+'/catalogue/{value}/'+ settings.selectedGenger +'/'+settings.selectedType
     };
 
     var dropDownGenderOptions = {
         selectedIndex: dropDownGenderSelectedIndex,
-        hasSplitter:true
+        hasSplitter:true,
+        submitUrl:'/'+settings.currentLanguage+'/catalogue/'+ settings.selectedLocation +'/{value}/'+settings.selectedType
     };
     var dropDownInstitutionTypeOptions = {
         selectedIndex: dropDownInstitutionTypeSelectedIndex,
-        hasSplitter:true
+        hasSplitter:true,
+        submitUrl:'/'+settings.currentLanguage+'/catalogue/'+ settings.selectedLocation +'/'+ settings.selectedGenger +'/{value}'
     };
 
     a9.dropdown($dropDownInstitutionLocation,dropDownInstitutionLocationListItems,dropDownInstitutionLocationOptions);

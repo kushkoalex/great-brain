@@ -25,9 +25,12 @@
                 url: descriptors.educationalInstitutionsCatalogueUrl,
                 urlText:l10n('educationalInstitutionsCatalogueTitle'),
                 title:dataItem.title,
-                subTitle:dataItem.titleEng,
-                logo:descriptors.educationalInstitutionDetailsLogo + dataItem.logoImageSrc
+                subTitle:dataItem.titleEng
             };
+
+        if(dataItem.logoImageSrc && dataItem.logoImageSrc!==null && dataItem.logoImageSrc!==''){
+            data.logo = descriptors.educationalInstitutionDetailsLogo + dataItem.logoImageSrc;
+        }
 
 
         return {

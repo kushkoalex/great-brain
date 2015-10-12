@@ -55,7 +55,8 @@
         var educationGender,
             itemClassName = 'educational-institutions-catalogue-item',
             itemContent = [],
-            isSpecial = dataItem.special === true;
+            isSpecial = dataItem.special === true,
+            url = a9.supplant(gb.settings.controlsDescriptors.site.educationalInstitutionDetailsUrl,{id:dataItem.name});
 
         switch (dataItem.gender) {
             case 'both':
@@ -93,10 +94,8 @@
                 ]
             }
         });
-
         return {
-            c: itemClassName, C: {e: 'a', h:gb.settings.controlsDescriptors.site.educationalInstitutionDetailsUrl, C: itemContent}
-            //c: itemClassName, C: itemContent
+            c: itemClassName, C: {e: 'a', h: url, C: itemContent}
         }
     };
 
