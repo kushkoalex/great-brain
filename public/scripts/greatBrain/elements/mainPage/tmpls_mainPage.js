@@ -57,7 +57,7 @@
             c: 'announcement-info', C: [
                 {c: 'title', t: announcement.title},
                 {c: 'announcement-info-logo'},
-                {c: 'text', t: announcement.text},
+                {c: 'text', H: announcement.text},
                 {e: 'a', h: announcement.url, c: 'link', t: l10n('announcementLinkText')}
             ]
         }
