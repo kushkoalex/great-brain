@@ -1,4 +1,4 @@
-(function (gb,a9) {
+(function (gb, a9) {
     gb.tmpls.dropdown = function (data) {
         var dropDownListItems = [],
             i,
@@ -40,7 +40,7 @@
 
         return [
             {
-                e:'form', n:'selectForm', a:{method:'post', action:''}, C:{
+                e: 'form', n: 'selectForm', a: {method: 'post', action: ''}, C: {
                 c: 'drop-down-list-head',
                 n: 'dropDownListHead',
                 C: dropDownListHeadContent
@@ -53,7 +53,7 @@
         ];
     };
 
-}(GB,A9));
+}(GB, A9));
 
 
 (function (a9, gb) {
@@ -62,6 +62,7 @@
             $body = document.body,
             build,
             $head,
+            marker = 'dropdowncontrolitems',
             $items,
             $selectedText,
             eventOnPointerEnd = a9.deviceInfo.eventOnPointerEnd,
@@ -73,27 +74,46 @@
         $items = build.items;
         $selectedText = build.selectedText;
 
+        a9.addClass($items, marker);
+
         var $form = build.selectForm;
 
-        console.log($form);
+        //console.log($form);
 
-        a9.addEvent($head, eventOnPointerEnd, showItems);
+        a9.addEvent($head, eventOnPointerEnd, toggleItems);
         a9.addEvent($body, eventOnPointerEnd, hideItems);
         a9.addEvent($items, eventOnPointerUp, selectItem);
 
 
-        function showItems(e) {
-            a9.removeClass($items, 'hidden');
+        function toggleItems(e) {
+            hideOtherControlsExceptCurrent($items);
+            if (a9.hasClass($items, 'hidden')) {
+                a9.removeClass($items, 'hidden');
+            }
+            else {
+                a9.addClass($items, 'hidden');
+            }
             preventHideItems(e);
         }
 
-        function hideItems() {
+        function hideOtherControlsExceptCurrent(obj) {
+            var controls = a9.$c(marker);
+            for (var i = 0; i < controls.length; i++) {
+                if (obj !== controls[i]) {
+                    a9.addClass(controls[i], 'hidden');
+                }
+            }
+        }
+
+        function hideItems(e) {
+            //console.log($items);
+            //console.log('hide');
             a9.addClass($items, 'hidden');
         }
 
         function selectItem(e) {
             $selectedText.innerHTML = e.target.innerHTML;
-            $form.setAttribute('action',a9.supplant(options.submitUrl,{value:e.target.getAttribute('value')}));
+            $form.setAttribute('action', a9.supplant(options.submitUrl, {value: e.target.getAttribute('value')}));
             $form.submit();
             //console.log($form.getAttribute('action'));
         }

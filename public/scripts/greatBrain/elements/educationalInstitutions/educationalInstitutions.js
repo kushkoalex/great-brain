@@ -61,8 +61,6 @@ GB.educationalInstitutions = function($parent){
         }
     });
 
-    console.log(dropDownInstitutionTypeSelectedIndex);
-
 
     var dropDownInstitutionLocationOptions = {
         selectedIndex: dropDownInstitutionLocationSelectedIndex,
