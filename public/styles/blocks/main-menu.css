@@ -54,7 +54,7 @@
     text-align: center;
     display: inline-block;
     list-style: none;
-    margin: 0 30px;
+    margin: 0 20px;
     color: #464646;
     vertical-align: top;
     text-transform: uppercase;
@@ -192,7 +192,7 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
     /*margin-top: 15px;*/
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
     padding: 40px 0 20px;
     text-align: center;
 }
