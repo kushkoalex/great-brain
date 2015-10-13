@@ -100,7 +100,8 @@
     padding: 2px 5px 2px 25px;
 
     margin-top: 7px;
-    color: #e5e5e5;
+    /*color: #e5e5e5;*/
+    color: #ffffff;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     -webkit-border-radius: 9px;
@@ -108,27 +109,35 @@
     border-radius: 9px;
 }
 
+
+
+
 ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
-    color: #e5e5e5;
+    color: rgba(255,255,255,0.5);
+    /*color: #e5e5e5;*/
 }
 
 :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #e5e5e5;
-    opacity: 1;
+    /*color: #e5e5e5;*/
+    color: rgba(255,255,255,0.5);
+    opacity: 0.5;
 }
 
 ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #e5e5e5;
-    opacity: 1;
+    /*color: #e5e5e5;*/
+    color: rgba(255,255,255,0.5);
+    /*opacity: 0.5;*/
+
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #e5e5e5;
+    color: rgba(255,255,255,0.5);
 }
+
 
 .header-bottom-line {
     height: 216px;
