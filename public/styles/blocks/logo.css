@@ -11,9 +11,18 @@
     background: url("../../images/logo-big-black-pattern.png") no-repeat center;
 }
 
+.isSVG .site-logo .logo-pattern {
+    background: url("../../images/svg/logo-black-gerb.svg") no-repeat center;
+}
+
 .main-page .site-logo .logo-pattern{
     background: url("../../images/logo-big-white-pattern.png") no-repeat center;
 }
+
+.isSVG .main-page .site-logo .logo-pattern{
+    background: url("../../images/svg/logo-white-gerb.svg") no-repeat center;
+}
+
 
 .site-logo .logo-sign {
     width: 118px;
@@ -23,8 +32,18 @@
     display: block;
 }
 
+.isSVG .site-logo .logo-sign{
+    background: url("../../images/svg/logo-black-letters.svg") no-repeat center;
+}
+
+
+
 .main-page .logo-sign{
     background: url("../../images/logo-big-white-sign.png") no-repeat center;
+}
+
+.isSVG .main-page .logo-sign{
+    background: url("../../images/svg/logo-white-letters.svg") no-repeat center;
 }
 
 .site-logo .logo-sign.fixed{
