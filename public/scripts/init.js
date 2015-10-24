@@ -5,6 +5,7 @@ A9.ready(function (a9, global) {
     //tp = global.cnCt.tp,
         $ = a9.$,
         $mainPage = $('mainPage'),
+        $mainPageMobile = $('mainPageMobile'),
         $educationalInstitutions = $('educationalInstitutions'),
         $educationalInstitutionDetails = $('educationalInstitutionDetails'),
         $educationKinds = $('educationKinds'),
@@ -27,11 +28,15 @@ A9.ready(function (a9, global) {
         u;
 
 
+    a9.deviceInfo.isMobileDevice = true;
+
     global.cnCt.bindTemplates(gb.tmpls);
 
     if ($mainPage !== null) {
         gb.mainPage($mainPage);
     }
+
+
 
     if ($educationalInstitutions !== null) {
         gb.educationalInstitutions($educationalInstitutions);
@@ -87,11 +92,15 @@ A9.ready(function (a9, global) {
 
 
 
+    if ($mainPageMobile !== null) {
+        gb.mainPageMobile($mainPageMobile);
+    }
+
+
     $scrollToTop = $('scrollToTop');
     if ($scrollToTop !== null) {
         gb.scrollToTop($scrollToTop);
     }
-
 
     gb.stickyPanels();
 

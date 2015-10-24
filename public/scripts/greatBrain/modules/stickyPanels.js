@@ -11,16 +11,20 @@ GB.stickyPanels = function () {
     a9.addEvent(global, 'scroll', function () {
         var scrollY = this.scrollY;
 
-        if (scrollY >= 100) {
-            a9.addClass($menu, fixedClassName)
-        } else {
-            a9.removeClass($menu, fixedClassName)
+        if($menu!==null) {
+            if (scrollY >= 100) {
+                a9.addClass($menu, fixedClassName)
+            } else {
+                a9.removeClass($menu, fixedClassName)
+            }
         }
 
-        if (scrollY >= 174) {
-            a9.addClass($logoSign, fixedClassName)
-        } else {
-            a9.removeClass($logoSign, fixedClassName)
+        if($logoSign!==null) {
+            if (scrollY >= 174) {
+                a9.addClass($logoSign, fixedClassName)
+            } else {
+                a9.removeClass($logoSign, fixedClassName)
+            }
         }
 
         if ($scrollToTop != null) {

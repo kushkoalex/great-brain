@@ -18,12 +18,13 @@ body {
     min-width: 1200px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-
     /*font-family: 'Roboto', sans-serif;  300  Roboto Light  */
-
     /*font-family: 'Roboto', sans-serif;  400 Roboto */
-
     /*font-family: 'Oranienbaum', serif;*/
+}
+
+.isMobile .page{
+    min-width: 400px;
 }
 
 img{

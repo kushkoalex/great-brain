@@ -17,3 +17,67 @@
     padding-left: 14px;
 }
 
+
+
+
+
+.header-mobile .language-switcher-icon{
+    width: 42px;
+    height: 42px;
+    background: url("../../images/language-switcher-mobile.png") no-repeat center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.isSVG .header-mobile .language-switcher-icon{
+    background: url("../../images/svg/lang-switch-mobile.svg");
+    background-size: cover;
+}
+
+.header-mobile .language-switcher-wrapper{
+    margin-top: -6px;
+    display: inline-block;
+    margin-left: 16px;
+
+}
+
+.header-mobile .language-switcher-wrapper.hidden{
+    display: none;
+}
+
+.header-mobile .language-switcher-wrapper .triangle{
+    width: 8px;
+    height: 8px;
+    border: 8px solid transparent;
+    border-bottom-color: #ffffff;
+    /*position: absolute;*/
+    position: relative;
+    margin-left: 16px;
+}
+
+.header-mobile .language-switcher .language-switcher-item{
+    padding: 10px;
+}
+
+.header-mobile .language-switcher {
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    color:#d5d5d5;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 18px;
+    letter-spacing: 3px;
+    background-color: #ffffff;
+    padding:20px 30px;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+
+.header-mobile .language-switcher a {
+    color: #f7941d;
+    padding: 0;
+    text-decoration: none;
+}

@@ -1,0 +1,30 @@
+.header-mobile .main-menu-icon{
+    width: 61px;
+    height: 41px;
+    background: url("../../images/main-menu-icon.png");
+    position: absolute;
+    right: 30px;
+    top: 21px;
+}
+
+.main-menu-mobile-layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e9692b;
+    z-index: 10001;
+}
+
+.main-menu-mobile-layout.hidden{
+    display: none;
+}
+
+.main-menu-mobile-layout .close{
+    width: 40px;
+    height: 41px;
+    background: url("../../images/main-menu-mobile-close-btn.png");
+    margin-top: 18px;
+    margin-left: 30px;
+}
