@@ -11,6 +11,7 @@
             {c:'main-page-logo-mobile'},
             tmpls.mainPageAnnouncementsMobile(),
             tmpls.mainMenuMobileLayout()
+
         ];
     };
 
