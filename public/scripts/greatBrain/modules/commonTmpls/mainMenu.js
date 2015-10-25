@@ -9,7 +9,7 @@
             menuData = gb.settings.dataModels.mainMenu,
             menuItems = [],
             menuItem,
-            menuItemInnerContent=[],
+            menuItemInnerContent = [],
             i,
             menuItemClassName,
             linkContent,
@@ -31,7 +31,7 @@
                 menuItemClassName += ' popup-link'
             }
 
-            if(menuData[i].isServiceMenuItem){
+            if (menuData[i].isServiceMenuItem) {
                 menuItemClassName += ' popup-link service-menu-link'
             }
 
@@ -49,16 +49,13 @@
             }
 
 
-
-
-
             menuItemInnerContent = [
                 {c: 'arrow'},
                 linkContent,
                 {c: 'arrow'}
             ];
 
-            if(menuData[i].isServiceMenuItem){
+            if (menuData[i].isServiceMenuItem) {
                 menuItemInnerContent.unshift(tmpls.servicesMenuWrapper())
             }
 

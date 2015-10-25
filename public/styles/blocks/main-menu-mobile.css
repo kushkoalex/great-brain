@@ -14,6 +14,7 @@
     right: 0;
     bottom: 0;
     background-color: #e9692b;
+    background-color: rgba(235,107,45,0.95);
     z-index: 10001;
 }
 
@@ -21,10 +22,106 @@
     display: none;
 }
 
+
+
+.main-menu-mobile-layout .head{
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    background-color: #e9692b;
+    padding-top: 18px;
+}
+
 .main-menu-mobile-layout .close{
     width: 40px;
     height: 41px;
     background: url("../../images/main-menu-mobile-close-btn.png");
-    margin-top: 18px;
     margin-left: 30px;
+    position: absolute;
+}
+
+.main-menu-mobile-layout .head .search-container{
+    position: absolute;
+    left: 100px;
+    right: 0;
+    height: 40px;
+
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px;
+    padding: 5px 5px 5px 50px;
+    background: #f5844e url("../../images/zoom.png") no-repeat 8px 7px;
+}
+
+
+.main-menu-mobile-layout .head .search-container input{
+    background-color: inherit;
+    border: none;
+    height: 30px;
+    font-style: italic;
+    font-size: 20px;
+    width: 300px;
+    outline: none;
+    color: #ffffff;
+}
+
+.main-menu-mobile{
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 130px;
+}
+
+.main-menu-mobile ul li {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-menu-mobile ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-menu-mobile ul li .separator{
+    width: 86px;
+    height: 4px;
+    background-color: #ffffff;
+    position: relative;
+    margin: 0 auto 25px;
+}
+
+.main-menu-socials{
+text-align: center;
+    margin-top: 20px;
+}
+
+.main-menu-socials .google,
+.main-menu-socials .fb,
+.main-menu-socials .instagram{
+    display: inline-block;
+    margin: 25px;
+}
+
+.main-menu-socials .google a,
+.main-menu-socials .fb a,
+.main-menu-socials .instagram a
+{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.main-menu-socials .google a {
+    background: url("../../images/svg/icon-social-google.svg") no-repeat;
+    background-size: cover;
+}
+.main-menu-socials .fb a {
+    background: url("../../images/svg/icon-social-fb.svg") no-repeat;
+    background-size: cover;
+}
+.main-menu-socials .instagram a {
+    background: url("../../images/svg/icon-social-insta.svg") no-repeat;
+    background-size: cover;
 }
