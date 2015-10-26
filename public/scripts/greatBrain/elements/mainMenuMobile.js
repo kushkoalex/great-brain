@@ -22,7 +22,6 @@ GB.mainMenuMobile = function ($parent) {
         a9.addClass($mainMenuMobileLayout, 'hidden');
         a9.addClass($countriesSelectorMenuMobileLayout, 'hidden');
         a9.addClass($serviceMenuMobileLayout, 'hidden');
-
     };
 
     a9.addEvent($countriesSelectorLink,eventOnPointerEnd,function(){

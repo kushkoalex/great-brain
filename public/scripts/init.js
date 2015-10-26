@@ -33,9 +33,17 @@ A9.ready(function (a9, global) {
     global.cnCt.bindTemplates(gb.tmpls);
 
     if ($mainPage !== null) {
-        gb.mainPage($mainPage);
+        if (a9.deviceInfo.isMobileDevice) {
+            gb.mainPageMobile($mainPage);
+        }
+        else {
+            gb.mainPage($mainPage);
+        }
     }
 
+    if ($mainPageMobile !== null) {
+        gb.mainPageMobile($mainPageMobile);
+    }
 
 
     if ($educationalInstitutions !== null) {
@@ -74,11 +82,11 @@ A9.ready(function (a9, global) {
         gb.partners($partners);
     }
 
-    if ( $services!== null) {
+    if ($services !== null) {
         gb.services($services);
     }
 
-    if ($siteContent!== null) {
+    if ($siteContent !== null) {
         gb.siteContent($siteContent);
     }
 
@@ -88,12 +96,6 @@ A9.ready(function (a9, global) {
 
     if ($intro !== null) {
         gb.intro($intro);
-    }
-
-
-
-    if ($mainPageMobile !== null) {
-        gb.mainPageMobile($mainPageMobile);
     }
 
 

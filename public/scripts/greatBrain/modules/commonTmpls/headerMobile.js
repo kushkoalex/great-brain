@@ -22,14 +22,14 @@
     };
 
     tmpls.mainMenuMobile = function () {
-        return {c: 'main-menu-icon', n: 'mainMenuMobileIcon'}
+        return {e:'a',h:'#', c: 'main-menu-icon', n: 'mainMenuMobileIcon'}
     };
 
     tmpls.mainMenuMobileLayout = function () {
         var descriptors = gb.settings.controlsDescriptors.site;
         // TODO: add hidden classname into main-menu-mobile-layout
 
-        return {c: 'main-menu-mobile-layout ', C: [
+        return {c: 'main-menu-mobile-layout hidden', C: [
             tmpls.countriesSelectorMenuMobileLayout(),
             tmpls.serviceMenuMobileLayout(),
             {c:'head',C:[{c: 'close', a: {id: 'closeMainMenuMobileBtn'}},{c:'search-container',C:{e:'input', a:{type:'text',placeholder:l10n('searchInputText','firstUpper')}}}]},
@@ -80,11 +80,11 @@
     };
 
     tmpls.serviceMenuMobileLayout = function(){
-        var countries = gb.settings.dataModels.servicesMenu,
+        var items = gb.settings.dataModels.servicesMenu,
             content=[];
 
-        a9.each(countries,function(country){
-            content.push({c:'menu-item', C:{e: 'a', h: country.url, t: country.title}});
+        a9.each(items,function(item){
+            content.push({c:'menu-item', C:{e: 'a', h: item.url, t: item.title}});
         });
 
         // TODO: hidden

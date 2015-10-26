@@ -7,8 +7,8 @@
     tmpls.mainPageMobile = function () {
         return [
             {c: 'main-banner', n: 'mainImageContentWrapper'},
-            tmpls.headerMobile(),
             {c:'main-page-logo-mobile'},
+            tmpls.headerMobile(),
             tmpls.mainPageAnnouncementsMobile(),
             tmpls.mainMenuMobileLayout()
 
