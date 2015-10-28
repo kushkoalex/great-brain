@@ -88,11 +88,15 @@
         var applyValue = function () {
             for (var i = 0; i < $images.length; i++) {
                 a9.removeClass($images[i], 'active');
-                a9.removeClass($imagesZoom[i], 'active');
+                if($imagesZoom) {
+                    a9.removeClass($imagesZoom[i], 'active');
+                }
 
             }
             a9.addClass($images[selectedIndex], 'active');
-            a9.addClass($imagesZoom[selectedIndex], 'active');
+            if($imagesZoom) {
+                a9.addClass($imagesZoom[selectedIndex], 'active');
+            }
         };
 
         $images = build.images;
