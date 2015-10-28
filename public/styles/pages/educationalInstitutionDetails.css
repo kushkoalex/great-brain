@@ -59,6 +59,7 @@
     height: 500px;
     float: right;
     margin-right: 30px;
+    position: relative;
 }
 
 .educational-institution-details-info{

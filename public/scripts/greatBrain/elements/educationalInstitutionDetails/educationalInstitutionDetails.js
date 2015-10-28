@@ -19,7 +19,16 @@ GB.educationalInstitutionDetails = function($parent){
     build = tp('educationalInstitutionDetails', pageData, $parent);
 
     $educationalInstitutionDetailsImagesCarousel = build.educationalInstitutionDetailsImagesCarousel;
-    a9.imageSlider($educationalInstitutionDetailsImagesCarousel);
+
+    var imageSliderOptions = {
+        images: pageData.images,
+        imagesPath: gb.settings.controlsDescriptors.site.educationalInstitutionDetailsCarouselImages,
+        imagePathOrig:gb.settings.controlsDescriptors.site.educationalInstitutionDetailsCarouselImagesOrig
+    };
+
+    a9.imageSlider($educationalInstitutionDetailsImagesCarousel, imageSliderOptions);
+
+
     gb.popupForm($parent);
     $serviceMenuWrapper= build.servicesMenuWrapper;
     gb.servicesMenu($serviceMenuWrapper);
