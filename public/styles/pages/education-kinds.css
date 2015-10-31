@@ -13,11 +13,22 @@
     padding-top: 9px;
 }
 
+.isMobile .country-selector-wrapper{
+    margin-top: 0;
+    padding-top: 100px;
+}
+
+.isMobile  .country-selector-wrapper .select-country-text{
+    display: block;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
 
 
 
 .country-selector{
-
+    width: 180px;
 }
 .country-selector .drop-down-list-head,
 .country-selector .item
@@ -39,9 +50,70 @@
 }
 
 
+.isMobile .country-selector .drop-down-list-head{
+    font-size: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.education-category-selector{
+    margin-top: 28px;
+}
+.education-category-selector .drop-down-list-head,
+.education-category-selector .item
+{
+    background-color:#ffffff;
+    color: #f7941d;
+    border: 2px solid #f7941d;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.education-category-selector .drop-down-list-head{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    line-height: 28px;
+}
+
+.education-category-selector .triangle{
+    border-top-color: #f7941d;
+}
+
+
+.age-group-mobile-selector{
+    vertical-align: top;
+}
+
+.age-group-mobile-selector .drop-down-list-head,
+.age-group-mobile-selector .item
+{
+    background-color:#ffffff;
+    color: #f7941d;
+    border: 2px solid #f7941d;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.age-group-mobile-selector .drop-down-list-head{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 28px;
+}
+
+.age-group-mobile-selector .triangle{
+    border-top-color: #f7941d;
+}
+
+
+
+
 .age-group-selector-wrapper{
     text-align: center;
     margin-top: -20px;
+}
+
+.isMobile .age-group-selector-wrapper{
+    margin-top: 50px;
 }
 
 .age-group-selector{
@@ -156,6 +228,12 @@
     color: #464646;
 }
 
+.isMobile .category-content-title{
+    margin-top: 35px;
+    font-size: 70px;
+    line-height: 65px;
+}
+
 .select-group {
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
@@ -164,6 +242,17 @@
     text-align: center;
     margin-top: 35px;
     letter-spacing: 1px;
+}
+
+.isMobile .select-group{
+    color: #ff9634;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 0;
 }
 
 .category-content-wrapper{
@@ -192,4 +281,24 @@
     margin-left: 470px;
     margin-right: 100px;
     margin-bottom: 70px;
+}
+
+
+.education-kinds-selectors-container{
+    background: url("../../images/education-kinds-selectors-container-bg.png") no-repeat;
+    background-size: cover;
+    height: 365px;
+    position: relative;
+    text-align: center;
+}
+
+.education-kinds-selectors-container .country-selector-mobile-wrapper{
+
+}
+
+.category-content-text{
+    padding: 40px;
+    font-size: 27px;
+    color: #3c3c3c;
+    line-height: 38px;
 }

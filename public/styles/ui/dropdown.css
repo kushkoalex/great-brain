@@ -2,7 +2,7 @@
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    position: absolute;
+    /*position: absolute;*/
     white-space: nowrap;
     position: relative;
     height: 50px;
@@ -34,6 +34,7 @@
     height: auto;
     position: absolute;
     width: 100%;
+    z-index: 10005;
 }
 .drop-down-list-items.hidden{
     height: 0;
@@ -74,7 +75,8 @@
     border: 6px solid transparent;
     border-top-color: #ffffff;
     position: absolute;
-    top: 20px;
+    /*top: 20px;*/
+    top: 50%;
     right: 15px;
 }
 

@@ -9,6 +9,7 @@ A9.ready(function (a9, global) {
         $educationalInstitutions = $('educationalInstitutions'),
         $educationalInstitutionDetails = $('educationalInstitutionDetails'),
         $educationKinds = $('educationKinds'),
+        $educationKindsMobile = $('educationKindsMobile'),
         $news = $('news'),
         $newsDetails = $('newsDetails'),
         $blog = $('blog'),
@@ -28,7 +29,7 @@ A9.ready(function (a9, global) {
         u;
 
 
-    //a9.deviceInfo.isMobileDevice = true;
+    a9.deviceInfo.isMobileDevice = true;
 
     global.cnCt.bindTemplates(gb.tmpls);
 
@@ -43,6 +44,10 @@ A9.ready(function (a9, global) {
 
     if ($mainPageMobile !== null) {
         gb.mainPageMobile($mainPageMobile);
+    }
+
+    if($educationKindsMobile!==null){
+        gb.educationKindsMobile($educationKindsMobile);
     }
 
 

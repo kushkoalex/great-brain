@@ -47,7 +47,7 @@
 
     tmpls.categoryContentWrapper = function (dataModel) {
         return {
-            c: 'category-content-wrapper', C: [tmpls.ageGroupSelector(dataModel),
+            c: 'category-content-wrapper', C: [tmpls.ageGroupSelector(),
                 tmpls.categoryContentInnerWrapper(dataModel)]
         }
     };
@@ -86,15 +86,10 @@
         }
     };
 
-    tmpls.ageGroupSelector = function (dataModel) {
+    tmpls.ageGroupSelector = function () {
         return {
             c: 'age-group-selector-wrapper', C:
-
             {n:'dropDownAgeGroups',c:'drop-down-list age-group-selector'}
-            //{
-            //    c: 'age-group-selector',
-            //    C: [{c: 'age-group', t: dataModel[0].educationCategories[0].ageGroups[0].age}, {c: 'triangle'}]
-            //}
         }
     };
 
@@ -111,12 +106,7 @@
 
     tmpls.educationCategoriesMenu = function () {
         var educationKinds = [],
-            menuItem,
-            i,
-            menuItemClassName,
-            linkContent,
-            menuItemState;
-
+            menuItem;
 
         a9.each(gb.settings.dataModels.educationKinds.educationCategories, function (category) {
 
@@ -138,6 +128,8 @@
 
         return {c: 'education-category-menu', C: {e: 'ul', C: educationKinds}}
     };
+
+
 
 
 }(GB));
