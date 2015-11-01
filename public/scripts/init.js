@@ -30,7 +30,7 @@ A9.ready(function (a9, global) {
         u;
 
 
-    a9.deviceInfo.isMobileDevice = true;
+    //a9.deviceInfo.isMobileDevice = true;
 
     global.cnCt.bindTemplates(gb.tmpls);
 
