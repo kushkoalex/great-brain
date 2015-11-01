@@ -5,9 +5,11 @@
     white-space: nowrap;
     position: relative;
     vertical-align: top;
+
 }
 .drop-down-list-wrapper{
     position: absolute;
+
 }
 
 .drop-down-list-head,
@@ -36,7 +38,7 @@
     filter: alpha(opacity=1);
     height: auto;
     /*position: absolute;*/
-    z-index: 10005;
+    /*z-index: 10012;*/
     width: auto;
 }
 .drop-down-list-items.hidden{
