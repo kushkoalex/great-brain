@@ -29,7 +29,7 @@ A9.ready(function (a9, global) {
         u;
 
 
-    a9.deviceInfo.isMobileDevice = true;
+    //a9.deviceInfo.isMobileDevice = true;
 
     global.cnCt.bindTemplates(gb.tmpls);
 
@@ -42,11 +42,20 @@ A9.ready(function (a9, global) {
         }
     }
 
+    if ($educationKinds !== null) {
+        if (a9.deviceInfo.isMobileDevice) {
+            gb.educationKindsMobile($educationKinds);
+        }
+        else {
+            gb.educationKinds($educationKinds);
+        }
+    }
+
     if ($mainPageMobile !== null) {
         gb.mainPageMobile($mainPageMobile);
     }
 
-    if($educationKindsMobile!==null){
+    if ($educationKindsMobile !== null) {
         gb.educationKindsMobile($educationKindsMobile);
     }
 
@@ -57,10 +66,6 @@ A9.ready(function (a9, global) {
 
     if ($educationalInstitutionDetails !== null) {
         gb.educationalInstitutionDetails($educationalInstitutionDetails);
-    }
-
-    if ($educationKinds !== null) {
-        gb.educationKinds($educationKinds);
     }
 
     if ($news !== null) {
