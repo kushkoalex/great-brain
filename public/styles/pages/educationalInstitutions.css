@@ -183,3 +183,36 @@
 .educational-institutions-catalogue-item.special-offer .title-en{
     color: #8ed669;
 }
+
+
+.isMobile .category-content-title.educational-institutions{
+    margin-top: 0;
+    padding-top: 150px;
+}
+
+
+.educational-institutions-mobile-filter-panel{
+    text-align: center;
+}
+.educational-institutions-mobile-filter-panel .filter ul{
+    margin-top: 50px;
+}
+.educational-institutions-mobile-filter-panel .filter ul li{
+    margin-top: 15px;
+}
+
+.educational-institutions-mobile-filter-panel .filter .drop-down-list-head{
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.educational-institutions-mobile-filter-panel .drop-down-list-head,
+.educational-institutions-mobile-filter-panel .item{
+    font-size: 20px;
+}
+
+.educational-institutions-mobile-content{
+    margin-top: 20px;
+    text-align: center;
+}

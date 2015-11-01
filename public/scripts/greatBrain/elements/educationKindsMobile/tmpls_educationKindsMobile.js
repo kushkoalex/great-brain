@@ -60,7 +60,7 @@
 
     tmpls.educationKindsSelectorsContainer = function () {
         return {
-            c: 'education-kinds-selectors-container', C: [
+            c: 'mobile-page-head-container', C: [
                 tmpls.countrySelectorMobile(),
                 tmpls.educationCategoriesSelectorMobile()
             ]

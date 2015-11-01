@@ -7,6 +7,7 @@ A9.ready(function (a9, global) {
         $mainPage = $('mainPage'),
         $mainPageMobile = $('mainPageMobile'),
         $educationalInstitutions = $('educationalInstitutions'),
+        $educationalInstitutionsMobile = $('educationalInstitutionsMobile'),
         $educationalInstitutionDetails = $('educationalInstitutionDetails'),
         $educationKinds = $('educationKinds'),
         $educationKindsMobile = $('educationKindsMobile'),
@@ -29,7 +30,7 @@ A9.ready(function (a9, global) {
         u;
 
 
-    //a9.deviceInfo.isMobileDevice = true;
+    a9.deviceInfo.isMobileDevice = true;
 
     global.cnCt.bindTemplates(gb.tmpls);
 
@@ -51,6 +52,14 @@ A9.ready(function (a9, global) {
         }
     }
 
+    if ($educationalInstitutions !== null) {
+        if (a9.deviceInfo.isMobileDevice) {
+            gb.educationalInstitutionsMobile($educationalInstitutions);
+        }else {
+            gb.educationalInstitutions($educationalInstitutions);
+        }
+    }
+
     if ($mainPageMobile !== null) {
         gb.mainPageMobile($mainPageMobile);
     }
@@ -59,9 +68,8 @@ A9.ready(function (a9, global) {
         gb.educationKindsMobile($educationKindsMobile);
     }
 
-
-    if ($educationalInstitutions !== null) {
-        gb.educationalInstitutions($educationalInstitutions);
+    if($educationalInstitutionsMobile!==null){
+        gb.educationalInstitutionsMobile($educationalInstitutionsMobile);
     }
 
     if ($educationalInstitutionDetails !== null) {

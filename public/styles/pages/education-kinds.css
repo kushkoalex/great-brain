@@ -288,7 +288,7 @@
 }
 
 
-.education-kinds-selectors-container{
+.mobile-page-head-container{
     background: url("../../images/education-kinds-selectors-container-bg.png") no-repeat;
     background-size: cover;
     height: 365px;
@@ -296,7 +296,7 @@
     text-align: center;
 }
 
-.education-kinds-selectors-container .country-selector-mobile-wrapper{
+.mobile-page-head-container .country-selector-mobile-wrapper{
 
 }
 
