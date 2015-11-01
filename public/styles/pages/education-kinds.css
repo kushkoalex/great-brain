@@ -28,7 +28,11 @@
 
 
 .country-selector{
-    width: 180px;
+    /*width: 180px;*/
+}
+
+.isMobile .country-selector{
+    /*width: 240px;*/
 }
 .country-selector .drop-down-list-head,
 .country-selector .item

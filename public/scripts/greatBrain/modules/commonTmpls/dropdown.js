@@ -38,19 +38,21 @@
         dropDownListHeadContent.push({c: 'triangle'});
 
 
-        return [
-            {
-                e: 'form', n: 'selectForm', a: {method: 'post', action: ''}, C: {
-                c: 'drop-down-list-head',
-                n: 'dropDownListHead',
-                C: dropDownListHeadContent
-            }
-            },
-            {
-                c: 'drop-down-list-items hidden', n: 'items', C: dropDownListItems
-            }
+        return {
+            c: 'drop-down-list-wrapper', C: [
+                {
+                    e: 'form', n: 'selectForm', a: {method: 'post', action: ''}, C: {
+                    c: 'drop-down-list-head',
+                    n: 'dropDownListHead',
+                    C: dropDownListHeadContent
+                }
+                },
+                {
+                    c: 'drop-down-list-items hidden', n: 'items', C: dropDownListItems
+                }
 
-        ];
+            ]
+        };
     };
 
 }(GB, A9));
